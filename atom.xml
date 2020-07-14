@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>TarrowFool个人博客</title>
+  
+  <subtitle>TarrowFool Blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://wang.github.io/"/>
+  <updated>2020-07-14T08:51:51.871Z</updated>
+  <id>https://wang.github.io/</id>
+  
+  <author>
+    <name>TarrowFool</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>99个心理学常识</title>
+    <link href="https://wang.github.io/2020/07/01/psychology/"/>
+    <id>https://wang.github.io/2020/07/01/psychology/</id>
+    <published>2020-07-01T03:16:46.000Z</published>
+    <updated>2020-07-14T08:51:51.871Z</updated>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2020/07/01/psychology/psychology.jpg&quot; class&gt;
+    
+    </summary>
+    
+    
+      <category term="reading" scheme="https://wang.github.io/categories/reading/"/>
+    
+      <category term="psychollgy" scheme="https://wang.github.io/categories/psychollgy/"/>
+    
+    
+      <category term="reading" scheme="https://wang.github.io/tags/reading/"/>
+    
+      <category term="psychology" scheme="https://wang.github.io/tags/psychology/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DataGrip快捷操作</title>
+    <link href="https://wang.github.io/2020/06/22/datagrip/"/>
+    <id>https://wang.github.io/2020/06/22/datagrip/</id>
+    <published>2020-06-22T09:13:33.000Z</published>
+    <updated>2020-07-14T08:51:40.830Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div style=&quot;width:70%;margin:0 auto;&quot;&gt;&lt;img src=&quot;/2020/06/22/datagrip/datagrip.jpg&quot; class&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/categories/code/"/>
+    
+      <category term="datagrip" scheme="https://wang.github.io/categories/datagrip/"/>
+    
+      <category term="jetbrains" scheme="https://wang.github.io/categories/jetbrains/"/>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/tags/code/"/>
+    
+      <category term="datagrip" scheme="https://wang.github.io/tags/datagrip/"/>
+    
+      <category term="jetbrains" scheme="https://wang.github.io/tags/jetbrains/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHPCMS-WHERE条件失效以及分页参数</title>
+    <link href="https://wang.github.io/2020/06/16/phpcms/"/>
+    <id>https://wang.github.io/2020/06/16/phpcms/</id>
+    <published>2020-06-16T09:27:09.000Z</published>
+    <updated>2020-07-14T08:51:23.548Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div style=&quot;width:70%;margin:0 auto;&quot;&gt;&lt;img src=&quot;/2020/06/16/phpcms/phpcms.jpg&quot; class&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="phpcms" scheme="https://wang.github.io/categories/phpcms/"/>
+    
+      <category term="代码" scheme="https://wang.github.io/categories/code/"/>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/tags/code/"/>
+    
+      <category term="phpcms" scheme="https://wang.github.io/tags/phpcms/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>毅力-如何培养自律的习惯</title>
+    <link href="https://wang.github.io/2020/06/16/autonomic/"/>
+    <id>https://wang.github.io/2020/06/16/autonomic/</id>
+    <published>2020-06-16T00:46:42.000Z</published>
+    <updated>2020-07-14T08:51:16.271Z</updated>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2020/06/16/autonomic/autonomic.jpg&quot; class&gt;
+    
+    </summary>
+    
+    
+      <category term="reading" scheme="https://wang.github.io/categories/reading/"/>
+    
+      <category term="autonomic" scheme="https://wang.github.io/categories/autonomic/"/>
+    
+    
+      <category term="reading" scheme="https://wang.github.io/tags/reading/"/>
+    
+      <category term="autonomic" scheme="https://wang.github.io/tags/autonomic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何预防薅羊毛</title>
+    <link href="https://wang.github.io/2020/06/02/econnoisseur/"/>
+    <id>https://wang.github.io/2020/06/02/econnoisseur/</id>
+    <published>2020-06-02T02:33:59.000Z</published>
+    <updated>2020-07-14T08:51:06.691Z</updated>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2020/06/02/econnoisseur/hao.jpg&quot; class&gt;
+    
+    </summary>
+    
+    
+      <category term="project" scheme="https://wang.github.io/categories/project/"/>
+    
+      <category term="心情" scheme="https://wang.github.io/categories/mood/"/>
+    
+    
+      <category term="project" scheme="https://wang.github.io/tags/project/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mysql历史语句</title>
+    <link href="https://wang.github.io/2020/05/26/sqlhistory/"/>
+    <id>https://wang.github.io/2020/05/26/sqlhistory/</id>
+    <published>2020-05-26T08:10:02.000Z</published>
+    <updated>2020-07-14T08:51:00.246Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div style=&quot;width:70%;margin:0 auto;&quot;&gt;&lt;img src=&quot;/2020/05/26/sqlhistory/mysql.jpg&quot; class&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="mysql" scheme="https://wang.github.io/categories/mysql/"/>
+    
+      <category term="代码" scheme="https://wang.github.io/categories/code/"/>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/tags/code/"/>
+    
+      <category term="mysql" scheme="https://wang.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PHPCMS采集-图片采集</title>
+    <link href="https://wang.github.io/2020/05/26/phpcms/"/>
+    <id>https://wang.github.io/2020/05/26/phpcms/</id>
+    <published>2020-05-26T03:21:14.000Z</published>
+    <updated>2020-07-14T08:50:51.291Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div style=&quot;width:70%;margin:0 auto;&quot;&gt;&lt;img src=&quot;/2020/05/26/phpcms/phpcms.jpg&quot; class&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="phpcms" scheme="https://wang.github.io/categories/phpcms/"/>
+    
+      <category term="代码" scheme="https://wang.github.io/categories/code/"/>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/tags/code/"/>
+    
+      <category term="phpcms" scheme="https://wang.github.io/tags/phpcms/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DEDECMS-5.7后台批量复制栏目文档</title>
+    <link href="https://wang.github.io/2020/05/21/dedecms/"/>
+    <id>https://wang.github.io/2020/05/21/dedecms/</id>
+    <published>2020-05-21T07:49:31.000Z</published>
+    <updated>2020-07-14T08:50:41.804Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div style=&quot;width:70%;margin:0 auto;&quot;&gt;&lt;img src=&quot;/2020/05/21/dedecms/dedecms.jpg&quot; class&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="dedecms" scheme="https://wang.github.io/categories/dedecms/"/>
+    
+      <category term="代码" scheme="https://wang.github.io/categories/code/"/>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/tags/code/"/>
+    
+      <category term="dedecms" scheme="https://wang.github.io/tags/dedecms/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo与Next安装</title>
+    <link href="https://wang.github.io/2020/05/20/install/"/>
+    <id>https://wang.github.io/2020/05/20/install/</id>
+    <published>2020-05-20T09:21:43.000Z</published>
+    <updated>2020-07-14T08:50:28.964Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div style=&quot;width:70%;margin:0 auto;&quot;&gt;&lt;img src=&quot;/2020/05/20/install/hexo.jpg&quot; class&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://wang.github.io/categories/hexo/"/>
+    
+      <category term="next" scheme="https://wang.github.io/categories/next/"/>
+    
+      <category term="代码" scheme="https://wang.github.io/categories/code/"/>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>愚者</title>
+    <link href="https://wang.github.io/2020/05/18/fristblog/"/>
+    <id>https://wang.github.io/2020/05/18/fristblog/</id>
+    <published>2020-05-18T03:14:22.000Z</published>
+    <updated>2020-05-20T07:51:55.028Z</updated>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2020/05/18/fristblog/tarrowfool.jpg&quot; class&gt;
+    
+    </summary>
+    
+    
+      <category term="心情" scheme="https://wang.github.io/categories/mood/"/>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/tags/code/"/>
+    
+      <category term="心情" scheme="https://wang.github.io/tags/mood/"/>
+    
+  </entry>
+  
+</feed>

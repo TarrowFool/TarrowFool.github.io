@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hexo与Next安装</title>
+    <url>/2020/05/20/install/</url>
+    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/05/20/install/hexo.jpg" class></div>
+
+<a id="more"></a>
+
+<h1 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h1><h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h2 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h2><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
+<ul>
+<li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a> (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)</li>
+<li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
+</ul>
+<p>下载安装包，点击安装包，点击下一步直到完成即可，node安装完后在命令行运行 node -v（查看版本），如果成功说明node安装成功，不成功可能是环境变量问题，去配置一下或重新安装下.<br> 同理安装git，安装完后再命令行运行git version（查看版本），如果成功说明git安装成功。</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>1.如果您的电脑中已经安装上述必备程序，接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>2.安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>会生成如下结构的文件：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line"> ├── _config.yml  站点配置文件</span><br><span class="line"> ├── package.json  站点依赖文件</span><br><span class="line"> ├── scaffolds  模板文件夹</span><br><span class="line"> ├── source 资源文件夹</span><br><span class="line"> |   ├── _drafts</span><br><span class="line"> |   └── _posts</span><br><span class="line"> └── themes  主题文件夹</span><br></pre></td></tr></table></figure>
+
+<p>最后一步你npm install不可少，它主要功能是用于安装package.json中的依赖，当有改动package.json中的依赖时都要运行一次。<br>到此hexo安装就算完成了，然后在命令行运行。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">hexo sever</span><br></pre></td></tr></table></figure>
+
+<p>就可以看到hexo默认主题效果了。</p>
+<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">hexo init [folder] 新建一个网站</span><br><span class="line">hexo <span class="keyword">new</span> [layout] &lt;title&gt; 创建一篇新文章</span><br><span class="line">hexo sever或hexo s 启动服务器</span><br><span class="line">hexo clean 清除缓存文件 (db.json) 和已生成的静态文件 (public)</span><br><span class="line">hexo generate或hexo g 生成静态文件</span><br><span class="line">hexo deploy或hexo d 部署网站</span><br><span class="line">hexo migrate &lt;type&gt; 从其他博客系统迁移内容</span><br></pre></td></tr></table></figure>
+
+<h1 id="Next安装"><a href="#Next安装" class="headerlink" title="Next安装"></a>Next安装</h1><h2 id="安装NexT"><a href="#安装NexT" class="headerlink" title="安装NexT"></a>安装NexT</h2><p>通过<code>git</code>指令下载<code>NexT</code><strong>最新的</strong>主题文件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<p>或者，直接从发布页<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fiissnan%2Fhexo-theme-next%2Freleases" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next/releases</a>下载源指定版本源代码。</p>
+<p>下载之后，解压缩主题主题文件，并把它放到<code>themes</code></p>
+<p>主题文件放在</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">+---public</span><br><span class="line">|   +---about</span><br><span class="line">|   +---archives</span><br><span class="line">|   +---categories</span><br><span class="line">|   +---css</span><br><span class="line">|   +---images</span><br><span class="line">|   +---js</span><br><span class="line">|   +---lib</span><br><span class="line">|   +---page</span><br><span class="line">|   +---post</span><br><span class="line">|   \---tags</span><br><span class="line">+---scaffolds</span><br><span class="line">+---source</span><br><span class="line">|   +---about</span><br><span class="line">|   +---categories</span><br><span class="line">|   +---images</span><br><span class="line">|   +---tags</span><br><span class="line">|   +---_drafts</span><br><span class="line">|   \---_posts</span><br><span class="line">\---themes</span><br><span class="line">    \---next</span><br><span class="line">        +---languages</span><br><span class="line">        +---layout</span><br><span class="line">        +---scripts</span><br><span class="line">        +---source</span><br><span class="line">        |   +---css</span><br><span class="line">        |   +---fonts</span><br><span class="line">        |   +---images</span><br><span class="line">        |   +---js</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件<code>_config.yml</code>里面，找到它</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"># 原来的值是landscape</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>hexo</category>
+        <category>next</category>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DEDECMS-5.7后台批量复制栏目文档</title>
+    <url>/2020/05/21/dedecms/</url>
+    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/05/21/dedecms/dedecms.jpg" class></div>
+
+<a id="more"></a>
+
+<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>因为网站多地区所需，需要用到文档复制功能，就在网上搜寻了一些大神写的复制栏目文档的功能，但是Copy下来以后，发现功能以及代码不是很完善，所以就完善了一番，完善了起始ID、重复文档跳过，生成文章的显示问题等问题，为了以后能用到此功能的童鞋，可以使用的更顺畅，本人只是初入PHP的一个小白，代码中还有不足的地方，请各位大神指教，我一定竭尽全力去更加完善。</p>
+<h1 id="第一步：修改模板文件"><a href="#第一步：修改模板文件" class="headerlink" title="第一步：修改模板文件"></a>第一步：修改模板文件</h1><p>修改文件dede/templets/content_batch_up.htm  其中dede是项目的后台路径，已修改的替换新路径</p>
+<p>1、修改头部脚本函数ShowHideMove()</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ShowHideMove</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> selBox = <span class="built_in">document</span>.getElementByIdx_x(<span class="string">'moveradio'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> selBox2 = <span class="built_in">document</span>.getElementByIdx_x(<span class="string">'copyradio'</span>);<span class="comment">//edited by adan;090508</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> obj = <span class="built_in">document</span>.getElementByIdx_x(<span class="string">'moveField'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(selBox.checked||selBox2.checked) obj.style.display = <span class="string">"block"</span>;<span class="comment">//edited by adan;090508</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span> obj.style.display = <span class="string">"none"</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、添加复制栏目按钮</p>
+<p>在模板文件中查找</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"action"</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">class</span>=<span class="string">"np"</span> <span class="attr">value</span>=<span class="string">"move"</span> <span class="attr">id</span>=<span class="string">"moveradio"</span> <span class="attr">onClick</span>=<span class="string">"ShowHideMove()"</span> /&gt;</span>移动文档</span><br></pre></td></tr></table></figure>
+
+<p>在上边代码后面添加</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">"action"</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">class</span>=<span class="string">"np tarrow-fool"</span> <span class="attr">value</span>=<span class="string">"copy"</span> <span class="attr">id</span>=<span class="string">"copyradio"</span> <span class="attr">onClick</span>=<span class="string">"ShowHideMove()"</span> /&gt;</span>复制栏目文档</span><br></pre></td></tr></table></figure>
+
+<h1 id="第二步：修改操作文件"><a href="#第二步：修改操作文件" class="headerlink" title="第二步：修改操作文件"></a>第二步：修改操作文件</h1><p>修改文件dede/content_batchup_action.php  其中dede是项目的后台路径，已修改的替换新路径</p>
+<p>1、在php文件中查找下边代码，然后替换成新的代码</p>
+<p>旧：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>($typeid!=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  $ids = GetSonIds($typeid);</span><br><span class="line"></span><br><span class="line">  $gwhere .= <span class="string">" AND typeid IN($ids) "</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>新：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>($typeid!=<span class="number">0</span> &amp;&amp; $action!=<span class="string">'copy'</span>)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  $ids = GetSonIds($typeid);</span><br><span class="line"></span><br><span class="line">  $gwhere .= <span class="string">" AND typeid IN($ids) "</span>;</span><br><span class="line"></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>($typeid!=<span class="number">0</span> &amp;&amp; $action==<span class="string">'copy'</span>)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  $gwhere .= <span class="string">" AND typeid = '$typeid' "</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、在php文件中查找下边代码，细心的童鞋可以发现“//修正缩略图错误”这个操作出现了两次，应该是开发人员的恶搞吧，可以删除掉该操作。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">//删除空标题内容</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>($action==<span class="string">'delnulltitle'</span>)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  $dsql-&gt;SetQuery(<span class="string">"SELECT id FROM #@__archives WHERE trim(title)='' "</span>);</span><br><span class="line"></span><br><span class="line">  $dsql-&gt;Execute(<span class="string">'x'</span>);</span><br><span class="line"></span><br><span class="line">  $tdd = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>($row = $dsql-&gt;GetObject(<span class="string">'x'</span>))</span><br><span class="line"></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">if</span>(DelArc($row-&gt;id)) $tdd++;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ShowMsg(<span class="string">"成功删除 $tdd 条记录！"</span>,<span class="string">"javascript:;"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">exit</span>();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//修正缩略图错误</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>($action==<span class="string">'modddpic'</span>)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  $dsql-&gt;ExecuteNoneQuery(<span class="string">"UPDATE #@__archives SET litpic='' WHERE trim(litpic)='litpic' "</span>);</span><br><span class="line"></span><br><span class="line">  ShowMsg(<span class="string">"成功修正缩略图错误！"</span>,<span class="string">"javascript:;"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">exit</span>();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>查找到以后在此代码之后加入下列代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>($action==<span class="string">'copy'</span>)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">empty</span>($typeid))</span><br><span class="line"></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">    ShowMsg(<span class="string">'该操作必须指定栏目！'</span>,<span class="string">'javascript:;'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">exit</span>();</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  $typeold = $dsql-&gt;GetOne(<span class="string">"Select * From `#@__arctype` where id='$typeid'; "</span>);</span><br><span class="line"></span><br><span class="line">  $typenew = $dsql-&gt;GetOne(<span class="string">"Select * From `#@__arctype` where id='$newtypeid'; "</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(!is_array($typenew))</span><br><span class="line"></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">    $dsql-&gt;Close();</span><br><span class="line"></span><br><span class="line">    ShowMsg(<span class="string">"无法检测复制到的新栏目的信息，不能完成操作！"</span>,<span class="string">"javascript:;"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">exit</span>();</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>($typenew[<span class="string">'ispart'</span>]!=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">    $dsql-&gt;Close();</span><br><span class="line"></span><br><span class="line">    ShowMsg(<span class="string">"你不能把数据复制到非最终列表的栏目！"</span>,<span class="string">"javascript:;"</span>);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">exit</span>();</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>($typenew[<span class="string">'channeltype'</span>]!=$typeold[<span class="string">'channeltype'</span>])</span><br><span class="line"></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">    $dsql-&gt;Close();</span><br><span class="line"></span><br><span class="line">    ShowMsg(<span class="string">"不能把数据复制到内容类型不同的栏目！"</span>,<span class="string">"javascript:;"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">exit</span>();</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  $gwhere .= <span class="string">" And channel='"</span>.$typenew[<span class="string">'channeltype'</span>].<span class="string">"' And title like '%$keyword%'"</span>;</span><br><span class="line"></span><br><span class="line">  $ch = $dsql-&gt;GetOne(<span class="string">"Select addtable From `#@__channeltype` where id=&#123;$typenew['channeltype']&#125; "</span>);</span><br><span class="line"></span><br><span class="line">  $addtable = $ch[<span class="string">'addtable'</span>];</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2020-4-8 update</span></span><br><span class="line"></span><br><span class="line">  $dsql-&gt;SetQuery(<span class="string">"Select * From `#@__archives` $gwhere"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2020-4-8 update</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// $dsql-&gt;SetQuery("Select * From `#@__archives` where typeid='$typeid'");</span></span><br><span class="line"></span><br><span class="line">  $dsql-&gt;Execute(<span class="string">'c'</span>);</span><br><span class="line"></span><br><span class="line">  $tdd = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>($row = $dsql-&gt;GetObject(<span class="string">'c'</span>))</span><br><span class="line"></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">    $senddate = time();</span><br><span class="line"></span><br><span class="line">    $sortrank = AddDay($senddate,<span class="number">0</span>);<span class="comment">//第二个参数是排序值，参考article_add.php</span></span><br><span class="line"></span><br><span class="line">    $ID = $row-&gt;id;</span><br><span class="line"></span><br><span class="line">    $typeid = $newtypeid;<span class="comment">//$newtypeid</span></span><br><span class="line"></span><br><span class="line">    $sortrank = $row-&gt;sortrank;</span><br><span class="line"></span><br><span class="line">    $flag = $row-&gt;flag;</span><br><span class="line"></span><br><span class="line">    $ismake = $row-&gt;ismake;</span><br><span class="line"></span><br><span class="line">    $channelid = $row-&gt;channel;</span><br><span class="line"></span><br><span class="line">    $arcrank = $row-&gt;arcrank;</span><br><span class="line"></span><br><span class="line">    $click = $row-&gt;click;</span><br><span class="line"></span><br><span class="line">    $money = $row-&gt;money;</span><br><span class="line"></span><br><span class="line">    $title = addslashes($row-&gt;title);<span class="comment">//需要添加addslashes()转换； adan;090508</span></span><br><span class="line"></span><br><span class="line">    $shorttitle = $row-&gt;shorttitle;</span><br><span class="line"></span><br><span class="line">    $color = $row-&gt;color;</span><br><span class="line"></span><br><span class="line">    $writer = $row-&gt;writer;</span><br><span class="line"></span><br><span class="line">    $source = $row-&gt;source;</span><br><span class="line"></span><br><span class="line">    $litpic = $row-&gt;litpic;</span><br><span class="line"></span><br><span class="line">    $pubdate = $row-&gt;pubdate;</span><br><span class="line"></span><br><span class="line">    $adminid = $cuserLogin-&gt;getUserID();</span><br><span class="line"></span><br><span class="line">    $notpost = $row-&gt;notpost;</span><br><span class="line"></span><br><span class="line">    $description = addslashes($row-&gt;description);<span class="comment">//需要添加addslashes()转换； adan;090508</span></span><br><span class="line"></span><br><span class="line">    $keywords = $row-&gt;keywords;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">require_once</span>(DEDEADMIN.<span class="string">"/inc/inc_archives_functions.php"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//重复文档跳过</span></span><br><span class="line"></span><br><span class="line">    $repetition = $dsql-&gt;GetOne(<span class="string">"Select id From `#@__archives` where title='$title' and typeid = '$typeid' "</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>($repetition &amp;&amp; $repetition[<span class="string">'id'</span>] &gt; <span class="number">0</span>)&#123;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//生成文档ID</span></span><br><span class="line"></span><br><span class="line">    $arcID = GetIndexKey($arcrank,$typeid,$sortrank,$channelid,$senddate,$adminid);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">empty</span>($arcID))</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">      ShowMsg(<span class="string">"无法获得主键，因此无法进行后续操作！"</span>,<span class="string">"-1"</span>);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">exit</span>();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//加入数据表#@__archives的SQL语句</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//----------------------------------</span></span><br><span class="line"></span><br><span class="line">    $inQuery = <span class="string">"INSERT INTO `#@__archives`(id,typeid,typeid2,sortrank,flag,ismake,channel,arcrank,click,money,title,shorttitle,</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    color,writer,source,litpic,pubdate,senddate,mid,lastpost,scores,goodpost,badpost,notpost,description,keywords,filename)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    VALUES ('$arcID','$typeid','','$sortrank','$flag','$ismake','$channelid','$arcrank','0','$money',</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    '$title','$shorttitle','$color','$writer','$source','$litpic','$pubdate','$senddate',</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    '$adminid','0','0','0','0','0','$description','$keywords','');"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(!$dsql-&gt;ExecuteNoneQuery($inQuery))</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">      $gerr = $dsql-&gt;GetError();</span><br><span class="line"></span><br><span class="line">      $dsql-&gt;ExecuteNoneQuery(<span class="string">"Delete From `#@__arctiny` where id='$arcID'"</span>);</span><br><span class="line"></span><br><span class="line">      ShowMsg(<span class="string">"把数据保存到数据库主表 `#@__archives` 时出错，请把相关信息提交给DedeCms官方。"</span>.str_replace(<span class="string">'"'</span>,<span class="string">''</span>,$gerr),<span class="string">"javascript:;"</span>);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">exit</span>();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//保存到附加表</span></span><br><span class="line"></span><br><span class="line">    $cts = $dsql-&gt;GetOne(<span class="string">"Select addtable From `#@__channeltype` where id='$channelid' "</span>);</span><br><span class="line"></span><br><span class="line">    $addtable = trim($cts[<span class="string">'addtable'</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">empty</span>($addtable))</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">      $dsql-&gt;ExecuteNoneQuery(<span class="string">"Delete From `#@__archives` where id='$arcID'"</span>);</span><br><span class="line"></span><br><span class="line">      $dsql-&gt;ExecuteNoneQuery(<span class="string">"Delete From `#@__arctiny` where id='$arcID'"</span>);</span><br><span class="line"></span><br><span class="line">      ShowMsg(<span class="string">"没找到当前模型[&#123;$channelid&#125;]的主表信息，无法完成操作！。"</span>,<span class="string">"javascript:;"</span>);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">exit</span>();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    $useip = GetIP();</span><br><span class="line"></span><br><span class="line">    $redirecturl = $addRow[<span class="string">'redirecturl'</span>];</span><br><span class="line"></span><br><span class="line">    $templet = $addRow[<span class="string">'templet'</span>];</span><br><span class="line"></span><br><span class="line">    $addRow = $dsql-&gt;GetOne(<span class="string">"Select * from `&#123;$addtable&#125;` where aid='$ID'"</span>);</span><br><span class="line"></span><br><span class="line">    $body = addslashes($addRow[<span class="string">"body"</span>]);</span><br><span class="line"></span><br><span class="line">    $query = <span class="string">"INSERT INTO `&#123;$addtable&#125;`(aid,typeid,redirecturl,templet,userip,body) Values('$arcID','$typeid','$redirecturl','$templet','$useip','$body')"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(!$dsql-&gt;ExecuteNoneQuery($query))</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">      $gerr = $dsql-&gt;GetError();</span><br><span class="line"></span><br><span class="line">      $dsql-&gt;ExecuteNoneQuery(<span class="string">"Delete From `#@__archives` where id='$arcID'"</span>);</span><br><span class="line"></span><br><span class="line">      $dsql-&gt;ExecuteNoneQuery(<span class="string">"Delete From `#@__arctiny` where id='$arcID'"</span>);</span><br><span class="line"></span><br><span class="line">      ShowMsg(<span class="string">"把数据保存到数据库附加表 `&#123;$addtable&#125;` 时出错，请把相关信息提交给DedeCms官方。"</span>.str_replace(<span class="string">'"'</span>,<span class="string">''</span>,$gerr),<span class="string">"javascript:;"</span>);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">exit</span>();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span> $tdd++;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>($tdd&gt;<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">  &#123;</span><br><span class="line"></span><br><span class="line">    $jumpurl = <span class="string">"makehtml_archives_action.php?typeid=$newtypeid&amp;pagesize=20"</span>;</span><br><span class="line"></span><br><span class="line">    ShowMsg(<span class="string">"成功复制了 $tdd 条记录，准备重新生成HTML..."</span>,$jumpurl);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">else</span> ShowMsg(<span class="string">"完成操作，没复制任何数据..."</span>,<span class="string">"javascript:;"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">exit</span>();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这就是此次关于DEDECMS后台功能的完善。</p>
+]]></content>
+      <categories>
+        <category>dedecms</category>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>dedecms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PHPCMS采集-图片采集</title>
+    <url>/2020/05/26/phpcms/</url>
+    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/05/26/phpcms/phpcms.jpg" class></div>
+
+<a id="more"></a>
+
+<h1 id="采集图片功能"><a href="#采集图片功能" class="headerlink" title="采集图片功能"></a>采集图片功能</h1><p>本次采集图片功能针对PHPCMS采集模块所进行的一个修改，原因吗是采集过程中需要采集多个不同位置的图片，但是PHPCMS采集图片的主要针对的是内容中的，而且需要勾选自动提取缩略图选项才能提取缩略图，所以自己尝试的去修改了采集模块的Class，只是满足了采集图片的功能需求，代码比较粗略，也存在一些BUG，有人鉴戒时，如若有更多的实现方法或者改进方案，可以在评论中探讨一下。</p>
+<h2 id="方法一：原生类"><a href="#方法一：原生类" class="headerlink" title="方法一：原生类"></a>方法一：原生类</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>首先找到采集方法的类：class collection，位置在/phpcms/modules/collection/classes/collection.class.php，为方便的话也可以直接搜索文件名。</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>找到文件后，可以直接搜索下边这行代码，大约在47行：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> ($config[<span class="string">'customize_config'</span>] = string2array($config[<span class="string">'customize_config'</span>])) &#123;</span><br></pre></td></tr></table></figure>
+
+<p>在上边这行代码下添加下边两行代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">pc_base::load_sys_class(<span class="string">'attachment'</span>,<span class="string">''</span>,<span class="number">0</span>);</span><br><span class="line">$attachment = <span class="keyword">new</span> attachment(<span class="string">'collection'</span>,<span class="string">'0'</span>,get_siteid());</span><br></pre></td></tr></table></figure>
+
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>在上边代码往下大约3~4行，可以找到下边这行代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$data[$v[<span class="string">'en_name'</span>]] = <span class="keyword">self</span>::replace_item(<span class="keyword">self</span>::cut_html($html, $rule[<span class="number">0</span>], $rule[<span class="number">1</span>]), $v[<span class="string">'html_rule'</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>然后在下边这行代码下边添加以下代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(strpos($data[$v[<span class="string">'en_name'</span>]],<span class="string">'/uploadfile'</span>) !==<span class="keyword">false</span> || strpos($data[$v[<span class="string">'en_name'</span>]],<span class="string">'/uploads'</span>) !==<span class="keyword">false</span>)&#123;</span><br><span class="line"></span><br><span class="line">    $scheme = parse_url($url, PHP_URL_SCHEME);</span><br><span class="line">    $hostname = parse_url($url,PHP_URL_HOST);</span><br><span class="line">    $imgurl = <span class="string">"&lt;img src='"</span>.$scheme.<span class="string">"://"</span>.$hostname.$data[$v[<span class="string">'en_name'</span>]].<span class="string">"' /&gt;"</span>;</span><br><span class="line"></span><br><span class="line">    $imgurl = $attachment-&gt;download($data[$v[<span class="string">'en_name'</span>]], $imgurl,$config[<span class="string">'watermark'</span>]);</span><br><span class="line">    preg_match(<span class="string">'/&lt;img.+src=\'?(.+\.(jpg|gif|bmp|bnp|png))\'?.+&gt;/i'</span>,$imgurl,$match);</span><br><span class="line">    $data[$v[<span class="string">'en_name'</span>]] = parse_url($match[<span class="number">1</span>],PHP_URL_PATH);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中uploadfile|uploads是判断采集网址图片的地址的，可根据采集网址上传地址的命名去进行适当的调整。</p>
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>在PHPCMS采集管理，自定义规则中添加你的规则即可，此方法只对自定义规则生效。</p>
+<h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><p>代码简陋，存在诸多不足，后续我再优化上传。</p>
+<h2 id="方法二：鉴戒方法"><a href="#方法二：鉴戒方法" class="headerlink" title="方法二：鉴戒方法"></a>方法二：鉴戒方法</h2><h3 id="第一步-1"><a href="#第一步-1" class="headerlink" title="第一步"></a>第一步</h3><p>跟以上文件一样，方法二与第一种方法不一致地方为，第一种方法使用的是PHPCMS的原生类，第二种方法使用的是远程图片本地化的额外方法。</p>
+<p>在该类最下边新添加远程图片本地化的方法，该方法是网上Copy过来的，感谢代码贡献者，才能让大家使用到此方法，方法如下：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*功能：php完美实现下载远程图片保存到本地</span></span><br><span class="line"><span class="comment">*参数：文件url,保存文件目录,保存文件名称，使用的下载方式</span></span><br><span class="line"><span class="comment">*当保存文件名称为空时则使用远程文件原来的名称</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getImage</span><span class="params">($url,$save_dir=<span class="string">''</span>,$filename=<span class="string">''</span>,$type=<span class="number">0</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(trim($url)==<span class="string">''</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">array</span>(<span class="string">'file_name'</span>=&gt;<span class="string">''</span>,<span class="string">'save_path'</span>=&gt;<span class="string">''</span>,<span class="string">'error'</span>=&gt;<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(trim($save_dir)==<span class="string">''</span>)&#123;</span><br><span class="line">        $save_dir=<span class="string">'./'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(trim($filename)==<span class="string">''</span>)&#123;<span class="comment">//保存文件名</span></span><br><span class="line">        $ext=strrchr($url,<span class="string">'.'</span>);</span><br><span class="line">        <span class="keyword">if</span>($ext!=<span class="string">'.gif'</span>&amp;&amp;$ext!=<span class="string">'.jpg'</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">array</span>(<span class="string">'file_name'</span>=&gt;<span class="string">''</span>,<span class="string">'save_path'</span>=&gt;<span class="string">''</span>,<span class="string">'error'</span>=&gt;<span class="number">3</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        $filename=md5(rand(<span class="number">10</span>,<span class="number">99</span>).time().rand(<span class="number">1000</span>,<span class="number">9999</span>)).$ext;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(<span class="number">0</span>!==strrpos($save_dir,<span class="string">'/'</span>))&#123;</span><br><span class="line">        $save_dir.=<span class="string">'/'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//创建保存目录</span></span><br><span class="line">    <span class="keyword">if</span>(!file_exists($save_dir)&amp;&amp;!mkdir($save_dir,<span class="number">0777</span>,<span class="keyword">true</span>))&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">array</span>(<span class="string">'file_name'</span>=&gt;<span class="string">''</span>,<span class="string">'save_path'</span>=&gt;<span class="string">''</span>,<span class="string">'error'</span>=&gt;<span class="number">5</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//获取远程文件所采用的方法</span></span><br><span class="line">    <span class="keyword">if</span>($type)&#123;</span><br><span class="line">        $ch=curl_init();</span><br><span class="line">        $timeout=<span class="number">5</span>;</span><br><span class="line">        curl_setopt($ch,CURLOPT_URL,$url);</span><br><span class="line">        curl_setopt($ch,CURLOPT_RETURNTRANSFER,<span class="number">1</span>);</span><br><span class="line">        curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,$timeout);</span><br><span class="line">        $img=curl_exec($ch);</span><br><span class="line">        curl_close($ch);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        ob_start();</span><br><span class="line">        readfile($url);</span><br><span class="line">        $img=ob_get_contents();</span><br><span class="line">        ob_end_clean();</span><br><span class="line">    &#125;</span><br><span class="line">    $size=strlen($img);</span><br><span class="line">    $fp2=@fopen($save_dir.$filename,<span class="string">'a'</span>);</span><br><span class="line">    fwrite($fp2,$img);</span><br><span class="line">    fclose($fp2);</span><br><span class="line">    <span class="keyword">unset</span>($img,$url);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">array</span>(<span class="string">'file_name'</span>=&gt;$filename,<span class="string">'save_path'</span>=&gt;$save_dir.$filename,<span class="string">'size'</span>=&gt;$size,<span class="string">'error'</span>=&gt;<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二步-1"><a href="#第二步-1" class="headerlink" title="第二步"></a>第二步</h3><p>方法一的第三步操作，可以找到下边这行代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$data[$v[<span class="string">'en_name'</span>]] = <span class="keyword">self</span>::replace_item(<span class="keyword">self</span>::cut_html($html, $rule[<span class="number">0</span>], $rule[<span class="number">1</span>]), $v[<span class="string">'html_rule'</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>然后在下边这行代码下边添加以下代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(strpos($data[$v[<span class="string">'en_name'</span>]],<span class="string">'/uploadfile'</span>) !==<span class="keyword">false</span> || strpos($data[$v[<span class="string">'en_name'</span>]],<span class="string">'/uploads'</span>) !==<span class="keyword">false</span>)&#123;</span><br><span class="line"></span><br><span class="line">    $scheme = parse_url($url, PHP_URL_SCHEME);</span><br><span class="line">    $hostname = parse_url($url,PHP_URL_HOST);</span><br><span class="line">    $imgurl = .$scheme.<span class="string">"://"</span>.$hostname.$data[$v[<span class="string">'en_name'</span>]];</span><br><span class="line">   	$return = <span class="keyword">self</span>::getImage($imgurl,<span class="string">"uploadfile/caiimg"</span>);</span><br><span class="line">   	$data[$v[<span class="string">'en_name'</span>]] = $return[<span class="string">'save_path'</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中getImage方法需要配置你的图片上传地址，想自定义文件名名称的话可以在方法中自行修改。</p>
+<h2 id="备注-1"><a href="#备注-1" class="headerlink" title="备注"></a>备注</h2><p>以上就是关于PHPCMS图片采集我自己琢磨出的俩个方法，方法存在不足以及BUG，大家有好的改进或者实现方式可以评论下方，我一定去尝试改进和学习，谢谢大家。</p>
+<blockquote>
+<p>如果没能一次成功，那就叫它1.0版吧。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>phpcms</category>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>phpcms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mysql历史语句</title>
+    <url>/2020/05/26/sqlhistory/</url>
+    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/05/26/sqlhistory/mysql.jpg" class></div>
+
+<a id="more"></a>
+
+<h1 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h1><h2 id="从一个表插入到另一个表"><a href="#从一个表插入到另一个表" class="headerlink" title="从一个表插入到另一个表"></a>从一个表插入到另一个表</h2><p>从一个表的数据插入到另一个表中，过程中可以进行其他的操作（拼接字符串）或者是条件判断。</p>
+<p>附语法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">concat_ws(separator, str1, str2, ...)</span><br></pre></td></tr></table></figure>
+
+<p>说明：第一个参数指定分隔符。需要注意的是分隔符不能为null，如果为null，则返回结果为null。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">insert into &#96;cmsv9_hits&#96; (hitsid,catid,updatetime) </span><br><span class="line">SELECT CONCAT_WS(&quot;-&quot;,&quot;c&quot;,&quot;1&quot;,id) as hitsid,catid,updatetime from &#96;cmsv9_news&#96; where catid in (17,18) and id &gt; 6441;</span><br></pre></td></tr></table></figure>
+
+<h2 id="清空数据表，重新从1自增"><a href="#清空数据表，重新从1自增" class="headerlink" title="清空数据表，重新从1自增"></a>清空数据表，重新从1自增</h2><p>清空数据表，且主键重新从1开始自增，相比Delete，Truncate不可加Where语句，删除的话Delete更加灵活一点。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TRUNCATE TABLE Tablename;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询两个表相关联的数据"><a href="#查询两个表相关联的数据" class="headerlink" title="查询两个表相关联的数据"></a>查询两个表相关联的数据</h2><p>从一个表中查询另一个表中包含关系的数据关联SQL语句。</p>
+<p>附语法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">concat(str1, str2,...)</span><br></pre></td></tr></table></figure>
+
+<p>功能：将多个字符串连接成一个字符串。</p>
+<p>返回结果为连接参数产生的字符串，如果有任何一个参数为null，则返回值为null。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT n.id,n.title,s.title AS school FROM &#96;cmsv9_news&#96; AS n LEFT JOIN &#96;cmsv9_school&#96; as s ON n.title LIKE CONCAT(&quot;%&quot;,s.title,&quot;%&quot;) WHERE n.subhead &#x3D; &#39;&#39;</span><br></pre></td></tr></table></figure>
+
+<p>附加修改SQL</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">UPDATE &#96;cmsv9_news&#96; AS n LEFT JOIN &#96;cmsv9_school&#96; as s ON n.title LIKE CONCAT(&quot;%&quot;,s.title,&quot;%&quot;) SET n.subhead &#x3D; s.title WHERE</span><br><span class="line">n.subhead &#x3D; &#39;&#39; AND n.title &lt;&gt; &#39;&#39; AND s.title &lt;&gt; &#39;&#39;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询结果串联成字符串"><a href="#查询结果串联成字符串" class="headerlink" title="查询结果串联成字符串"></a>查询结果串联成字符串</h2><p>查询出来的结果串联成一个字符串，方便二次进行函数处理。</p>
+<p>附语法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">group_concat([DISTINCT] 要连接的字段 [Order BY ASC&#x2F;DESC 排序字段] [Separator &#39;分隔符&#39;])</span><br></pre></td></tr></table></figure>
+
+<p>附加SQL：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT GROUP_CONCAT(id) as idall FROM &#96;qhky_arctype&#96; WHERE reid &#x3D; &#39;15&#39;</span><br></pre></td></tr></table></figure>
+
+<p>返回值为Array类型。</p>
+]]></content>
+      <categories>
+        <category>mysql</category>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何预防薅羊毛</title>
+    <url>/2020/06/02/econnoisseur/</url>
+    <content><![CDATA[<img src="/2020/06/02/econnoisseur/hao.jpg" class>
+
+<a id="more"></a>
+
+<h1 id="如何预防薅羊毛？"><a href="#如何预防薅羊毛？" class="headerlink" title="如何预防薅羊毛？"></a>如何预防薅羊毛？</h1><p>关于答题形式或者其他游戏形式奖励真实红包的活动，羊毛党或者不法分子通过肉鸡号大量虚假账号进行注册，套取红包造成用户的直接损失，关于以上自己的一些总结包括网上的一些前辈总结出来的方法，在这里做一个汇总：</p>
+<h2 id="第一点"><a href="#第一点" class="headerlink" title="第一点"></a>第一点</h2><p>进行OPNEID微信信息等验证，有很多肉鸡号是没有姓名和头像的，不确保有些微信存在姓名和头像。</p>
+<h2 id="第二点"><a href="#第二点" class="headerlink" title="第二点"></a>第二点</h2><p>用户从一开始的注册到后来的答题以及领取红包的整体流程要有详细的时间（服务器时间）以及IP的留存，方便比对IP地址。</p>
+<h2 id="第三点"><a href="#第三点" class="headerlink" title="第三点"></a>第三点</h2><p>限制微信红包的金额、每人的次数以及一天红包的上限和微信的防刷等级，防止通过大金额在很短的时间内造成大的损失。</p>
+<h2 id="第四点"><a href="#第四点" class="headerlink" title="第四点"></a>第四点</h2><p>红包在不必要的情况下（延时发放），不要立刻发出去，可以设定在某一个时间段发出去，或者后台审核发出去，给我们自己一个缓冲的时间去处理以及过滤掉一些非法的数据。</p>
+<h2 id="第五点"><a href="#第五点" class="headerlink" title="第五点"></a>第五点</h2><p>整体程序的严谨性和安全性的提高，例如：限制活动的时间，用户的地区，公众号关注等方面。</p>
+<h2 id="第六点"><a href="#第六点" class="headerlink" title="第六点"></a>第六点</h2><p>随机验证码或者手机短信验证码多条件限制等。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上就是总结的关于微信红包的真实案例后的真实想法，通过此次活动能够更加警醒自己对于安全性方面的知识的提高和学习。</p>
+<img src="/2020/06/02/econnoisseur/mianli.jpg" class>]]></content>
+      <categories>
+        <category>project</category>
+        <category>心情</category>
+      </categories>
+      <tags>
+        <tag>project</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>毅力-如何培养自律的习惯</title>
+    <url>/2020/06/16/autonomic/</url>
+    <content><![CDATA[<img src="/2020/06/16/autonomic/autonomic.jpg" class>
+
+<a id="more"></a>
+
+<img src="/2020/06/16/autonomic/autonoimc1.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc2.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc3.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc4.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc5.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc6.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc7.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc8.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc9.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc10.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc11.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc12.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc13.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc14.jpg" class>
+
+<img src="/2020/06/16/autonomic/autonoimc15.jpg" class>]]></content>
+      <categories>
+        <category>reading</category>
+        <category>autonomic</category>
+      </categories>
+      <tags>
+        <tag>reading</tag>
+        <tag>autonomic</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PHPCMS-WHERE条件失效以及分页参数</title>
+    <url>/2020/06/16/phpcms/</url>
+    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/06/16/phpcms/phpcms.jpg" class></div>
+
+<a id="more"></a>
+
+<h1 id="WHERE条件失效"><a href="#WHERE条件失效" class="headerlink" title="WHERE条件失效"></a>WHERE条件失效</h1><p>本次改动针对于列表信息调用时，加入WHERE失效的问题，借鉴了一部分网上的代码片段，解决了该问题，但是实际的过程中又发现了新的问题，是分页的数据和WHERE条件的数据不一致，这次做一个较为完整的修改方案：</p>
+<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>首先找到本次修改调整的文件：phpcms/modules/content/classes/content_tag.class.php</p>
+<p>找到count方法中的：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$sql = $data[<span class="string">'where'</span>];</span><br></pre></td></tr></table></figure>
+
+<p>替换为下边的代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$where = (<span class="keyword">isset</span>($data[<span class="string">'where'</span>])&amp;&amp;(!<span class="keyword">empty</span>($data[<span class="string">'where'</span>])))?<span class="string">' AND '</span>.$data[<span class="string">'where'</span>]:<span class="string">''</span>;</span><br><span class="line">$thumb = intval($data[<span class="string">'thumb'</span>]) ? <span class="string">" AND thumb != ''"</span> : <span class="string">''</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">$this</span>-&gt;category[$catid][<span class="string">'child'</span>]) &#123;</span><br><span class="line">    $catids_str = <span class="keyword">$this</span>-&gt;category[$catid][<span class="string">'arrchildid'</span>];</span><br><span class="line">    $pos = strpos($catids_str,<span class="string">','</span>)+<span class="number">1</span>;</span><br><span class="line">    $catids_str = substr($catids_str, $pos);</span><br><span class="line">    $sql = <span class="string">"status=99"</span>.$where.<span class="string">" AND catid IN ($catids_str)"</span>.$thumb;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    $sql = <span class="string">"status=99"</span>.$where.<span class="string">" AND catid='$catid'"</span>.$thumb;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>还是该文件找到lists方法中的：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$sql = $data[<span class="string">'where'</span>];</span><br></pre></td></tr></table></figure>
+
+<p>替换为下边的代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$where = (<span class="keyword">isset</span>($data[<span class="string">'where'</span>])&amp;&amp;(!<span class="keyword">empty</span>($data[<span class="string">'where'</span>])))?<span class="string">' AND '</span>.$data[<span class="string">'where'</span>]:<span class="string">''</span>;</span><br><span class="line">$thumb = intval($data[<span class="string">'thumb'</span>]) ? <span class="string">" AND thumb != ''"</span> : <span class="string">''</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">$this</span>-&gt;category[$catid][<span class="string">'child'</span>]) &#123;</span><br><span class="line">    $catids_str = <span class="keyword">$this</span>-&gt;category[$catid][<span class="string">'arrchildid'</span>];</span><br><span class="line">    $pos = strpos($catids_str,<span class="string">','</span>)+<span class="number">1</span>;</span><br><span class="line">    $catids_str = substr($catids_str, $pos);</span><br><span class="line">    $sql = <span class="string">"status=99"</span>.$where.<span class="string">" AND catid IN ($catids_str)"</span>.$thumb;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    $sql = <span class="string">"status=99"</span>.$where.<span class="string">" AND catid='$catid'"</span>.$thumb;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="分页参数"><a href="#分页参数" class="headerlink" title="分页参数"></a>分页参数</h1><p>本次改动针对自定义参数的分页时无参数的情况的修改。</p>
+<h2 id="第一步-1"><a href="#第一步-1" class="headerlink" title="第一步"></a>第一步</h2><p>需要在pc:content 前边加上下边这段代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&#123;php $urlrule = makeurlrule();&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="第二步-1"><a href="#第二步-1" class="headerlink" title="第二步"></a>第二步</h2><p>在pc:content的中加上下边这个参数：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">urlrule=<span class="string">"$urlrule"</span></span><br></pre></td></tr></table></figure>
+
+<p>再刷新的时候，会发现参数可以正常的被调用。</p>
+]]></content>
+      <categories>
+        <category>phpcms</category>
+        <category>代码</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>phpcms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DataGrip快捷操作</title>
+    <url>/2020/06/22/datagrip/</url>
+    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/06/22/datagrip/datagrip.jpg" class></div>
+
+<a id="more"></a>
+
+<h1 id="DataGrip快捷键"><a href="#DataGrip快捷键" class="headerlink" title="DataGrip快捷键"></a>DataGrip快捷键</h1><blockquote>
+<p>管理数据库连接：Ctrl+Alt+Shift+S</p>
+</blockquote>
+<blockquote>
+<p>文件视图窗口：Alt+2</p>
+</blockquote>
+<blockquote>
+<p>进入一个文件：Ctrl+Shift+N</p>
+</blockquote>
+<blockquote>
+<p>打开最近的文件：Ctrl+E</p>
+</blockquote>
+<blockquote>
+<p>导航栏：Alt+Home</p>
+</blockquote>
+<blockquote>
+<p>全局搜索：双击Shift </p>
+</blockquote>
+<blockquote>
+<p>Ctrl+Enter：执行选中的SQL语句</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+Shift+左右箭头：调整列宽度（选中行，可以调整所有列的宽度）</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+Y：删除行</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+Delete：删除结尾单词</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+Backspace：删除开头单词</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+D：选择复制行</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+N：进入某个表（按name）</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+G：进入行或列</p>
+</blockquote>
+<blockquote>
+<p>Shift+f6:  变量重命名（弹出重命名对话框）</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+Shift+U:  大小写自动转换（字段名或者表名）</p>
+</blockquote>
+<blockquote>
+<p>Ctrl+Shift+L:  sql格式化（选中需要格式化的代码）</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>代码</category>
+        <category>datagrip</category>
+        <category>jetbrains</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>datagrip</tag>
+        <tag>jetbrains</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>99个心理学常识</title>
+    <url>/2020/07/01/psychology/</url>
+    <content><![CDATA[<img src="/2020/07/01/psychology/psychology.jpg" class>
+
+<a id="more"></a>
+
+<h1 id="99个心理学常识"><a href="#99个心理学常识" class="headerlink" title="99个心理学常识"></a>99个心理学常识</h1><h2 id="告别误解，走进真实的心理学"><a href="#告别误解，走进真实的心理学" class="headerlink" title="告别误解，走进真实的心理学"></a>告别误解，走进真实的心理学</h2><h3 id="1-心理学是伪科学？谁告诉你的"><a href="#1-心理学是伪科学？谁告诉你的" class="headerlink" title="1.心理学是伪科学？谁告诉你的"></a>1.心理学是伪科学？谁告诉你的</h3><p>世界上不存在瞬间愈病的药，任何治疗都需要时间和过程，心理咨询也是一样的。正所谓“冰冻三尺非一日之寒”，要融化三尺冰块不可能一蹴而就。</p>
+<h3 id="2-别再把算命和心理学扯一起了"><a href="#2-别再把算命和心理学扯一起了" class="headerlink" title="2.别再把算命和心理学扯一起了"></a>2.别再把算命和心理学扯一起了</h3><p>求助于算命的人，往往都是迷失自我的人，容易受到外界暗示。当他们处于情绪低落、失意的时候，对生活丧失了控制感，安全感也受到了影响，心理依赖性增加，受暗示性也比平时更强。</p>
+<h3 id="3-对心理学家撒谎，会不会被识破"><a href="#3-对心理学家撒谎，会不会被识破" class="headerlink" title="3.对心理学家撒谎，会不会被识破"></a>3.对心理学家撒谎，会不会被识破</h3><p>心理学家通常都是依据人的情绪表现和外在行为等，来研究人的心理。或许，他们可以根据某个人的外在特征或测验结果，来推测这个人的内部心理特征。除非他具备超感知能力，否则的话，任凭他的经验有多丰富，也不可能一眼就看穿他人的内心世界，更无法迅速判断一个人是否在说谎。</p>
+<h3 id="4-是不是只有变态的人才去做心理咨询"><a href="#4-是不是只有变态的人才去做心理咨询" class="headerlink" title="4.是不是只有变态的人才去做心理咨询"></a>4.是不是只有变态的人才去做心理咨询</h3><p>大多数心理学研究都是针对正常人的，比如儿童情绪的发展、性别差异、智力、老年人心理和跨文化的比较等，这都是心理学研究的内容。精神病学属于医学领域，精神病学家是医生，他们要面对的是心理失常的人，也就是所谓的“变态者”。精神病学家跟其他医生一样，在治疗精神疾病时需要使用药物，这一点是任何心理咨询师都不会做的事。咨询师虽然也关注精神病人，但绝对不会使用药物对其进行治疗。</p>
+<h3 id="5-你是心理学家？给我催眠吧"><a href="#5-你是心理学家？给我催眠吧" class="headerlink" title="5.你是心理学家？给我催眠吧"></a>5.你是心理学家？给我催眠吧</h3><p>在催眠状态下，受术者不会完全丧失个人意志，依然可以说谎，且谎言未必能被检测出来。</p>
+<p>你永远无法催眠一个不愿被催眠的人。</p>
+<h3 id="6-心理学不就是解梦分析吗"><a href="#6-心理学不就是解梦分析吗" class="headerlink" title="6.心理学不就是解梦分析吗"></a>6.心理学不就是解梦分析吗</h3><p>解梦只是精神分析心理学家所使用的心理治疗技术之一。</p>
+<h2 id="从零开始，了解心理学常识"><a href="#从零开始，了解心理学常识" class="headerlink" title="从零开始，了解心理学常识"></a>从零开始，了解心理学常识</h2><h3 id="7-心理学发展史：聊聊心理学的前世今生"><a href="#7-心理学发展史：聊聊心理学的前世今生" class="headerlink" title="7.心理学发展史：聊聊心理学的前世今生"></a>7.心理学发展史：聊聊心理学的前世今生</h3><p>直到1879年，冯特在德国莱比锡大学建立了世界上第一个心理学实验室，才标志着科学心理学的诞生。从那个时候算起，迄今为止心理学也只有一百多年的短暂历史。所以说，心理学既是一门古老的科学，又是一门年轻的科学。</p>
+<h3 id="8-派系之争：听起来都有道理耶"><a href="#8-派系之争：听起来都有道理耶" class="headerlink" title="8.派系之争：听起来都有道理耶"></a>8.派系之争：听起来都有道理耶</h3><ul>
+<li>内容心理学派</li>
+<li>意动心理学派</li>
+<li>构造主义心理学派</li>
+<li>机能主义学派</li>
+<li>格式塔学派</li>
+<li>行为主义学派</li>
+<li>精神分析学派</li>
+<li>人本主义学派</li>
+<li>日内瓦学派</li>
+</ul>
+<h3 id="9-心理学大咖：他们的名字值得一记"><a href="#9-心理学大咖：他们的名字值得一记" class="headerlink" title="9.心理学大咖：他们的名字值得一记"></a>9.心理学大咖：他们的名字值得一记</h3><ul>
+<li>心理学之父——冯特</li>
+<li>条件反射的发现者——巴甫洛夫</li>
+<li>精神分析大师——弗洛伊德</li>
+<li>分析心理学先驱——荣格</li>
+<li>动物心理学首创者——桑代克</li>
+<li>环境决定论者——华生</li>
+<li>儿童心理学之父——皮亚杰</li>
+<li>需要层次理论——马斯洛</li>
+<li>人本主义的代表——罗杰斯</li>
+</ul>
+<h3 id="10-感觉剥夺：人丧失感觉会怎么样"><a href="#10-感觉剥夺：人丧失感觉会怎么样" class="headerlink" title="10.感觉剥夺：人丧失感觉会怎么样"></a>10.感觉剥夺：人丧失感觉会怎么样</h3><p>从定义上说，感觉是人脑对事物个别属性的认识，是来自于外界的刺激作用于人的感觉器官产生。我们对客观世界的认识，通常都是从认识事物的一些简单属性开始的，头脑接受并加工了这些属性，进而认识了这些属性，就形成了感觉。</p>
+<p>爱孩子，就把感觉还给孩子，让他们在不断尝试中成长。带着你的爱，带着你的眼，站在一旁观看，适当的时候给予引导，这才是最好的爱。</p>
+<h3 id="11-听觉：有了对比，才会印象深刻"><a href="#11-听觉：有了对比，才会印象深刻" class="headerlink" title="11.听觉：有了对比，才会印象深刻"></a>11.听觉：有了对比，才会印象深刻</h3><p>所谓感觉对比，是由于背景不同的同一刺激可能会令我们产生感觉上的差异。比如：刚吃完甜的奶油蛋糕，再吃橘子的话，会觉得橘子特别酸；同时听到一个高音和一个低音，低音对高音的掩蔽效果更强，我们更容易听到低音。</p>
+<h3 id="12-知觉选择性：总有你注意不到的东西"><a href="#12-知觉选择性：总有你注意不到的东西" class="headerlink" title="12.知觉选择性：总有你注意不到的东西"></a>12.知觉选择性：总有你注意不到的东西</h3><p>同样的环境，同样的街道，不同的人看到的是不同的事物。</p>
+<h3 id="13-错觉：你看见的不一定是真的"><a href="#13-错觉：你看见的不一定是真的" class="headerlink" title="13.错觉：你看见的不一定是真的"></a>13.错觉：你看见的不一定是真的</h3><p>在知觉的一些组织原则上，往往会产生一些错觉，就是对客观事物不正确的知觉。虽然你亲眼看见了一些东西，但那未必是真的。</p>
+<p>时间有客观的长度，但在人心里也有相对的长度，它跟客观长度是有出入的，因为人的心理是复杂的。</p>
+<h3 id="14-意识和潜意识：一个是主人，一个是仆人"><a href="#14-意识和潜意识：一个是主人，一个是仆人" class="headerlink" title="14.意识和潜意识：一个是主人，一个是仆人"></a>14.意识和潜意识：一个是主人，一个是仆人</h3><p>人们的行为通常是为了实现自己所期待的结果，因此他们相信，是意志在决定着自己的行为。但是，世上并不只存在着有意识的意念，在更多情况下，我们是在自己都不知道想干什么的情况下做出行动的。</p>
+<h3 id="15-习得性无助：被拐卖的人，为何会认命"><a href="#15-习得性无助：被拐卖的人，为何会认命" class="headerlink" title="15.习得性无助：被拐卖的人，为何会认命"></a>15.习得性无助：被拐卖的人，为何会认命</h3><p>习得性无助，是美国心理学家塞利格曼1967年在研究动物时提出的，即因为重复的失败或惩罚而造成的听任摆布的行为。</p>
+<p>如果一个人面对不可控的情境时，认识到无论怎样努力，都无法改变不可避免的结果后，就会产生放弃努力的消极认知和行为，表现出无助、无望和抑郁等消极情绪。习得性无助会进一步恶化当事人的身心状态，影响他的理性判断能力。</p>
+<h3 id="16-记忆：偷偷告诉你，它是一个大骗子"><a href="#16-记忆：偷偷告诉你，它是一个大骗子" class="headerlink" title="16.记忆：偷偷告诉你，它是一个大骗子"></a>16.记忆：偷偷告诉你，它是一个大骗子</h3><p>德国心理学家艾宾浩斯通过对无意义音节的记忆实验的记录，发现了一种普遍存在的遗忘规律，即“艾宾浩斯曲线”：在学习的20分钟后，遗忘达到了41.8%，而在31天后遗忘达到了78.9%。所以说，记忆随着时光流走，遗忘一直都在发生。</p>
+<h3 id="17-本能：说实话，你管得住自己吗"><a href="#17-本能：说实话，你管得住自己吗" class="headerlink" title="17.本能：说实话，你管得住自己吗"></a>17.本能：说实话，你管得住自己吗</h3><p>弗洛伊德在人格理论中将人格分为三个部分：本我、自我和超我。</p>
+<p>本我，即我们个性中最原始的部分。本我的原则是追求快乐，完全按照自己的本能去做事。</p>
+<p>超我，即可进行道德判断和自我控制，能按照社会准则做事。</p>
+<p>自我，即基于本我产生的，在自我支配下，会运用已经学到的规则约束本我，但同时又用现实的客观条件来调节本我和超我之间的矛盾，让自己既能理性地获得快乐，又能避免痛苦。</p>
+<h3 id="18-智商：是与生俱来，还是后天培养"><a href="#18-智商：是与生俱来，还是后天培养" class="headerlink" title="18.智商：是与生俱来，还是后天培养"></a>18.智商：是与生俱来，还是后天培养</h3><p>众所周知，爱因斯坦是犹太裔。科学家格雷戈里·科克伦博士认为，犹太人比其他人类族群更聪明，导致这一结果的，正是自然选择。犹太人一直生活在动荡不安的环境中，早期遭受过罗马统治的压迫，中世纪遭受法律歧视，只好从事与金钱相关的职业，不允许与非犹太人通婚，等等。科克伦博士强调，欧洲犹太人从事的职业都是高度重视智力因素的职业。</p>
+<h3 id="19-学习：其实，我们都能变得更聪明"><a href="#19-学习：其实，我们都能变得更聪明" class="headerlink" title="19.学习：其实，我们都能变得更聪明"></a>19.学习：其实，我们都能变得更聪明</h3><ul>
+<li>星期一：徒步或骑车上班，晚餐以鱼肉为主。</li>
+<li>星期二：学习几个陌生的单词，用它造句对话。</li>
+<li>星期三：跑步健身或冥想，和陌生人交流。</li>
+<li>星期四：换一条路线上班，玩脑筋急转弯的游戏。</li>
+<li>星期五：告别咖啡和酒精，把要买的东西列出清单。</li>
+<li>星期六：不用惯手刷牙，洗澡的时候闭眼。</li>
+<li>星期日：玩拼字游戏，在公园散步。</li>
+</ul>
+<p>试验过后，多数受试者都表示，他们变得聪明了一些，其中有些人的智商竟然提高了40%！这说明，智力可以通过后天的训练来提升，如改变饮食习惯、增强情商、多进行创意思考等。</p>
+<h2 id="颠覆思维，重新认识你自己"><a href="#颠覆思维，重新认识你自己" class="headerlink" title="颠覆思维，重新认识你自己"></a>颠覆思维，重新认识你自己</h2><h3 id="20-自我知觉：认识自己，是世界上最难的事"><a href="#20-自我知觉：认识自己，是世界上最难的事" class="headerlink" title="20.自我知觉：认识自己，是世界上最难的事"></a>20.自我知觉：认识自己，是世界上最难的事</h3><p>准确的自我知觉，可以有效率地帮助我们进行社会调试，让心理和行为朝着良好的方向发展。一个人越了解自己，就越有力量，因为他知道如何扬长避短，如何更好地发挥出自己的潜力。</p>
+<h3 id="21-思维定式：天才也会犯常识性的错误"><a href="#21-思维定式：天才也会犯常识性的错误" class="headerlink" title="21.思维定式：天才也会犯常识性的错误"></a>21.思维定式：天才也会犯常识性的错误</h3><p>从心理学上解释，这种效应是人们局限于既有信息或认识的现象，它会束缚人的思维，让思维按照固有的路径展开。思维定式有时能帮我们解决问题，但有时也会阻碍我们解决问题。</p>
+<h3 id="22-认知失调：为什么吃不着葡萄说葡萄酸"><a href="#22-认知失调：为什么吃不着葡萄说葡萄酸" class="headerlink" title="22.认知失调：为什么吃不着葡萄说葡萄酸"></a>22.认知失调：为什么吃不着葡萄说葡萄酸</h3><p>我们总希望自己的心理处于平衡状态中，但生活中总有一些东西是求而不得的，此时就会出现认知失调。为了重新达到心理平衡的状态，我们必须想办法去降低目标的诱惑性，或是转移自己的注意力。</p>
+<h3 id="23-人格面具：我们都想表现理想化的自己"><a href="#23-人格面具：我们都想表现理想化的自己" class="headerlink" title="23.人格面具：我们都想表现理想化的自己"></a>23.人格面具：我们都想表现理想化的自己</h3><p>所谓人格，是指一个人与社会环境相互作用时表现出的一种独特的行为模式、思维模式和情绪反应的特征；而人格面具是一个人公开展示的一面，是个体内在世界和外在世界的分界点，由瑞士心理学家荣格提出。</p>
+<h3 id="24-周哈里窗：到底哪一个“我”才是真的"><a href="#24-周哈里窗：到底哪一个“我”才是真的" class="headerlink" title="24.周哈里窗：到底哪一个“我”才是真的"></a>24.周哈里窗：到底哪一个“我”才是真的</h3><ul>
+<li>开放我——左上角的那一扇窗，也称为公众我，属于自由活动领域。这是自我最基本的信息，也是自己清楚别人也知道的部分，如性别、外貌、职业、爱好、特长等。开放我的大小取决于自我心灵开放的程度、个性张扬的力度、交际的广度、他人的关注度、开放信息的利害关系等。</li>
+<li>盲目我——右上角的那一扇窗，属于盲目领域。这是自己不知道而他人知道的部分，如有些人习惯失信却不自知，有爱眨眼的小动作自己也感觉不到。盲目我的大小与自我观察、自我反省的能力有关，通常来说，善于内省的人盲目我比较小。</li>
+<li>隐藏我——左下角的那一扇窗，也称隐私我，属于隐藏领域。这是自己知道而他人不知道的部分，也就是我们常说的隐私，不愿意或不想让别人知道的事实或心理，如身份、缺点、往事、痛苦、愧疚、尴尬等。一般来说，心理承受力较强的人，隐忍、自闭、胆怯、虚伪的人，隐藏我更多一些。</li>
+<li>未知我——右下角的那一扇窗，也称潜在我，属于处女领域，是自己和别人都不知道的部分，通常是指潜在的能力或特性。如一个人通过训练或学习，可能获得的知识与技能，或是在特定的条件下才会展示出来的能力，这也包含着弗洛伊德说的潜意识层面，就像藏在海水下面的冰山，巨大而又不易被看到。</li>
+</ul>
+<h3 id="25-角色效应：你们是孪生姐妹，怎么性格完全不同"><a href="#25-角色效应：你们是孪生姐妹，怎么性格完全不同" class="headerlink" title="25.角色效应：你们是孪生姐妹，怎么性格完全不同"></a>25.角色效应：你们是孪生姐妹，怎么性格完全不同</h3><p>人们以不同的社会角色参加活动，这种因角色不同而引起的心理或行为变化被称为角色效应。放眼望去，不只是孪生子才有“角色效应”，普通人也会受到角色的影响。比如，你扮演“老师”的角色，就会受限“为人师表”的角色要求；你充当“警察”就会受到“英勇无畏”等角色要求的影响。</p>
+<h3 id="26-自我宽恕：犯错的时候，有没有觉得是被逼的"><a href="#26-自我宽恕：犯错的时候，有没有觉得是被逼的" class="headerlink" title="26.自我宽恕：犯错的时候，有没有觉得是被逼的"></a>26.自我宽恕：犯错的时候，有没有觉得是被逼的</h3><p>这种行为在心理学上叫作“自我宽恕”，指的是我们对于自己的错误、缺点总是可以很轻易地原谅，而对于别人的却不行。在与他人发生冲突时，人很难站在客观的立场上审视彼此的错误，而只会站在自己的立场上，认为自己是正确的、是好人，与自己对立的都是坏人。哪怕是犯下十恶不赦之罪的人，也会为自己找借口。</p>
+<h3 id="27-不值得定律：选择你所爱的，爱你所选择的"><a href="#27-不值得定律：选择你所爱的，爱你所选择的" class="headerlink" title="27.不值得定律：选择你所爱的，爱你所选择的"></a>27.不值得定律：选择你所爱的，爱你所选择的</h3><p>选择自己所爱的，爱自己所选择的；不值得做的事不要做，值得做的事就要把它做好。</p>
+<h3 id="28-控制错觉：自己选的彩票，比别人选的好"><a href="#28-控制错觉：自己选的彩票，比别人选的好" class="headerlink" title="28.控制错觉：自己选的彩票，比别人选的好"></a>28.控制错觉：自己选的彩票，比别人选的好</h3><p>对于那些非常偶然的事，人们以为凭借自己的能力可以支配，这种感觉被称为“控制错觉”。这种错觉的产生，是由于我们平常的生活都是由自己来支配的，因而人们就把这种错觉扩展到了偶然性的事件上。</p>
+<h3 id="29-心理投射：外面没有别人，只有你自己"><a href="#29-心理投射：外面没有别人，只有你自己" class="headerlink" title="29.心理投射：外面没有别人，只有你自己"></a>29.心理投射：外面没有别人，只有你自己</h3><p>这在心理学上被称为“心理投射”，是一种“以己度人”的心理倾向，把自己的感情、意志、特性、态度等加到其他对象的身上，从而遮蔽了客观的真实面貌。这种倾向，通常都是无意识的，因为很多时候，我们对自己真实的想法讳莫如深，但借助一个中性的客体，却往往能吐露出真情。</p>
+<p>心理学家荣格认为，心理投射是一种抵抗焦虑的防御机制，其表现就是把一种存在于自己身上的品质或态度潜意识地归咎于另一个人。</p>
+<h2 id="掌控平衡，身心灵的三部曲"><a href="#掌控平衡，身心灵的三部曲" class="headerlink" title="掌控平衡，身心灵的三部曲"></a>掌控平衡，身心灵的三部曲</h2><h3 id="30-情绪共鸣：军心涣散，竟是因为一首曲子"><a href="#30-情绪共鸣：军心涣散，竟是因为一首曲子" class="headerlink" title="30.情绪共鸣：军心涣散，竟是因为一首曲子"></a>30.情绪共鸣：军心涣散，竟是因为一首曲子</h3><p>这里涉及心理学中的“情绪共鸣”原理：在外界的刺激下，一个人的情绪和情感的内部状态和外部表现，能够影响和感染他人，使其产生相同或相似的情感反应。</p>
+<p>当我们心理出现问题时，可以利用良好的情绪来感染不好的情绪，让情绪恢复到良好的状态。</p>
+<h3 id="31-厌恶心理：有讨厌的东西，不都是坏事儿"><a href="#31-厌恶心理：有讨厌的东西，不都是坏事儿" class="headerlink" title="31.厌恶心理：有讨厌的东西，不都是坏事儿"></a>31.厌恶心理：有讨厌的东西，不都是坏事儿</h3><p>果仔细分析厌恶的心理活动，就会发现它也不都是一件坏事儿。心理学理论认为，回避和厌恶本身，往往可以产生自身防卫的效果，它说明人在一定条件下的行为，是经过选择的结果，而不是盲目所为。</p>
+<p>所以说，有厌恶情绪不总是坏的，有时它会提醒我们，什么该做，什么不该做。</p>
+<h3 id="32-安慰剂效应：我进了牙科诊所，就觉得牙痛好多了"><a href="#32-安慰剂效应：我进了牙科诊所，就觉得牙痛好多了" class="headerlink" title="32.安慰剂效应：我进了牙科诊所，就觉得牙痛好多了"></a>32.安慰剂效应：我进了牙科诊所，就觉得牙痛好多了</h3><p>有病还是得去医院，要正确对待，不能单纯地依靠自我宽慰，或是向外界寻求“安慰剂”。</p>
+<h3 id="33-霍桑效应：难受别憋着，人都得学会发泄"><a href="#33-霍桑效应：难受别憋着，人都得学会发泄" class="headerlink" title="33.霍桑效应：难受别憋着，人都得学会发泄"></a>33.霍桑效应：难受别憋着，人都得学会发泄</h3><p>霍桑效应，也称为宣泄效应。对于职场人来说，工作的过程就是积累压力的过程，每个人的心理承受能力都是有限的，若不及时排解压力，就会被压垮。所以，工作一段时间后，就得适当地宣泄一下，这样才能维持身心的平衡，更好地处理问题。</p>
+<h3 id="34-叶克斯-多德森定律：动机太强了，往往事与愿违"><a href="#34-叶克斯-多德森定律：动机太强了，往往事与愿违" class="headerlink" title="34.叶克斯-多德森定律：动机太强了，往往事与愿违"></a>34.叶克斯-多德森定律：动机太强了，往往事与愿违</h3><p>个体智力活动的效率与其相应的焦虑水平呈U形曲线的函数关系，即随着焦虑水平的增加，个体积极性、主动性和克服困难的意志力会不断增强，此时焦虑水平对效率起到促进作用；当焦虑水平为中等时，能力发挥的效率最高；当焦虑水平超过了一定限度，过强的焦虑会对学习和能力的发挥产生阻碍作用。</p>
+<h3 id="35-心理摆效应：情绪是个善变狂，你得学会控制它"><a href="#35-心理摆效应：情绪是个善变狂，你得学会控制它" class="headerlink" title="35.心理摆效应：情绪是个善变狂，你得学会控制它"></a>35.心理摆效应：情绪是个善变狂，你得学会控制它</h3><p>有一些患有精神疲倦、情绪低落等症状的患者，每隔28天就会来治疗一次，他们将28天称为“情绪定律”，认为每个人从出生之日起，情绪都以28天为周期，发生从高潮、临界到低潮的循环变化。</p>
+<h3 id="36-精神胜利法：生活那么难，要懂得自我安慰"><a href="#36-精神胜利法：生活那么难，要懂得自我安慰" class="headerlink" title="36.精神胜利法：生活那么难，要懂得自我安慰"></a>36.精神胜利法：生活那么难，要懂得自我安慰</h3><p>当遇到的困难难以排解时，我们不妨利用一下阿Q的精神胜利法，把那些坏情绪转移走，不去想它、不去碰它，去做自己平时最想做而又能产生愉快体验的事，比如听音乐、看电影、跳舞、打球、旅行等，用这些快乐的事来充实自己的时间，逐步淡化心里的烦恼。</p>
+<p>一是时空转移，现在遇到的问题，换到彼时来消解；二是心理转移，不强化那些刺激情绪而又难以摆脱的烦恼，用积极的情绪来抵消消极的情绪。</p>
+<h3 id="37-詹森效应：不是比赛太难，是你太恐惧"><a href="#37-詹森效应：不是比赛太难，是你太恐惧" class="headerlink" title="37.詹森效应：不是比赛太难，是你太恐惧"></a>37.詹森效应：不是比赛太难，是你太恐惧</h3><p>有些人卓尔不群，平时都是佼佼者，他在心理上就认为，只能成功不能失败。由于赛场的特殊性，导致心理包袱过重，束缚了潜能的发挥。要避免詹森效应带来的消极影响，最重要的就是积极主动地克服恐惧。</p>
+<h3 id="38-瓦伦达效应：别想太多，该做什么就做什么"><a href="#38-瓦伦达效应：别想太多，该做什么就做什么" class="headerlink" title="38.瓦伦达效应：别想太多，该做什么就做什么"></a>38.瓦伦达效应：别想太多，该做什么就做什么</h3><p>社会心理学家把这种专注于事情本身、不患得患失的心态叫作瓦伦达心态，并对其做了总结：任何人想要做好一件事情，先要专注该事情本身，不要考虑与该事情无关或者相关的其他事情。</p>
+<h3 id="39-身体与情绪：为什么假装生气，最后会真生气"><a href="#39-身体与情绪：为什么假装生气，最后会真生气" class="headerlink" title="39.身体与情绪：为什么假装生气，最后会真生气"></a>39.身体与情绪：为什么假装生气，最后会真生气</h3><p>心理学家詹姆斯就提出了这样的理论：我们之所以快乐是因为我们笑了，悲伤是因为我们哭了，身体反应会导致情绪反应。所以，我们该多想想自己渴望的结果，让大脑帮我们完成愿望。若是整天想着那些不顺心的、坏的结果，那恐怕真的会怕什么来什么！</p>
+<h3 id="40-海格力斯效应：谁跟我过不去，我也不让他好过"><a href="#40-海格力斯效应：谁跟我过不去，我也不让他好过" class="headerlink" title="40.海格力斯效应：谁跟我过不去，我也不让他好过"></a>40.海格力斯效应：谁跟我过不去，我也不让他好过</h3><p>心理学家把“以眼还眼、以牙还牙”的行为，称为海格力斯效应，它是一种人与人之间或群体间存在的冤冤相报致使仇恨越来越深的社会心理效应，会让人陷入无休止的烦恼中，错过许多美好的事物。</p>
+<ul>
+<li>第一，宽容。宽容不仅仅是饶恕别人的错误，更是放过自己。当你对别人的伤害耿耿于怀时，你受到的伤害会被无限放大，而后来的这些伤害，其实是你加给自己的。人生不过几十年，何必跟自己较劲呢？</li>
+<li>第二，忍耐。忍一时风平浪静，退一步海阔天空，这句话不是没道理的。无论是爱还是恨，不懂得忍耐，最后吃亏的都是自己。忍耐不是消极和胆怯，而是承担和力量。</li>
+<li>第三，忘记。美好的东西值得铭记，不美好的东西该忘就忘，活得豁达洒脱一点，是对自己的善待。</li>
+</ul>
+<h3 id="41-兴趣定律：想活得开心，你得有点儿兴趣爱好"><a href="#41-兴趣定律：想活得开心，你得有点儿兴趣爱好" class="headerlink" title="41.兴趣定律：想活得开心，你得有点儿兴趣爱好"></a>41.兴趣定律：想活得开心，你得有点儿兴趣爱好</h3><p>兴趣的发展有三个阶段，即有趣——乐趣——志趣。</p>
+<p>有趣是最初级的兴趣，也是引人入门的第一步；乐趣是中级的兴趣，是坚持的活动过程；志趣是高级的兴趣，与事业目标相连。一旦兴趣被激发，人就会伴随着愉快紧张的情绪和主动的意志去努力，积极地认识事物。</p>
+<h2 id="透过现象，看到背后的心理"><a href="#透过现象，看到背后的心理" class="headerlink" title="透过现象，看到背后的心理"></a>透过现象，看到背后的心理</h2><h3 id="42-从众心理：别人都这么做，我也这么做"><a href="#42-从众心理：别人都这么做，我也这么做" class="headerlink" title="42.从众心理：别人都这么做，我也这么做"></a>42.从众心理：别人都这么做，我也这么做</h3><p>从众心理，指的是个人受到外界人群行为的影响，而在自己的知觉、判断、认识上表现出符合公共舆论或多数人的行为方式。原因就是，没有人愿意自己在某件事或某个决定时，跟大多数人不一样，总觉得多数人的决定应该是对的，因而也乐于做出和众人一样的决定或行为。简单地说，就是随大流、人云亦云。</p>
+<h3 id="43-狄德罗效应：买了件上衣，又觉得没合适的裤子配"><a href="#43-狄德罗效应：买了件上衣，又觉得没合适的裤子配" class="headerlink" title="43.狄德罗效应：买了件上衣，又觉得没合适的裤子配"></a>43.狄德罗效应：买了件上衣，又觉得没合适的裤子配</h3><p>即“狄德罗效应”，指的是人们在拥有了一件新物品后，总倾向于不断配置与其相适应的物品，以达到心理上的平衡，这一规律后又被称为“配套定律”。</p>
+<h3 id="44-囚徒困境：自私的选择，真的能利己吗"><a href="#44-囚徒困境：自私的选择，真的能利己吗" class="headerlink" title="44.囚徒困境：自私的选择，真的能利己吗"></a>44.囚徒困境：自私的选择，真的能利己吗</h3><p>“囚徒困境”，是由美国普林斯顿大学的数学家阿尔伯特·塔克在1950年提出来的，说的是在一个存在着相互作用的博弈中，最好的策略直接取决于对方采用的策略，特别是取决于这个策略为发展双方合作留出多大的余地。</p>
+<p>自私地寻求最大效益并不意味着就能得到最好的结果，也不意味着由此可以促进公共的善，只有合作才能获得最好的结果。</p>
+<h3 id="45-竞争优势定律：合作的诱惑，总也敌不过竞争"><a href="#45-竞争优势定律：合作的诱惑，总也敌不过竞争" class="headerlink" title="45.竞争优势定律：合作的诱惑，总也敌不过竞争"></a>45.竞争优势定律：合作的诱惑，总也敌不过竞争</h3><p>即便是在双方有共同利益的时候，也会优先选择竞争，而不是选择合作。这种现象，被心理学家称为“竞争优势定律”。</p>
+<p>心理学家荣格提出过这样一个公式：我+我们=完整的我。“绝对的我”是不存在的，“完整的我”应当是融入“我们”的“我”。在合作中实现共赢，才是真正的赢。</p>
+<h3 id="46-路径依赖：一旦作出选择，就像踏上了不归路"><a href="#46-路径依赖：一旦作出选择，就像踏上了不归路" class="headerlink" title="46.路径依赖：一旦作出选择，就像踏上了不归路"></a>46.路径依赖：一旦作出选择，就像踏上了不归路</h3><p>路径依赖。这是美国斯坦福大学保罗·戴维在1975年提出的，他说：“一旦做了某种选择，就好比走上了一条不归之路，惯性的力量会使这一选择不断自我强化。”</p>
+<h3 id="47-认知错误：人为什么有时会无视道德"><a href="#47-认知错误：人为什么有时会无视道德" class="headerlink" title="47.认知错误：人为什么有时会无视道德"></a>47.认知错误：人为什么有时会无视道德</h3><p>人们在考虑事情时，有时候会因为特殊的情境和目的，出现认知错误，犯下不该犯的错。</p>
+<h3 id="48-认知偏差：主动搭讪，是不是图谋不轨"><a href="#48-认知偏差：主动搭讪，是不是图谋不轨" class="headerlink" title="48.认知偏差：主动搭讪，是不是图谋不轨"></a>48.认知偏差：主动搭讪，是不是图谋不轨</h3><p>错误管理理论认为，人类在不确定情境下的决策通常面临着出现差错的风险。</p>
+<h3 id="49-英雄主义情结：险情面前，为何有人不怕死"><a href="#49-英雄主义情结：险情面前，为何有人不怕死" class="headerlink" title="49.英雄主义情结：险情面前，为何有人不怕死"></a>49.英雄主义情结：险情面前，为何有人不怕死</h3><p>给英雄下定义要难于给懦夫下定义——后者也许就是：“在危险、紧急的情况下用腿思考，而非用脑。”试图拯救别人的那些人，也许仅是一时冲动，不加思考，随机而为——但是他们没有选择退缩或逃跑。</p>
+<h3 id="50-禁果定律：越不被允许的东西，人们越感兴趣"><a href="#50-禁果定律：越不被允许的东西，人们越感兴趣" class="headerlink" title="50.禁果定律：越不被允许的东西，人们越感兴趣"></a>50.禁果定律：越不被允许的东西，人们越感兴趣</h3><p>这是人们的好奇心理在作怪，也被称为“禁果定律”：越是被禁止的东西或事情，越会对它产生好奇和关注，内心充满了窥探的欲望和尝试的冲动。</p>
+<p>心理学家就把“男女恋爱时，父母干涉阻挠，彼此相爱更深”的现象称为“罗密欧与朱丽叶效应”。</p>
+<p>出现这种情况，是因为人都有自主的需要，都渴望能独立自主，不愿受人控制。一旦别人越俎代庖，替自己作选择，或把这种选择强加于自己时，就会产生一种心理抗拒，排斥自己被迫选择的事物，而更加喜欢自己被迫失去的事物。心理学家还发现，越是难得到的东西，在人心目中的地位越高，价值越大，越有吸引力。</p>
+<h3 id="51-心理代偿：自从失恋后，他就成了事业狂"><a href="#51-心理代偿：自从失恋后，他就成了事业狂" class="headerlink" title="51.心理代偿：自从失恋后，他就成了事业狂"></a>51.心理代偿：自从失恋后，他就成了事业狂</h3><p>这在心理学上叫作代偿行为，即当遇到难以逾越的障碍时，会放弃最初的目标，通过实现其他类似目标的办法，寻求内在的满足。</p>
+<h3 id="52-社会懈怠：三个和尚为什么会没水喝"><a href="#52-社会懈怠：三个和尚为什么会没水喝" class="headerlink" title="52.社会懈怠：三个和尚为什么会没水喝"></a>52.社会懈怠：三个和尚为什么会没水喝</h3><p>社会懈怠效应，是指个体在团体中较不卖力的现象；旁观者效应，是在紧急情况下由于有他人在场，而没有对受害者提供帮助的情况。尽管两者都是由于情境中他人的存在而导致责任感降低的表现，但前者和团体有关，后者情境中的他人不是同一团体的成员。</p>
+<p>显然，社会懈怠不是一个值得提倡的行为，要消除这种现象，最好的办法就是让每个成员都感受到更多的责任和价值。</p>
+<h3 id="53-逆反情结：让他往东，他偏要往西"><a href="#53-逆反情结：让他往东，他偏要往西" class="headerlink" title="53.逆反情结：让他往东，他偏要往西"></a>53.逆反情结：让他往东，他偏要往西</h3><p>人的自我价值是热爱生活、追求生活意义的心理根基，任何人都无法接受自己无价值地活在世上。当一个人自我价值受到影响和损害时，他会本能地进行自我价值的保护，在态度和行为上抗拒外界的劝导和说教，这种逆反心理也被称为“自我价值保护逆反”。</p>
+<h3 id="54-皮肤饥饿：有奶便是娘？你真的想错了"><a href="#54-皮肤饥饿：有奶便是娘？你真的想错了" class="headerlink" title="54.皮肤饥饿：有奶便是娘？你真的想错了"></a>54.皮肤饥饿：有奶便是娘？你真的想错了</h3><p>心理学上把这种情形称为“皮肤饥饿”，指的是那些在小时候很少得到母亲的拥抱、亲昵的孩子长大后形成的一种潜在而又深刻的对被爱、被关心、被抚慰的渴望感，如果这种感觉过于强烈，就会导致一种病态的情感需求。</p>
+<h3 id="55-私人空间：坐电梯时，你敢直视旁边的人吗"><a href="#55-私人空间：坐电梯时，你敢直视旁边的人吗" class="headerlink" title="55.私人空间：坐电梯时，你敢直视旁边的人吗"></a>55.私人空间：坐电梯时，你敢直视旁边的人吗</h3><p>所谓私人空间，就是在我们身体周围，有一定的空间，一旦有人闯入了这个空间，我们就会感觉不自在。</p>
+<p>心理空间其实就是一种安全感，而追求安全感是人的本能。</p>
+<h2 id="洞察人心，做人际关系的赢家"><a href="#洞察人心，做人际关系的赢家" class="headerlink" title="洞察人心，做人际关系的赢家"></a>洞察人心，做人际关系的赢家</h2><h3 id="56-首因效应：第一次见面，千万不要搞砸了"><a href="#56-首因效应：第一次见面，千万不要搞砸了" class="headerlink" title="56.首因效应：第一次见面，千万不要搞砸了"></a>56.首因效应：第一次见面，千万不要搞砸了</h3><p>首因效应是美国心理学家洛钦斯首先提出的，指的是人与人第一次交往中给人留下的印象，在对方的头脑中形成并占据主导地位的效应。这就是我们平时说的第一印象，这种印象比以后接触中得到的信息更强，持续的时间也更久。</p>
+<h3 id="57-互惠法则：得了别人的好处，要记得回报"><a href="#57-互惠法则：得了别人的好处，要记得回报" class="headerlink" title="57.互惠法则：得了别人的好处，要记得回报"></a>57.互惠法则：得了别人的好处，要记得回报</h3><p>得到对方的恩惠就一定要报答，这种心理就是“互惠法则”，也是人类社会中根深蒂固的一个行为准则。</p>
+<h3 id="58-交往适度定律：我对他那么好，他为什么疏远我"><a href="#58-交往适度定律：我对他那么好，他为什么疏远我" class="headerlink" title="58.交往适度定律：我对他那么好，他为什么疏远我"></a>58.交往适度定律：我对他那么好，他为什么疏远我</h3><p>心理学家霍曼斯曾经提出过，人与人之间的交往本质上是一种社会交换。</p>
+<h3 id="59-刺猬效应：恰当的距离，才能产生美"><a href="#59-刺猬效应：恰当的距离，才能产生美" class="headerlink" title="59.刺猬效应：恰当的距离，才能产生美"></a>59.刺猬效应：恰当的距离，才能产生美</h3><p>在与人相处的过程中，要学会拉近彼此的距离，但也要懂得给对方留有空间，把彼此的关系控制在一个相互容纳并相互吸引的范围内。</p>
+<p>生活经验告诉我们，彼此的空间距离近了，不代表心理距离也近了，彼此间不联系也不代表心里不惦记对方。所以，面对周围的人时，要学会控制好身体距离和心理距离的关系，这样才能实现“距离产生美”的效果。</p>
+<h3 id="60-犯错误效应：你这么完美，会没朋友的"><a href="#60-犯错误效应：你这么完美，会没朋友的" class="headerlink" title="60.犯错误效应：你这么完美，会没朋友的"></a>60.犯错误效应：你这么完美，会没朋友的</h3><p>貌似完美的人不经意地犯个小错，不仅瑕不掩瑜，还让人觉得安全，因为他显露出了平凡的一面，这就是心理学上的犯错误效应。</p>
+<h3 id="61-相似定律：俞伯牙和钟子期为何能成为知己"><a href="#61-相似定律：俞伯牙和钟子期为何能成为知己" class="headerlink" title="61.相似定律：俞伯牙和钟子期为何能成为知己"></a>61.相似定律：俞伯牙和钟子期为何能成为知己</h3><p>我们经常会说“物以类聚，人以群分”，大致就是在讲，人都是容易对跟自己相似的人产生好感，继而成为朋友。</p>
+<h3 id="62-多看效应：刷脸的好处，你一定要知道"><a href="#62-多看效应：刷脸的好处，你一定要知道" class="headerlink" title="62.多看效应：刷脸的好处，你一定要知道"></a>62.多看效应：刷脸的好处，你一定要知道</h3><p>见面的次数越多，相互喜欢的程度越大；见面的次数越少或根本没有，相互喜欢的程度就比较低。</p>
+<p>想拥有好人缘，在创造了美好的第一印象之后，要尽可能地提高自己在别人面前的熟悉度，这样就能增加别人喜欢你的程度。</p>
+<h3 id="63-改宗效应：为何“好好先生”会被人瞧不起"><a href="#63-改宗效应：为何“好好先生”会被人瞧不起" class="headerlink" title="63.改宗效应：为何“好好先生”会被人瞧不起"></a>63.改宗效应：为何“好好先生”会被人瞧不起</h3><p>当一个观点对于某人来说特别重要时，如果他能用这个观点让一个“反对者”改变原来的态度和想法，与他的观点保持一致，那么他可能更倾向于喜欢那个“反对者”，而不是自始至终的附和者。</p>
+<p>换句话说，人们喜欢在自己的影响下改变观点的人。当通过辩论和解释，能让一个人改变观点，信服自己的意见，会使人产生一种成就感，这种现象就是改宗效应。</p>
+<h3 id="64-晕轮效应：她那么漂亮，想必也很有智慧"><a href="#64-晕轮效应：她那么漂亮，想必也很有智慧" class="headerlink" title="64.晕轮效应：她那么漂亮，想必也很有智慧"></a>64.晕轮效应：她那么漂亮，想必也很有智慧</h3><p>晕轮效应也称为光环效应，是美国著名心理学家爱德华·桑代克提出的，这是一种普遍的心理现象，即对一个人进行评价时，往往会因对他某一品质特征的强烈、清晰的感知，而掩盖了其他方面的品质，甚至是弱点。</p>
+<p>这种主观的心理臆测，对人的心理产生巨大的认知障碍，它很容易抓住事物的个别特征，习惯以个别推及一般，就像是盲人摸象，容易把本没有内在联系的一些个性或外貌特征联系在一起，断言有这种特征必然会有另一种特征。</p>
+<h3 id="65-刻板效应：早和你说过了，人跟人不一样"><a href="#65-刻板效应：早和你说过了，人跟人不一样" class="headerlink" title="65.刻板效应：早和你说过了，人跟人不一样"></a>65.刻板效应：早和你说过了，人跟人不一样</h3><p>这种用印刻在自己头脑中的关于某一类人的固定形象，来判断和评价人的心理现象，被称为刻板印象。</p>
+<p>从某种程度上来说，刻板效应有一定的道理，因为居住在同一地区、从事同一种职业、从属于同一种族、同一年龄段的人，势必会有一些共性，但它毕竟是一种概括、抽象而笼统的看法，不能代替每一个活生生的个体特征。倘若以偏概全的话，可能就会给人际交往造成阻碍。因为有些看法与事实并不相符，甚至完全是错的。</p>
+<p>别用刻板的态度去看人，用心去体会每一个生命的独特。</p>
+<h3 id="66-古德曼定律：不懂沉默的人，就不懂沟通"><a href="#66-古德曼定律：不懂沉默的人，就不懂沟通" class="headerlink" title="66.古德曼定律：不懂沉默的人，就不懂沟通"></a>66.古德曼定律：不懂沉默的人，就不懂沟通</h3><p>没有沉默就没有沟通，沉默可以调节说话和听讲的节奏。沉默在谈话中的作用，就相当于零在数学中的作用。尽管是零，却必不可少，没有沉默，一切交流都无法进行。后来，这个定律就被称为“古德曼定律”。</p>
+<p>祸从口出，言多必失，这些道理我们要时刻谨记于心。</p>
+<h3 id="67-史密斯原则：没有永远的敌人，只有永远的利益"><a href="#67-史密斯原则：没有永远的敌人，只有永远的利益" class="headerlink" title="67.史密斯原则：没有永远的敌人，只有永远的利益"></a>67.史密斯原则：没有永远的敌人，只有永远的利益</h3><p>竞争与合作从来都不是完全对立的，而是相互依存的。与竞争对手合作，与合作伙伴良性竞争，在竞争与合作中共同学习和进步，才能让彼此走得更远，发展得更好。这也间接地提醒我们：化敌为友，不是对立而是合作，用友好的方式达到双方最终的目的，才是最明智的选择。</p>
+<h3 id="68-焦点效应：人人都想得到他人的关注"><a href="#68-焦点效应：人人都想得到他人的关注" class="headerlink" title="68.焦点效应：人人都想得到他人的关注"></a>68.焦点效应：人人都想得到他人的关注</h3><p>这种心理被称为焦点效应，也叫社会焦点效应，是人们高估周围人对自己外表和行为关注度的一种表现。</p>
+<h3 id="69-猎奇心理：适当满足一下别人的好奇心"><a href="#69-猎奇心理：适当满足一下别人的好奇心" class="headerlink" title="69.猎奇心理：适当满足一下别人的好奇心"></a>69.猎奇心理：适当满足一下别人的好奇心</h3><p>猎奇心理是一种普遍的心理需求，泛指人们对于自己尚不知晓、不熟悉或比较奇异的事物或观念等，表现出的一种好奇感和急于探求其奥秘或答案的心理活动。</p>
+<h3 id="70-传播扭曲：清醒一点，远离小道消息"><a href="#70-传播扭曲：清醒一点，远离小道消息" class="headerlink" title="70.传播扭曲：清醒一点，远离小道消息"></a>70.传播扭曲：清醒一点，远离小道消息</h3><p>明明一件事的真相是这样，传来传去就成了另一副模样，这种现象就是“传播扭曲”，指信息在传播过程中经常会被层层扭曲，且多被夸张增值，最终面目全非。</p>
+<h3 id="71-塔玛拉效应：管得住嘴，才守得住未来"><a href="#71-塔玛拉效应：管得住嘴，才守得住未来" class="headerlink" title="71.塔玛拉效应：管得住嘴，才守得住未来"></a>71.塔玛拉效应：管得住嘴，才守得住未来</h3><p>真正聪明的人，能在事业上所有建树的人，往往都坚持一个原则：多做事，少说话。这就是心理学上的塔玛拉效应。</p>
+<h2 id="爱不迷茫，拥有美好的亲密关系"><a href="#爱不迷茫，拥有美好的亲密关系" class="headerlink" title="爱不迷茫，拥有美好的亲密关系"></a>爱不迷茫，拥有美好的亲密关系</h2><h3 id="72-择偶心理：你理想中的另一半是什么样"><a href="#72-择偶心理：你理想中的另一半是什么样" class="headerlink" title="72.择偶心理：你理想中的另一半是什么样"></a>72.择偶心理：你理想中的另一半是什么样</h3><p>以利交者，利尽则散；以色交者，色衰则疏；以心交者，方能永恒。</p>
+<h3 id="73-心理宁静期：警惕移情别恋的发生"><a href="#73-心理宁静期：警惕移情别恋的发生" class="headerlink" title="73.心理宁静期：警惕移情别恋的发生"></a>73.心理宁静期：警惕移情别恋的发生</h3><p>心理宁静期多了几分理性的色彩，两个人对彼此已经很了解，日子每天都一样，再没有初恋时的新鲜刺激，厌倦感就慢慢堆积起来。此时，移情别恋最容易发生。</p>
+<p>世界上没有一个完全契合你的人，更没有一段完美无缺的感情。</p>
+<h3 id="74-猜疑心理：猜猜猜的折磨，谁也受不了"><a href="#74-猜疑心理：猜猜猜的折磨，谁也受不了" class="headerlink" title="74.猜疑心理：猜猜猜的折磨，谁也受不了"></a>74.猜疑心理：猜猜猜的折磨，谁也受不了</h3><p>培根曾说：“心思中的猜疑就像蝙蝠，永远在黄昏里飞。猜疑的确应该制止，至少应当节制，因为这种心理使人精神迷惘，疏远朋友，而且扰乱事务，使之不能顺利有恒。猜疑，使君王易施暴政，为夫者易生嫉妒，有智谋者寡断而抑郁。”</p>
+<p>自卑的人也容易引发猜疑。弗洛姆说过：“爱是信心的行为，谁没有信心，谁便没有爱。”</p>
+<h3 id="75-嫉妒心理：吃醋也要吃得恰到好处"><a href="#75-嫉妒心理：吃醋也要吃得恰到好处" class="headerlink" title="75.嫉妒心理：吃醋也要吃得恰到好处"></a>75.嫉妒心理：吃醋也要吃得恰到好处</h3><p>爱情具有排他性和独占性，当一个人发现恋人对自己的爱减弱时，吃醋引起的一些行为，会成为逆向刺激，强化伴侣对于爱的专注。</p>
+<p>在与伴侣相处时，一定要学会适当地控制自己的情绪，尊重对方的感情，允许对方有自己的人际交往空间。同时，要分析自己是否过于敏感，缺乏自信，若真如此，就要积极地转移注意力，充实自己的生活。</p>
+<h3 id="76-麦穗定律：世上有没有最大最好的麦穗"><a href="#76-麦穗定律：世上有没有最大最好的麦穗" class="headerlink" title="76.麦穗定律：世上有没有最大最好的麦穗"></a>76.麦穗定律：世上有没有最大最好的麦穗</h3><p>人们把对爱情的要求过于完美，在行走的过程中，对未来不可知，对过去无法回头，所以始终难以完美的现象称为麦穗定律。</p>
+<p>在寻找真爱的过程中，错过一次不要紧，怕的是一而再、再而三地错过。不要因为错过了一次，就放弃再次寻找；也不要在找到之后，再希冀着去找更大的。人生永远都无法尽善尽美，清楚什么是自己想要的，选自己所爱，爱自己所选，就是最好的珍惜。</p>
+<h3 id="77-依赖心理：你究竟是在爱，还是在寄生"><a href="#77-依赖心理：你究竟是在爱，还是在寄生" class="headerlink" title="77.依赖心理：你究竟是在爱，还是在寄生"></a>77.依赖心理：你究竟是在爱，还是在寄生</h3><p>他们总是将幸福寄托在他人身上，似乎找到了一个伴侣就找到了幸福。事实上，这不是爱情，而是寄生。</p>
+<p>爱应当是相互依存，又相互独立的。人生的幸福不是别人给予的，而是自己定义并抒写的，只有两个心理独立而健康的人，才能营造出一段美妙的亲密关系。</p>
+<h3 id="78-超限效应：不作无谓的牺牲，感情无法勉强"><a href="#78-超限效应：不作无谓的牺牲，感情无法勉强" class="headerlink" title="78.超限效应：不作无谓的牺牲，感情无法勉强"></a>78.超限效应：不作无谓的牺牲，感情无法勉强</h3><p>把超限效应运用到感情中，我们要领悟的是：当遇到了不懂得珍惜自己的人，与其苦苦地留恋，处处忍让迁就，倒不如毅然决然地放手，不再做无谓的牺牲。</p>
+<h3 id="79-皮格马利翁效应：一万句指责，敌不过一句赞美"><a href="#79-皮格马利翁效应：一万句指责，敌不过一句赞美" class="headerlink" title="79.皮格马利翁效应：一万句指责，敌不过一句赞美"></a>79.皮格马利翁效应：一万句指责，敌不过一句赞美</h3><p>当一个人得到他人的信任与赞美时，会变得更加自信和自尊，从而获得一种积极向上的原动力。为了不让对方失望，会更加努力地发挥自己的优势，尽力达到对方的期望。</p>
+<h3 id="80-布里丹毛驴效应：爱需要选择的勇气和能力"><a href="#80-布里丹毛驴效应：爱需要选择的勇气和能力" class="headerlink" title="80.布里丹毛驴效应：爱需要选择的勇气和能力"></a>80.布里丹毛驴效应：爱需要选择的勇气和能力</h3><p>人们就把在决策过程中犹豫不定、迟疑不决的现象，称为布里丹毛驴效应。</p>
+<h2 id="扫除阴霾，让美好的生活回归"><a href="#扫除阴霾，让美好的生活回归" class="headerlink" title="扫除阴霾，让美好的生活回归"></a>扫除阴霾，让美好的生活回归</h2><h3 id="81-抑郁：当心这只可怕的“大黑狗”"><a href="#81-抑郁：当心这只可怕的“大黑狗”" class="headerlink" title="81.抑郁：当心这只可怕的“大黑狗”"></a>81.抑郁：当心这只可怕的“大黑狗”</h3><p>抑郁症是一种常见的精神疾病，主要表现是情绪低落、悲观、思维迟缓、缺乏主动性、自责自罪、睡眠差，担心自己患有各种疾病，严重者会出现自杀的念头和行为。</p>
+<p>抑郁症就是一只可怕的大黑狗，无情地吞噬着人的精神乃至生命。维也纳心理医生汉斯·伦茨曾经把抑郁症称为“俱无病”，患有抑郁症的人感觉一切俱无价值、无力量、无感情、无快乐，悲观绝望。</p>
+<h3 id="82-孤僻：不要把自己活成一座孤岛"><a href="#82-孤僻：不要把自己活成一座孤岛" class="headerlink" title="82.孤僻：不要把自己活成一座孤岛"></a>82.孤僻：不要把自己活成一座孤岛</h3><p>孤僻心理，是指因缺乏与人的交流而产生的孤单、寂寞的情绪体验。孤僻的人通常比较内向，不愿意与别人接触，待人冷漠，对周围的人常常带着一种戒备、厌烦的心理，猜疑心较强，容易神经过敏，做事喜欢独来独往，经常会陷入孤独和空虚中。</p>
+<h3 id="83-虚荣：扔掉扭曲的自尊心吧"><a href="#83-虚荣：扔掉扭曲的自尊心吧" class="headerlink" title="83.虚荣：扔掉扭曲的自尊心吧"></a>83.虚荣：扔掉扭曲的自尊心吧</h3><p>当一个人的需要超过了自己担负的能力，就会想到用不恰当的方式来满足自尊心，这时就产生了虚荣心。</p>
+<h3 id="84-自卑：其实你很好，你自己却不知道"><a href="#84-自卑：其实你很好，你自己却不知道" class="headerlink" title="84.自卑：其实你很好，你自己却不知道"></a>84.自卑：其实你很好，你自己却不知道</h3><p>自卑是一个人对自己的能力、品质等做出偏低的评价，总觉得自己不如别人的一种消极的心理状态，也是普遍存在的一种负面情绪。在与人相处时，自卑的人很想得到他人的肯定，又担心别人的轻视和拒绝，经常敏感地把别人的不愉快归咎于是自己的问题。自卑的人过于自尊，常常为了保护脆弱的自尊而表现得十分强硬，令人难以接近。</p>
+<h3 id="85-冲动：一失足成千古恨的缘由"><a href="#85-冲动：一失足成千古恨的缘由" class="headerlink" title="85.冲动：一失足成千古恨的缘由"></a>85.冲动：一失足成千古恨的缘由</h3><p>冲动是行为系统不理智的各种表现，指人的情感特别强烈、理性控制很薄弱的一种心理现象，也是一种极具破坏力的情绪，给人带来的负面影响远远超出想象。</p>
+<h3 id="86-抱怨：世界上最没有用的语言"><a href="#86-抱怨：世界上最没有用的语言" class="headerlink" title="86.抱怨：世界上最没有用的语言"></a>86.抱怨：世界上最没有用的语言</h3><p>每一个行走在世间的人，都有着各自的难处，没有谁比谁活得容易。只不过，面对失意，有人选择了直视，有人选择了逃避，也有人选择了抱怨。他们逢人就诉苦，开口就抱怨，让抱怨的情绪变成了传染源，充斥在自己的周围，感染着原本美好的一切。</p>
+<p>威尔·鲍温在《不抱怨的世界》一书中写道：“我们抱怨，是为了获取同情心和注意力，以及避免去做我们不敢做的事。”</p>
+<h3 id="87-浮躁：为什么离成功越来越远"><a href="#87-浮躁：为什么离成功越来越远" class="headerlink" title="87.浮躁：为什么离成功越来越远"></a>87.浮躁：为什么离成功越来越远</h3><p>浮躁是一种冲动性、情绪性、盲目性相互交织的病态社会心理。浮躁的人没有常性，做任何事都想投机取巧，终日心神不宁，焦躁难安。</p>
+<p>慢些，我们就会更快。没错，有人为了显示效率，凡事草草了事，结果得不偿失，使得一件本需一次完成的事情，要回头重复多次。所以，做事情不要急于求成。</p>
+<h2 id="积极一点，人生会变得更绚烂"><a href="#积极一点，人生会变得更绚烂" class="headerlink" title="积极一点，人生会变得更绚烂"></a>积极一点，人生会变得更绚烂</h2><h3 id="88-吉格勒定理：你是一个有目标的人吗"><a href="#88-吉格勒定理：你是一个有目标的人吗" class="headerlink" title="88.吉格勒定理：你是一个有目标的人吗"></a>88.吉格勒定理：你是一个有目标的人吗</h3><p>美国行为学家J．吉格勒说过：“除了生命本身，没有任何才能不需要后天的锻炼。”后来，这番话被人们总结为：不管一个人有多么超群的能力，如果缺少一个认定的高远目标，他将一事无成。这也被称为吉格勒定理。</p>
+<p>没有目标的人，往往活得很迷茫，不知道前面的路在哪儿。如果你在生活和工作方面有明确的目标，那么恭喜你，已经走在了成功的路上。</p>
+<h3 id="89-帕金森定律：问问自己，时间都去哪儿了"><a href="#89-帕金森定律：问问自己，时间都去哪儿了" class="headerlink" title="89.帕金森定律：问问自己，时间都去哪儿了"></a>89.帕金森定律：问问自己，时间都去哪儿了</h3><p>在时间充裕的情况下，不由自主地放慢节奏或添加其他工作项目。于是，工作就开始自动地膨胀，直至占满所有可用的时间，这就是帕金森定律。</p>
+<h3 id="90-最后通牒效应：为什么总是拖拖拉拉"><a href="#90-最后通牒效应：为什么总是拖拖拉拉" class="headerlink" title="90.最后通牒效应：为什么总是拖拖拉拉"></a>90.最后通牒效应：为什么总是拖拖拉拉</h3><p>在心理学上，这种现象被称为最后通牒效应，即对于不需要马上完成的任务，人们总是习惯于在最后期限即将到来时，才去付诸行动。</p>
+<p>你是自己的主人，你有权利支配自己的生命，你想让自己活得更加精彩，就不要犹豫，从现在开始，拿起手中的笔，把自己的历程记录下来，给自己的目标一个期限，让自己的时间支出得有理有据。</p>
+<h3 id="91-自我激励：每个人都是一座宝藏"><a href="#91-自我激励：每个人都是一座宝藏" class="headerlink" title="91.自我激励：每个人都是一座宝藏"></a>91.自我激励：每个人都是一座宝藏</h3><p>一个人的能力在平时的表现和经过激励后的表现几乎相差一倍。经过激励后，人的心理动力会加大，积极性大幅提升。在没有激励的情况下，心理动力很小，积极性比较低。积极性的发挥，取决于能力和动力，而能力的发挥很大程度上跟动力有关。当我们激发了内在动机，就有了一股强大的力量，催促着自己朝着既定的目标加速前进。</p>
+<h3 id="92-瓦拉赫效应：你找对自己的位置了吗"><a href="#92-瓦拉赫效应：你找对自己的位置了吗" class="headerlink" title="92.瓦拉赫效应：你找对自己的位置了吗"></a>92.瓦拉赫效应：你找对自己的位置了吗</h3><p>瓦拉赫效应是以诺贝尔化学奖获得者奥托·瓦拉赫命名的，他有着传奇的一生，鉴于他在化学方面的成就，心理学家总结出了一个规律：人的智能发展会呈现出不均衡性，每个人都有自己独特的智能强点和弱点，能够找到智能强点中的最佳点，自身隐藏的潜力就会得到极致的发挥，取得惊人的成绩。</p>
+<p>人的智能发展会呈现出不均衡性，每个人都有自己独特的智能强点和弱点，能够找到智能强点中的最佳点，自身隐藏的潜力就会得到极致的发挥，取得惊人的成绩。</p>
+<p>衡量自己的定位是不是对的，不在于付出了多少努力，花费了多少时间，而在于你是否认清自己，或者在某个领域内找到了兴趣和有效学习、工作的方法。当然，这个最佳出发点不是固定的，因为个人的特长和兴趣会随着时间、年龄、环境发生改变，我们要学会因时因地地调整自己，准确定位。</p>
+<h3 id="93-压力认知：没有压力，未必是一件好事"><a href="#93-压力认知：没有压力，未必是一件好事" class="headerlink" title="93.压力认知：没有压力，未必是一件好事"></a>93.压力认知：没有压力，未必是一件好事</h3><p>压力不总是一件坏事。在心理压力的作用下，人的生存需求和社会动机能够将内在的潜能激发出来。在一定程度范围内，压力越大，激发潜力的可能性就越大。同时，人的心理是有弹性的，你越是挤压它，它的弹力就越大。对不甘平庸的人来说，正确面对压力、合理调节压力，有益无害。</p>
+<h3 id="94-约拿情结：梦想触手可及时，人会不会害怕"><a href="#94-约拿情结：梦想触手可及时，人会不会害怕" class="headerlink" title="94.约拿情结：梦想触手可及时，人会不会害怕"></a>94.约拿情结：梦想触手可及时，人会不会害怕</h3><p>在我们最得意的时候，我们通常会害怕成功。因为我们害怕正视自己最低的可能性，也害怕自己潜力所能达到的最高水平。</p>
+<p>成长是人的本性，每个人都在成长，只是方式不同。当你面对自己想要的东西时，你是勇敢去追寻，还是在恐惧紧张之下选择妥协？记住：不同的选择，成就不同的人生。</p>
+<h3 id="95-跨栏定律：成功和遇到的困难是对等的"><a href="#95-跨栏定律：成功和遇到的困难是对等的" class="headerlink" title="95.跨栏定律：成功和遇到的困难是对等的"></a>95.跨栏定律：成功和遇到的困难是对等的</h3><p>阿费烈德就把这种现象称为跨栏定律，即竖立在你面前的栏杆越高，你跳得就越高。</p>
+<h3 id="96-蘑菇定律：在阴暗里的角落里努力生长"><a href="#96-蘑菇定律：在阴暗里的角落里努力生长" class="headerlink" title="96.蘑菇定律：在阴暗里的角落里努力生长"></a>96.蘑菇定律：在阴暗里的角落里努力生长</h3><p>人们就把初学者不被重视、从事打杂工作，无端遭受批评指责，得不到必要的指导和提携的情况，称为“蘑菇定律”。</p>
+<p>达尔文说过一句话：“要先改变环境，必须先适应环境，别等环境来适应你。”对于正处于“蘑菇期”的年轻人来说，这真的是一番绝佳的忠告。</p>
+<h3 id="97-飞轮效应：最艰难的时刻，就是改变的临界点"><a href="#97-飞轮效应：最艰难的时刻，就是改变的临界点" class="headerlink" title="97.飞轮效应：最艰难的时刻，就是改变的临界点"></a>97.飞轮效应：最艰难的时刻，就是改变的临界点</h3><p>为了使静止的飞轮转动起来，一开始必须要花费很大的力气，一圈圈周而复始地推，每转一圈都很费劲，但每一圈的努力都不是无用功，因为飞轮会转动得越来越快。在达到某个临界点时，飞轮的重力和冲力会成为推动力的一部分，此时无须再费力，飞轮也会快速转动，且会不停地转动。</p>
+<p>我们时常说，万事开头难。想做成一件事，开始的时候必然要面临诸多的阻挠和困难，多数人恰恰败在了这个艰难的时刻，如果能坚持下去，度过困难期，就将步入平稳发展的阶段。飞轮效应让我们看到胜利的曙光，只要坚持不懈地推动事业的飞轮，终有一天，它会自己飞快地旋转起来，而无须费多大力气。</p>
+<h3 id="98-手表定律：一件事情不能同时制定两个标准"><a href="#98-手表定律：一件事情不能同时制定两个标准" class="headerlink" title="98.手表定律：一件事情不能同时制定两个标准"></a>98.手表定律：一件事情不能同时制定两个标准</h3><p>对待同一件事情，不能同时设定两个不同的标准，不然这件事情就会变得复杂，毫无头绪。对个人而言，也不能同时选择两种不同的价值观，不然行为和思维都会陷入混乱；对企业来说，更不能同时采取两种不同的管理方式，否则企业就难以正常地运转。</p>
+<p>这世界上存在太多的标准，即便是同一件事，每个人的衡量标准都不一样，坚持自己的观点和立场，明确自己真正想要的是什么，如此不管是成是败都能够心安理得。</p>
+<h3 id="99-高原效应：别太看重结果，多享受过程"><a href="#99-高原效应：别太看重结果，多享受过程" class="headerlink" title="99.高原效应：别太看重结果，多享受过程"></a>99.高原效应：别太看重结果，多享受过程</h3><p>心理学家就把个体面临恐惧、高压、突发事件时的心理称为高原效应。</p>
+<p>每个人的潜意识里都存在着一定的表演欲，“最佳表演时间”就是把这种欲望无限地放大，继而克服和抵消高原效应带来的负面影响。</p>
+]]></content>
+      <categories>
+        <category>reading</category>
+        <category>psychollgy</category>
+      </categories>
+      <tags>
+        <tag>reading</tag>
+        <tag>psychology</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>愚者</title>
+    <url>/2020/05/18/fristblog/</url>
+    <content><![CDATA[<img src="/2020/05/18/fristblog/tarrowfool.jpg" class>
+
+<a id="more"></a>
+
+<h1 id="愚者"><a href="#愚者" class="headerlink" title="愚者"></a>愚者</h1><p>　　<a href="https://baike.baidu.com/item/%E6%84%9A%E8%80%85/22123156?fr=aladdin" title target>愚者</a>（塔罗牌的第一张），愚者是塔罗牌78张纸牌之一，也是22张大阿尔克那其中之一。愚者并没有编号（或作0号又或作22号），是所有塔罗牌的开始，亦代表着塔罗牌的结束，代表着无限的可能性。</p>
+<h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><ul>
+<li>含义：天真、单纯、可能性。</li>
+<li>优点：与众不同、幸运、不拘一格、追求新奇的梦想、勇于冒险、向往自由、有艺术家气质、直攻要害、自由恋爱。</li>
+<li>缺点：自负、固执、不安定、墨守成规、缺乏责任心、生活在梦幻中、不现实、不会应变、停滞不前、行为古怪、方向错误、感情不稳定。</li>
+<li>概述：愚者满怀天真、单纯没有恐惊的迈向人生旅途，这张牌告诉我们，在梦中我们对发生之事的判断力都是较为迟钝的，但在现实世界中，却往往反映着可能发生的危险。因此，要是我们能有一颗相信梦想的纯真之心，那么，对精神层面上的自由度而言，我们可是会强过许多人哦！</li>
+</ul>
+<h2 id="牌面解读"><a href="#牌面解读" class="headerlink" title="牌面解读"></a>牌面解读</h2><p>　　愚者穿着色彩斑斓的服装，无视于前方的悬崖，昂首阔步向前行。他脚边的小白狗正狂吠着，似乎在提醒他要悬崖勒马。但愚者仍旧保持着欢欣的神色，望向遥远的天空而非眼前的悬崖，凭本能行事。愚者左手持着白玫瑰，象征纯洁热情。右手拿杖系着包袱。那根杖可不是普通的杖，是令牌，象征力量。但除了愚者，有谁会拿着象征力量的令牌系着包袱呢？</p>
+<h2 id="牌义解读"><a href="#牌义解读" class="headerlink" title="牌义解读"></a>牌义解读</h2><ul>
+<li>有人说愚者有颗天真且纯真的心就如同那白色的玫瑰花一样那么的自然那么的纯净；也有人说他十分愚蠢，缺乏理性判断的能力，做任何事都凭直觉，没有拒绝和抵抗的能力，就是愚蠢、冲动和虚无的代表。</li>
+<li>轻便的行囊中带着他过去的经验与知识，让他在面对未来时不会害怕。虽然旁人也会不时提醒他将要面对的危险，但是这丝毫不会降低他对未来的好奇心与求知欲。即便这是他的第一步，他都会充满了信心走下去。虽然他不知道未来，更不知道前方隐藏的危险，但这都不重要，因为他走过去就自然会知道了。</li>
+<li>愚者是一个不受世俗规范约束的人，所以这张牌代表了自我。它暗示你虽然活在尘世中，但仍然有一颗纯洁的相信梦想的童心，为了心中的梦甘愿去面对凶险的未来。这张牌告诉你只要你还有梦想，就要去努力把它变成现实，冒险又算得了什么？</li>
+</ul>
+<h2 id="牌位解读"><a href="#牌位解读" class="headerlink" title="牌位解读"></a>牌位解读</h2><ul>
+<li>牌面正立时，意味着你在事业上有一种洒脱、无拘无束的态度，保持着轻松自然的心情迎接未来的挑战。从感情上来说，你即将开始或已经步入一段轻松简单的感情生活，不会如胶似漆，也不会平淡无味。它也可以形容你的伴侣，他（她）是一个难以琢磨的天真的人，喜欢现在的自由生活，不愿被死板的计划和安排所左右。</li>
+<li>牌面倒立时，意味着你在事业上过于自负、固执己见，即使有旁人的劝告都无法让你产生任何的警觉，失去了最关键的机遇，结果只能是事倍功半。感情上近乎执着地编织太多虚幻的梦，与伴侣无法顺利沟通，恋情不安定，感情忽冷忽热。</li>
+<li>正位：与众不同、幸运、不拘一格、追求新奇的梦想、眼界狭小、勇于冒险、向往自由、有艺术家气质、直攻要害、情感起伏不定、自由恋爱。</li>
+<li>逆位：自负、固执、不安定、墨守成规、缺乏责任心、生活在梦幻中、不现实、不会应变、停滞不前、行为古怪、方向错误、感情不稳定。</li>
+</ul>
+<h1 id="不忘初心"><a href="#不忘初心" class="headerlink" title="不忘初心"></a>不忘初心</h1><p>　　在代码的漫漫长路，独自点着灯前行，不管前路多黑暗艰辛，我亦无悔向前，星光不问赶路人 时光不负有心人。加油，陌生人，不忘初心，方得始终。</p>
+]]></content>
+      <categories>
+        <category>心情</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>心情</tag>
+      </tags>
+  </entry>
+</search>
