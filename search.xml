@@ -652,4 +652,34 @@
         <tag>eloquent orm</tag>
       </tags>
   </entry>
+  <entry>
+    <title>excel操作</title>
+    <url>/2020/07/30/excel/</url>
+    <content><![CDATA[<div style="width:50%;margin:0 auto;"><img src="/2020/07/30/excel/excel.jpg" class></div>
+
+<a id="more"></a>
+
+<h1 id="Excel操作"><a href="#Excel操作" class="headerlink" title="Excel操作"></a>Excel操作</h1><h2 id="把字符串用符号隔开"><a href="#把字符串用符号隔开" class="headerlink" title="把字符串用符号隔开"></a>把字符串用符号隔开</h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">=<span class="built_in">MID</span>(<span class="symbol">A1</span>,<span class="number">1</span>,<span class="number">1</span>)&amp;<span class="string">";"</span>&amp;<span class="built_in">MID</span>(<span class="symbol">A1</span>,<span class="number">2</span>,<span class="number">1</span>)&amp;<span class="string">";"</span>&amp;<span class="built_in">MID</span>(<span class="symbol">A1</span>,<span class="number">3</span>,<span class="number">1</span>)&amp;<span class="string">";"</span>&amp;<span class="built_in">MID</span>(<span class="symbol">A1</span>,<span class="number">4</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="去除空格"><a href="#去除空格" class="headerlink" title="去除空格"></a>去除空格</h2><p>选中单元格，点击右上角“查找和选择”，选择“替换”。</p>
+<p>弹出对话框后，在“查找内容”中输入一个空格，点击“全部替换”即可。</p>
+<h2 id="去除换行符"><a href="#去除换行符" class="headerlink" title="去除换行符"></a>去除换行符</h2><p>选择要删除换行符的单元格，然后按快捷键<strong>Ctrl + H</strong>启动“查找和替换”功能。</p>
+<p>接下来，在“搜索字符串”框中单击一次，按住Ctrl键并按键盘上的“J”。这是将“换行”指定为替换目标的操作。然后单击“全部替换”以消除换行符。</p>
+<h2 id="去除结尾字符"><a href="#去除结尾字符" class="headerlink" title="去除结尾字符"></a>去除结尾字符</h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">=<span class="built_in">LEFT</span>(<span class="symbol">A1</span>,<span class="built_in">LEN</span>(<span class="symbol">A1</span>)-<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="excel中如何只复制内容，不复制公式"><a href="#excel中如何只复制内容，不复制公式" class="headerlink" title="excel中如何只复制内容，不复制公式"></a>excel中如何只复制内容，不复制公式</h2><p>打开需要操作的EXCEL表格，选中需要复制单元格按键盘“Ctrl+C”复制单元格内容。</p>
+<p>选中需要粘贴的单元格，在“开始”选项卡找到“粘贴板”，点击“粘贴”下方的下拉菜单按钮。</p>
+<p>在弹出的粘贴选项中选择“粘贴数值”。</p>
+<h2 id="单元格合并加符号"><a href="#单元格合并加符号" class="headerlink" title="单元格合并加符号"></a>单元格合并加符号</h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">=<span class="symbol">B2</span>&amp;<span class="string">"-"</span>&amp;<span class="symbol">C2</span>&amp;<span class="string">"+"</span>&amp;<span class="string">"E2"</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>excel</category>
+        <category>office</category>
+      </categories>
+      <tags>
+        <tag>excel</tag>
+        <tag>office</tag>
+      </tags>
+  </entry>
 </search>

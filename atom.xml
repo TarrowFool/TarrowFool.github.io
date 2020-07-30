@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wang.github.io/"/>
-  <updated>2020-07-23T09:55:51.416Z</updated>
+  <updated>2020-07-30T07:49:20.832Z</updated>
   <id>https://wang.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>excel操作</title>
+    <link href="https://wang.github.io/2020/07/30/excel/"/>
+    <id>https://wang.github.io/2020/07/30/excel/</id>
+    <published>2020-07-30T02:16:58.000Z</published>
+    <updated>2020-07-30T07:49:20.832Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div style=&quot;width:50%;margin:0 auto;&quot;&gt;&lt;img src=&quot;/2020/07/30/excel/excel.jpg&quot; class&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="excel" scheme="https://wang.github.io/categories/excel/"/>
+    
+      <category term="office" scheme="https://wang.github.io/categories/office/"/>
+    
+    
+      <category term="excel" scheme="https://wang.github.io/tags/excel/"/>
+    
+      <category term="office" scheme="https://wang.github.io/tags/office/"/>
+    
+  </entry>
   
   <entry>
     <title>laravel-model</title>
@@ -75,7 +100,7 @@
     <link href="https://wang.github.io/2020/06/22/datagrip/"/>
     <id>https://wang.github.io/2020/06/22/datagrip/</id>
     <published>2020-06-22T09:13:33.000Z</published>
-    <updated>2020-07-14T08:51:40.830Z</updated>
+    <updated>2020-07-30T02:22:12.175Z</updated>
     
     <summary type="html">
     
