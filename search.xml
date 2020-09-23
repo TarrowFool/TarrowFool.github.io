@@ -660,6 +660,14 @@
 
 <p>或者</p>
 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt;</span><br><span class="line">  Options +FollowSymlinks -Multiviews</span><br><span class="line">  RewriteEngine On</span><br><span class="line"></span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">  RewriteRule ^(.*)$ index.php?s=$<span class="number">1</span> [QSA,PT,L]</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>代码</category>
+        <category>thinkphp</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>thinkphp</tag>
+      </tags>
   </entry>
   <entry>
     <title>愚者</title>
