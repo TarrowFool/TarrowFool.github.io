@@ -682,4 +682,19 @@
         <tag>office</tag>
       </tags>
   </entry>
+  <entry>
+    <title>ThinkPHP去除index.php</title>
+    <url>/2020/09/23/ThinkPHP/</url>
+    <content><![CDATA[<div style="width:50%;margin:0 auto;"></div>
+
+<a id="more"></a>
+
+<h1 id="ThinkPHP去除index-php"><a href="#ThinkPHP去除index-php" class="headerlink" title="ThinkPHP去除index.php"></a>ThinkPHP去除index.php</h1><h2 id="Apache方法"><a href="#Apache方法" class="headerlink" title="Apache方法"></a>Apache方法</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p><code>httpd.conf</code>配置文件中加载了<code>mod_rewrite.so</code>模块</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>AllowOverride None 将None改为 All</p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>把下面的内容保存为<code>.htaccess</code>文件放到应用入口文件的同级目录下</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt;</span><br><span class="line">  Options +FollowSymlinks -Multiviews</span><br><span class="line">  RewriteEngine On</span><br><span class="line"></span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">  RewriteRule ^(.*)$ index.php/$<span class="number">1</span> [QSA,PT,L]</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt;</span><br><span class="line">  Options +FollowSymlinks -Multiviews</span><br><span class="line">  RewriteEngine On</span><br><span class="line"></span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">  RewriteRule ^(.*)$ index.php?s=$<span class="number">1</span> [QSA,PT,L]</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wang.github.io/"/>
-  <updated>2020-07-30T07:49:20.832Z</updated>
+  <updated>2020-09-23T02:35:48.941Z</updated>
   <id>https://wang.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ThinkPHP去除index.php</title>
+    <link href="https://wang.github.io/2020/09/23/ThinkPHP/"/>
+    <id>https://wang.github.io/2020/09/23/ThinkPHP/</id>
+    <published>2020-09-23T02:31:15.000Z</published>
+    <updated>2020-09-23T02:35:48.941Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div style=&quot;width:50%;margin:0 auto;&quot;&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>excel操作</title>
