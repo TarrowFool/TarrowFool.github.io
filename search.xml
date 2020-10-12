@@ -1,54 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo与Next安装</title>
-    <url>/2020/05/20/install/</url>
-    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/05/20/install/hexo.jpg" class></div>
-
-<a id="more"></a>
-
-<h1 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h1><h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<h2 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h2><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
-<ul>
-<li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a> (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)</li>
-<li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
-</ul>
-<p>下载安装包，点击安装包，点击下一步直到完成即可，node安装完后在命令行运行 node -v（查看版本），如果成功说明node安装成功，不成功可能是环境变量问题，去配置一下或重新安装下.<br> 同理安装git，安装完后再命令行运行git version（查看版本），如果成功说明git安装成功。</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>1.如果您的电脑中已经安装上述必备程序，接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>2.安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>会生成如下结构的文件：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line"> ├── _config.yml  站点配置文件</span><br><span class="line"> ├── package.json  站点依赖文件</span><br><span class="line"> ├── scaffolds  模板文件夹</span><br><span class="line"> ├── source 资源文件夹</span><br><span class="line"> |   ├── _drafts</span><br><span class="line"> |   └── _posts</span><br><span class="line"> └── themes  主题文件夹</span><br></pre></td></tr></table></figure>
-
-<p>最后一步你npm install不可少，它主要功能是用于安装package.json中的依赖，当有改动package.json中的依赖时都要运行一次。<br>到此hexo安装就算完成了，然后在命令行运行。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">hexo sever</span><br></pre></td></tr></table></figure>
-
-<p>就可以看到hexo默认主题效果了。</p>
-<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">hexo init [folder] 新建一个网站</span><br><span class="line">hexo <span class="keyword">new</span> [layout] &lt;title&gt; 创建一篇新文章</span><br><span class="line">hexo sever或hexo s 启动服务器</span><br><span class="line">hexo clean 清除缓存文件 (db.json) 和已生成的静态文件 (public)</span><br><span class="line">hexo generate或hexo g 生成静态文件</span><br><span class="line">hexo deploy或hexo d 部署网站</span><br><span class="line">hexo migrate &lt;type&gt; 从其他博客系统迁移内容</span><br></pre></td></tr></table></figure>
-
-<h1 id="Next安装"><a href="#Next安装" class="headerlink" title="Next安装"></a>Next安装</h1><h2 id="安装NexT"><a href="#安装NexT" class="headerlink" title="安装NexT"></a>安装NexT</h2><p>通过<code>git</code>指令下载<code>NexT</code><strong>最新的</strong>主题文件。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
-
-<p>或者，直接从发布页<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fiissnan%2Fhexo-theme-next%2Freleases" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next/releases</a>下载源指定版本源代码。</p>
-<p>下载之后，解压缩主题主题文件，并把它放到<code>themes</code></p>
-<p>主题文件放在</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">+---public</span><br><span class="line">|   +---about</span><br><span class="line">|   +---archives</span><br><span class="line">|   +---categories</span><br><span class="line">|   +---css</span><br><span class="line">|   +---images</span><br><span class="line">|   +---js</span><br><span class="line">|   +---lib</span><br><span class="line">|   +---page</span><br><span class="line">|   +---post</span><br><span class="line">|   \---tags</span><br><span class="line">+---scaffolds</span><br><span class="line">+---source</span><br><span class="line">|   +---about</span><br><span class="line">|   +---categories</span><br><span class="line">|   +---images</span><br><span class="line">|   +---tags</span><br><span class="line">|   +---_drafts</span><br><span class="line">|   \---_posts</span><br><span class="line">\---themes</span><br><span class="line">    \---next</span><br><span class="line">        +---languages</span><br><span class="line">        +---layout</span><br><span class="line">        +---scripts</span><br><span class="line">        +---source</span><br><span class="line">        |   +---css</span><br><span class="line">        |   +---fonts</span><br><span class="line">        |   +---images</span><br><span class="line">        |   +---js</span><br></pre></td></tr></table></figure>
-
-<p>在站点配置文件<code>_config.yml</code>里面，找到它</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"># 原来的值是landscape</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>hexo</category>
-        <category>next</category>
-        <category>代码</category>
-      </categories>
-      <tags>
-        <tag>代码</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>DEDECMS-5.7后台批量复制栏目文档</title>
     <url>/2020/05/21/dedecms/</url>
     <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/05/21/dedecms/dedecms.jpg" class></div>
@@ -90,101 +42,6 @@
       <tags>
         <tag>代码</tag>
         <tag>dedecms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PHPCMS采集-图片采集</title>
-    <url>/2020/05/26/phpcms/</url>
-    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/05/26/phpcms/phpcms.jpg" class></div>
-
-<a id="more"></a>
-
-<h1 id="采集图片功能"><a href="#采集图片功能" class="headerlink" title="采集图片功能"></a>采集图片功能</h1><p>本次采集图片功能针对PHPCMS采集模块所进行的一个修改，原因吗是采集过程中需要采集多个不同位置的图片，但是PHPCMS采集图片的主要针对的是内容中的，而且需要勾选自动提取缩略图选项才能提取缩略图，所以自己尝试的去修改了采集模块的Class，只是满足了采集图片的功能需求，代码比较粗略，也存在一些BUG，有人鉴戒时，如若有更多的实现方法或者改进方案，可以在评论中探讨一下。</p>
-<h2 id="方法一：原生类"><a href="#方法一：原生类" class="headerlink" title="方法一：原生类"></a>方法一：原生类</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>首先找到采集方法的类：class collection，位置在/phpcms/modules/collection/classes/collection.class.php，为方便的话也可以直接搜索文件名。</p>
-<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>找到文件后，可以直接搜索下边这行代码，大约在47行：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> ($config[<span class="string">'customize_config'</span>] = string2array($config[<span class="string">'customize_config'</span>])) &#123;</span><br></pre></td></tr></table></figure>
-
-<p>在上边这行代码下添加下边两行代码：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">pc_base::load_sys_class(<span class="string">'attachment'</span>,<span class="string">''</span>,<span class="number">0</span>);</span><br><span class="line">$attachment = <span class="keyword">new</span> attachment(<span class="string">'collection'</span>,<span class="string">'0'</span>,get_siteid());</span><br></pre></td></tr></table></figure>
-
-<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>在上边代码往下大约3~4行，可以找到下边这行代码：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$data[$v[<span class="string">'en_name'</span>]] = <span class="keyword">self</span>::replace_item(<span class="keyword">self</span>::cut_html($html, $rule[<span class="number">0</span>], $rule[<span class="number">1</span>]), $v[<span class="string">'html_rule'</span>]);</span><br></pre></td></tr></table></figure>
-
-<p>然后在下边这行代码下边添加以下代码：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(strpos($data[$v[<span class="string">'en_name'</span>]],<span class="string">'/uploadfile'</span>) !==<span class="keyword">false</span> || strpos($data[$v[<span class="string">'en_name'</span>]],<span class="string">'/uploads'</span>) !==<span class="keyword">false</span>)&#123;</span><br><span class="line"></span><br><span class="line">    $scheme = parse_url($url, PHP_URL_SCHEME);</span><br><span class="line">    $hostname = parse_url($url,PHP_URL_HOST);</span><br><span class="line">    $imgurl = <span class="string">"&lt;img src='"</span>.$scheme.<span class="string">"://"</span>.$hostname.$data[$v[<span class="string">'en_name'</span>]].<span class="string">"' /&gt;"</span>;</span><br><span class="line"></span><br><span class="line">    $imgurl = $attachment-&gt;download($data[$v[<span class="string">'en_name'</span>]], $imgurl,$config[<span class="string">'watermark'</span>]);</span><br><span class="line">    preg_match(<span class="string">'/&lt;img.+src=\'?(.+\.(jpg|gif|bmp|bnp|png))\'?.+&gt;/i'</span>,$imgurl,$match);</span><br><span class="line">    $data[$v[<span class="string">'en_name'</span>]] = parse_url($match[<span class="number">1</span>],PHP_URL_PATH);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中uploadfile|uploads是判断采集网址图片的地址的，可根据采集网址上传地址的命名去进行适当的调整。</p>
-<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>在PHPCMS采集管理，自定义规则中添加你的规则即可，此方法只对自定义规则生效。</p>
-<h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><p>代码简陋，存在诸多不足，后续我再优化上传。</p>
-<h2 id="方法二：鉴戒方法"><a href="#方法二：鉴戒方法" class="headerlink" title="方法二：鉴戒方法"></a>方法二：鉴戒方法</h2><h3 id="第一步-1"><a href="#第一步-1" class="headerlink" title="第一步"></a>第一步</h3><p>跟以上文件一样，方法二与第一种方法不一致地方为，第一种方法使用的是PHPCMS的原生类，第二种方法使用的是远程图片本地化的额外方法。</p>
-<p>在该类最下边新添加远程图片本地化的方法，该方法是网上Copy过来的，感谢代码贡献者，才能让大家使用到此方法，方法如下：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*功能：php完美实现下载远程图片保存到本地</span></span><br><span class="line"><span class="comment">*参数：文件url,保存文件目录,保存文件名称，使用的下载方式</span></span><br><span class="line"><span class="comment">*当保存文件名称为空时则使用远程文件原来的名称</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getImage</span><span class="params">($url,$save_dir=<span class="string">''</span>,$filename=<span class="string">''</span>,$type=<span class="number">0</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(trim($url)==<span class="string">''</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">array</span>(<span class="string">'file_name'</span>=&gt;<span class="string">''</span>,<span class="string">'save_path'</span>=&gt;<span class="string">''</span>,<span class="string">'error'</span>=&gt;<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(trim($save_dir)==<span class="string">''</span>)&#123;</span><br><span class="line">        $save_dir=<span class="string">'./'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(trim($filename)==<span class="string">''</span>)&#123;<span class="comment">//保存文件名</span></span><br><span class="line">        $ext=strrchr($url,<span class="string">'.'</span>);</span><br><span class="line">        <span class="keyword">if</span>($ext!=<span class="string">'.gif'</span>&amp;&amp;$ext!=<span class="string">'.jpg'</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">array</span>(<span class="string">'file_name'</span>=&gt;<span class="string">''</span>,<span class="string">'save_path'</span>=&gt;<span class="string">''</span>,<span class="string">'error'</span>=&gt;<span class="number">3</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        $filename=md5(rand(<span class="number">10</span>,<span class="number">99</span>).time().rand(<span class="number">1000</span>,<span class="number">9999</span>)).$ext;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(<span class="number">0</span>!==strrpos($save_dir,<span class="string">'/'</span>))&#123;</span><br><span class="line">        $save_dir.=<span class="string">'/'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//创建保存目录</span></span><br><span class="line">    <span class="keyword">if</span>(!file_exists($save_dir)&amp;&amp;!mkdir($save_dir,<span class="number">0777</span>,<span class="keyword">true</span>))&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">array</span>(<span class="string">'file_name'</span>=&gt;<span class="string">''</span>,<span class="string">'save_path'</span>=&gt;<span class="string">''</span>,<span class="string">'error'</span>=&gt;<span class="number">5</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//获取远程文件所采用的方法</span></span><br><span class="line">    <span class="keyword">if</span>($type)&#123;</span><br><span class="line">        $ch=curl_init();</span><br><span class="line">        $timeout=<span class="number">5</span>;</span><br><span class="line">        curl_setopt($ch,CURLOPT_URL,$url);</span><br><span class="line">        curl_setopt($ch,CURLOPT_RETURNTRANSFER,<span class="number">1</span>);</span><br><span class="line">        curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,$timeout);</span><br><span class="line">        $img=curl_exec($ch);</span><br><span class="line">        curl_close($ch);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        ob_start();</span><br><span class="line">        readfile($url);</span><br><span class="line">        $img=ob_get_contents();</span><br><span class="line">        ob_end_clean();</span><br><span class="line">    &#125;</span><br><span class="line">    $size=strlen($img);</span><br><span class="line">    $fp2=@fopen($save_dir.$filename,<span class="string">'a'</span>);</span><br><span class="line">    fwrite($fp2,$img);</span><br><span class="line">    fclose($fp2);</span><br><span class="line">    <span class="keyword">unset</span>($img,$url);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">array</span>(<span class="string">'file_name'</span>=&gt;$filename,<span class="string">'save_path'</span>=&gt;$save_dir.$filename,<span class="string">'size'</span>=&gt;$size,<span class="string">'error'</span>=&gt;<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="第二步-1"><a href="#第二步-1" class="headerlink" title="第二步"></a>第二步</h3><p>方法一的第三步操作，可以找到下边这行代码：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$data[$v[<span class="string">'en_name'</span>]] = <span class="keyword">self</span>::replace_item(<span class="keyword">self</span>::cut_html($html, $rule[<span class="number">0</span>], $rule[<span class="number">1</span>]), $v[<span class="string">'html_rule'</span>]);</span><br></pre></td></tr></table></figure>
-
-<p>然后在下边这行代码下边添加以下代码：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(strpos($data[$v[<span class="string">'en_name'</span>]],<span class="string">'/uploadfile'</span>) !==<span class="keyword">false</span> || strpos($data[$v[<span class="string">'en_name'</span>]],<span class="string">'/uploads'</span>) !==<span class="keyword">false</span>)&#123;</span><br><span class="line"></span><br><span class="line">    $scheme = parse_url($url, PHP_URL_SCHEME);</span><br><span class="line">    $hostname = parse_url($url,PHP_URL_HOST);</span><br><span class="line">    $imgurl = .$scheme.<span class="string">"://"</span>.$hostname.$data[$v[<span class="string">'en_name'</span>]];</span><br><span class="line">   	$return = <span class="keyword">self</span>::getImage($imgurl,<span class="string">"uploadfile/caiimg"</span>);</span><br><span class="line">   	$data[$v[<span class="string">'en_name'</span>]] = $return[<span class="string">'save_path'</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中getImage方法需要配置你的图片上传地址，想自定义文件名名称的话可以在方法中自行修改。</p>
-<h2 id="备注-1"><a href="#备注-1" class="headerlink" title="备注"></a>备注</h2><p>以上就是关于PHPCMS图片采集我自己琢磨出的俩个方法，方法存在不足以及BUG，大家有好的改进或者实现方式可以评论下方，我一定去尝试改进和学习，谢谢大家。</p>
-<blockquote>
-<p>如果没能一次成功，那就叫它1.0版吧。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>phpcms</category>
-        <category>代码</category>
-      </categories>
-      <tags>
-        <tag>代码</tag>
-        <tag>phpcms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mysql历史语句</title>
-    <url>/2020/05/26/sqlhistory/</url>
-    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/05/26/sqlhistory/mysql.jpg" class></div>
-
-<a id="more"></a>
-
-<h1 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h1><h2 id="从一个表插入到另一个表"><a href="#从一个表插入到另一个表" class="headerlink" title="从一个表插入到另一个表"></a>从一个表插入到另一个表</h2><p>从一个表的数据插入到另一个表中，过程中可以进行其他的操作（拼接字符串）或者是条件判断。</p>
-<p>附语法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">concat_ws(separator, str1, str2, ...)</span><br></pre></td></tr></table></figure>
-
-<p>说明：第一个参数指定分隔符。需要注意的是分隔符不能为null，如果为null，则返回结果为null。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">insert into &#96;cmsv9_hits&#96; (hitsid,catid,updatetime) </span><br><span class="line">SELECT CONCAT_WS(&quot;-&quot;,&quot;c&quot;,&quot;1&quot;,id) as hitsid,catid,updatetime from &#96;cmsv9_news&#96; where catid in (17,18) and id &gt; 6441;</span><br></pre></td></tr></table></figure>
-
-<h2 id="清空数据表，重新从1自增"><a href="#清空数据表，重新从1自增" class="headerlink" title="清空数据表，重新从1自增"></a>清空数据表，重新从1自增</h2><p>清空数据表，且主键重新从1开始自增，相比Delete，Truncate不可加Where语句，删除的话Delete更加灵活一点。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TRUNCATE TABLE Tablename;</span><br></pre></td></tr></table></figure>
-
-<h2 id="查询两个表相关联的数据"><a href="#查询两个表相关联的数据" class="headerlink" title="查询两个表相关联的数据"></a>查询两个表相关联的数据</h2><p>从一个表中查询另一个表中包含关系的数据关联SQL语句。</p>
-<p>附语法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">concat(str1, str2,...)</span><br></pre></td></tr></table></figure>
-
-<p>功能：将多个字符串连接成一个字符串。</p>
-<p>返回结果为连接参数产生的字符串，如果有任何一个参数为null，则返回值为null。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT n.id,n.title,s.title AS school FROM &#96;cmsv9_news&#96; AS n LEFT JOIN &#96;cmsv9_school&#96; as s ON n.title LIKE CONCAT(&quot;%&quot;,s.title,&quot;%&quot;) WHERE n.subhead &#x3D; &#39;&#39;</span><br></pre></td></tr></table></figure>
-
-<p>附加修改SQL</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">UPDATE &#96;cmsv9_news&#96; AS n LEFT JOIN &#96;cmsv9_school&#96; as s ON n.title LIKE CONCAT(&quot;%&quot;,s.title,&quot;%&quot;) SET n.subhead &#x3D; s.title WHERE</span><br><span class="line">n.subhead &#x3D; &#39;&#39; AND n.title &lt;&gt; &#39;&#39; AND s.title &lt;&gt; &#39;&#39;;</span><br></pre></td></tr></table></figure>
-
-<h2 id="查询结果串联成字符串"><a href="#查询结果串联成字符串" class="headerlink" title="查询结果串联成字符串"></a>查询结果串联成字符串</h2><p>查询出来的结果串联成一个字符串，方便二次进行函数处理。</p>
-<p>附语法：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">group_concat([DISTINCT] 要连接的字段 [Order BY ASC&#x2F;DESC 排序字段] [Separator &#39;分隔符&#39;])</span><br></pre></td></tr></table></figure>
-
-<p>附加SQL：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT GROUP_CONCAT(id) as idall FROM &#96;qhky_arctype&#96; WHERE reid &#x3D; &#39;15&#39;</span><br></pre></td></tr></table></figure>
-
-<p>返回值为Array类型。</p>
-]]></content>
-      <categories>
-        <category>mysql</category>
-        <category>代码</category>
-      </categories>
-      <tags>
-        <tag>代码</tag>
-        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
@@ -233,66 +90,51 @@
       </tags>
   </entry>
   <entry>
-    <title>如何预防薅羊毛</title>
-    <url>/2020/06/02/econnoisseur/</url>
-    <content><![CDATA[<img src="/2020/06/02/econnoisseur/hao.jpg" class>
+    <title>Hexo与Next安装</title>
+    <url>/2020/05/20/install/</url>
+    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/05/20/install/hexo.jpg" class></div>
 
 <a id="more"></a>
 
-<h1 id="如何预防薅羊毛？"><a href="#如何预防薅羊毛？" class="headerlink" title="如何预防薅羊毛？"></a>如何预防薅羊毛？</h1><p>关于答题形式或者其他游戏形式奖励真实红包的活动，羊毛党或者不法分子通过肉鸡号大量虚假账号进行注册，套取红包造成用户的直接损失，关于以上自己的一些总结包括网上的一些前辈总结出来的方法，在这里做一个汇总：</p>
-<h2 id="第一点"><a href="#第一点" class="headerlink" title="第一点"></a>第一点</h2><p>进行OPNEID微信信息等验证，有很多肉鸡号是没有姓名和头像的，不确保有些微信存在姓名和头像。</p>
-<h2 id="第二点"><a href="#第二点" class="headerlink" title="第二点"></a>第二点</h2><p>用户从一开始的注册到后来的答题以及领取红包的整体流程要有详细的时间（服务器时间）以及IP的留存，方便比对IP地址。</p>
-<h2 id="第三点"><a href="#第三点" class="headerlink" title="第三点"></a>第三点</h2><p>限制微信红包的金额、每人的次数以及一天红包的上限和微信的防刷等级，防止通过大金额在很短的时间内造成大的损失。</p>
-<h2 id="第四点"><a href="#第四点" class="headerlink" title="第四点"></a>第四点</h2><p>红包在不必要的情况下（延时发放），不要立刻发出去，可以设定在某一个时间段发出去，或者后台审核发出去，给我们自己一个缓冲的时间去处理以及过滤掉一些非法的数据。</p>
-<h2 id="第五点"><a href="#第五点" class="headerlink" title="第五点"></a>第五点</h2><p>整体程序的严谨性和安全性的提高，例如：限制活动的时间，用户的地区，公众号关注等方面。</p>
-<h2 id="第六点"><a href="#第六点" class="headerlink" title="第六点"></a>第六点</h2><p>随机验证码或者手机短信验证码多条件限制等。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上就是总结的关于微信红包的真实案例后的真实想法，通过此次活动能够更加警醒自己对于安全性方面的知识的提高和学习。</p>
-<img src="/2020/06/02/econnoisseur/mianli.jpg" class>]]></content>
+<h1 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h1><h2 id="什么是-Hexo？"><a href="#什么是-Hexo？" class="headerlink" title="什么是 Hexo？"></a>什么是 Hexo？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h2 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h2><p>安装 Hexo 相当简单，只需要先安装下列应用程序即可：</p>
+<ul>
+<li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a> (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)</li>
+<li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
+</ul>
+<p>下载安装包，点击安装包，点击下一步直到完成即可，node安装完后在命令行运行 node -v（查看版本），如果成功说明node安装成功，不成功可能是环境变量问题，去配置一下或重新安装下.<br> 同理安装git，安装完后再命令行运行git version（查看版本），如果成功说明git安装成功。</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>1.如果您的电脑中已经安装上述必备程序，接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>2.安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>会生成如下结构的文件：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line"> ├── _config.yml  站点配置文件</span><br><span class="line"> ├── package.json  站点依赖文件</span><br><span class="line"> ├── scaffolds  模板文件夹</span><br><span class="line"> ├── source 资源文件夹</span><br><span class="line"> |   ├── _drafts</span><br><span class="line"> |   └── _posts</span><br><span class="line"> └── themes  主题文件夹</span><br></pre></td></tr></table></figure>
+
+<p>最后一步你npm install不可少，它主要功能是用于安装package.json中的依赖，当有改动package.json中的依赖时都要运行一次。<br>到此hexo安装就算完成了，然后在命令行运行。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">hexo sever</span><br></pre></td></tr></table></figure>
+
+<p>就可以看到hexo默认主题效果了。</p>
+<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">hexo init [folder] 新建一个网站</span><br><span class="line">hexo <span class="keyword">new</span> [layout] &lt;title&gt; 创建一篇新文章</span><br><span class="line">hexo sever或hexo s 启动服务器</span><br><span class="line">hexo clean 清除缓存文件 (db.json) 和已生成的静态文件 (public)</span><br><span class="line">hexo generate或hexo g 生成静态文件</span><br><span class="line">hexo deploy或hexo d 部署网站</span><br><span class="line">hexo migrate &lt;type&gt; 从其他博客系统迁移内容</span><br></pre></td></tr></table></figure>
+
+<h1 id="Next安装"><a href="#Next安装" class="headerlink" title="Next安装"></a>Next安装</h1><h2 id="安装NexT"><a href="#安装NexT" class="headerlink" title="安装NexT"></a>安装NexT</h2><p>通过<code>git</code>指令下载<code>NexT</code><strong>最新的</strong>主题文件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<p>或者，直接从发布页<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Fiissnan%2Fhexo-theme-next%2Freleases" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next/releases</a>下载源指定版本源代码。</p>
+<p>下载之后，解压缩主题主题文件，并把它放到<code>themes</code></p>
+<p>主题文件放在</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">+---public</span><br><span class="line">|   +---about</span><br><span class="line">|   +---archives</span><br><span class="line">|   +---categories</span><br><span class="line">|   +---css</span><br><span class="line">|   +---images</span><br><span class="line">|   +---js</span><br><span class="line">|   +---lib</span><br><span class="line">|   +---page</span><br><span class="line">|   +---post</span><br><span class="line">|   \---tags</span><br><span class="line">+---scaffolds</span><br><span class="line">+---source</span><br><span class="line">|   +---about</span><br><span class="line">|   +---categories</span><br><span class="line">|   +---images</span><br><span class="line">|   +---tags</span><br><span class="line">|   +---_drafts</span><br><span class="line">|   \---_posts</span><br><span class="line">\---themes</span><br><span class="line">    \---next</span><br><span class="line">        +---languages</span><br><span class="line">        +---layout</span><br><span class="line">        +---scripts</span><br><span class="line">        +---source</span><br><span class="line">        |   +---css</span><br><span class="line">        |   +---fonts</span><br><span class="line">        |   +---images</span><br><span class="line">        |   +---js</span><br></pre></td></tr></table></figure>
+
+<p>在站点配置文件<code>_config.yml</code>里面，找到它</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"># 原来的值是landscape</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>project</category>
-        <category>心情</category>
-      </categories>
-      <tags>
-        <tag>project</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PHPCMS-WHERE条件失效以及分页参数</title>
-    <url>/2020/06/16/phpcms/</url>
-    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/06/16/phpcms/phpcms.jpg" class></div>
-
-<a id="more"></a>
-
-<h1 id="WHERE条件失效"><a href="#WHERE条件失效" class="headerlink" title="WHERE条件失效"></a>WHERE条件失效</h1><p>本次改动针对于列表信息调用时，加入WHERE失效的问题，借鉴了一部分网上的代码片段，解决了该问题，但是实际的过程中又发现了新的问题，是分页的数据和WHERE条件的数据不一致，这次做一个较为完整的修改方案：</p>
-<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>首先找到本次修改调整的文件：phpcms/modules/content/classes/content_tag.class.php</p>
-<p>找到count方法中的：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$sql = $data[<span class="string">'where'</span>];</span><br></pre></td></tr></table></figure>
-
-<p>替换为下边的代码：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$where = (<span class="keyword">isset</span>($data[<span class="string">'where'</span>])&amp;&amp;(!<span class="keyword">empty</span>($data[<span class="string">'where'</span>])))?<span class="string">' AND '</span>.$data[<span class="string">'where'</span>]:<span class="string">''</span>;</span><br><span class="line">$thumb = intval($data[<span class="string">'thumb'</span>]) ? <span class="string">" AND thumb != ''"</span> : <span class="string">''</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">$this</span>-&gt;category[$catid][<span class="string">'child'</span>]) &#123;</span><br><span class="line">    $catids_str = <span class="keyword">$this</span>-&gt;category[$catid][<span class="string">'arrchildid'</span>];</span><br><span class="line">    $pos = strpos($catids_str,<span class="string">','</span>)+<span class="number">1</span>;</span><br><span class="line">    $catids_str = substr($catids_str, $pos);</span><br><span class="line">    $sql = <span class="string">"status=99"</span>.$where.<span class="string">" AND catid IN ($catids_str)"</span>.$thumb;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    $sql = <span class="string">"status=99"</span>.$where.<span class="string">" AND catid='$catid'"</span>.$thumb;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>还是该文件找到lists方法中的：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$sql = $data[<span class="string">'where'</span>];</span><br></pre></td></tr></table></figure>
-
-<p>替换为下边的代码：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$where = (<span class="keyword">isset</span>($data[<span class="string">'where'</span>])&amp;&amp;(!<span class="keyword">empty</span>($data[<span class="string">'where'</span>])))?<span class="string">' AND '</span>.$data[<span class="string">'where'</span>]:<span class="string">''</span>;</span><br><span class="line">$thumb = intval($data[<span class="string">'thumb'</span>]) ? <span class="string">" AND thumb != ''"</span> : <span class="string">''</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">$this</span>-&gt;category[$catid][<span class="string">'child'</span>]) &#123;</span><br><span class="line">    $catids_str = <span class="keyword">$this</span>-&gt;category[$catid][<span class="string">'arrchildid'</span>];</span><br><span class="line">    $pos = strpos($catids_str,<span class="string">','</span>)+<span class="number">1</span>;</span><br><span class="line">    $catids_str = substr($catids_str, $pos);</span><br><span class="line">    $sql = <span class="string">"status=99"</span>.$where.<span class="string">" AND catid IN ($catids_str)"</span>.$thumb;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    $sql = <span class="string">"status=99"</span>.$where.<span class="string">" AND catid='$catid'"</span>.$thumb;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="分页参数"><a href="#分页参数" class="headerlink" title="分页参数"></a>分页参数</h1><p>本次改动针对自定义参数的分页时无参数的情况的修改。</p>
-<h2 id="第一步-1"><a href="#第一步-1" class="headerlink" title="第一步"></a>第一步</h2><p>需要在pc:content 前边加上下边这段代码：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&#123;php $urlrule = makeurlrule();&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="第二步-1"><a href="#第二步-1" class="headerlink" title="第二步"></a>第二步</h2><p>在pc:content的中加上下边这个参数：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">urlrule=<span class="string">"$urlrule"</span></span><br></pre></td></tr></table></figure>
-
-<p>再刷新的时候，会发现参数可以正常的被调用。</p>
-]]></content>
-      <categories>
-        <category>phpcms</category>
+        <category>hexo</category>
         <category>代码</category>
+        <category>next</category>
       </categories>
       <tags>
         <tag>代码</tag>
-        <tag>phpcms</tag>
       </tags>
   </entry>
   <entry>
@@ -363,6 +205,271 @@
         <tag>代码</tag>
         <tag>datagrip</tag>
         <tag>jetbrains</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PHPCMS-WHERE条件失效以及分页参数</title>
+    <url>/2020/06/16/phpcms/</url>
+    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/06/16/phpcms/phpcms.jpg" class></div>
+
+<a id="more"></a>
+
+<h1 id="WHERE条件失效"><a href="#WHERE条件失效" class="headerlink" title="WHERE条件失效"></a>WHERE条件失效</h1><p>本次改动针对于列表信息调用时，加入WHERE失效的问题，借鉴了一部分网上的代码片段，解决了该问题，但是实际的过程中又发现了新的问题，是分页的数据和WHERE条件的数据不一致，这次做一个较为完整的修改方案：</p>
+<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>首先找到本次修改调整的文件：phpcms/modules/content/classes/content_tag.class.php</p>
+<p>找到count方法中的：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$sql = $data[<span class="string">'where'</span>];</span><br></pre></td></tr></table></figure>
+
+<p>替换为下边的代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$where = (<span class="keyword">isset</span>($data[<span class="string">'where'</span>])&amp;&amp;(!<span class="keyword">empty</span>($data[<span class="string">'where'</span>])))?<span class="string">' AND '</span>.$data[<span class="string">'where'</span>]:<span class="string">''</span>;</span><br><span class="line">$thumb = intval($data[<span class="string">'thumb'</span>]) ? <span class="string">" AND thumb != ''"</span> : <span class="string">''</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">$this</span>-&gt;category[$catid][<span class="string">'child'</span>]) &#123;</span><br><span class="line">    $catids_str = <span class="keyword">$this</span>-&gt;category[$catid][<span class="string">'arrchildid'</span>];</span><br><span class="line">    $pos = strpos($catids_str,<span class="string">','</span>)+<span class="number">1</span>;</span><br><span class="line">    $catids_str = substr($catids_str, $pos);</span><br><span class="line">    $sql = <span class="string">"status=99"</span>.$where.<span class="string">" AND catid IN ($catids_str)"</span>.$thumb;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    $sql = <span class="string">"status=99"</span>.$where.<span class="string">" AND catid='$catid'"</span>.$thumb;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>还是该文件找到lists方法中的：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$sql = $data[<span class="string">'where'</span>];</span><br></pre></td></tr></table></figure>
+
+<p>替换为下边的代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$where = (<span class="keyword">isset</span>($data[<span class="string">'where'</span>])&amp;&amp;(!<span class="keyword">empty</span>($data[<span class="string">'where'</span>])))?<span class="string">' AND '</span>.$data[<span class="string">'where'</span>]:<span class="string">''</span>;</span><br><span class="line">$thumb = intval($data[<span class="string">'thumb'</span>]) ? <span class="string">" AND thumb != ''"</span> : <span class="string">''</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">$this</span>-&gt;category[$catid][<span class="string">'child'</span>]) &#123;</span><br><span class="line">    $catids_str = <span class="keyword">$this</span>-&gt;category[$catid][<span class="string">'arrchildid'</span>];</span><br><span class="line">    $pos = strpos($catids_str,<span class="string">','</span>)+<span class="number">1</span>;</span><br><span class="line">    $catids_str = substr($catids_str, $pos);</span><br><span class="line">    $sql = <span class="string">"status=99"</span>.$where.<span class="string">" AND catid IN ($catids_str)"</span>.$thumb;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    $sql = <span class="string">"status=99"</span>.$where.<span class="string">" AND catid='$catid'"</span>.$thumb;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="分页参数"><a href="#分页参数" class="headerlink" title="分页参数"></a>分页参数</h1><p>本次改动针对自定义参数的分页时无参数的情况的修改。</p>
+<h2 id="第一步-1"><a href="#第一步-1" class="headerlink" title="第一步"></a>第一步</h2><p>需要在pc:content 前边加上下边这段代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&#123;php $urlrule = makeurlrule();&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="第二步-1"><a href="#第二步-1" class="headerlink" title="第二步"></a>第二步</h2><p>在pc:content的中加上下边这个参数：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">urlrule=<span class="string">"$urlrule"</span></span><br></pre></td></tr></table></figure>
+
+<p>再刷新的时候，会发现参数可以正常的被调用。</p>
+]]></content>
+      <categories>
+        <category>代码</category>
+        <category>phpcms</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>phpcms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mysql历史语句</title>
+    <url>/2020/05/26/sqlhistory/</url>
+    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/05/26/sqlhistory/mysql.jpg" class></div>
+
+<a id="more"></a>
+
+<h1 id="SQL语句"><a href="#SQL语句" class="headerlink" title="SQL语句"></a>SQL语句</h1><h2 id="从一个表插入到另一个表"><a href="#从一个表插入到另一个表" class="headerlink" title="从一个表插入到另一个表"></a>从一个表插入到另一个表</h2><p>从一个表的数据插入到另一个表中，过程中可以进行其他的操作（拼接字符串）或者是条件判断。</p>
+<p>附语法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">concat_ws(separator, str1, str2, ...)</span><br></pre></td></tr></table></figure>
+
+<p>说明：第一个参数指定分隔符。需要注意的是分隔符不能为null，如果为null，则返回结果为null。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">insert into &#96;cmsv9_hits&#96; (hitsid,catid,updatetime) </span><br><span class="line">SELECT CONCAT_WS(&quot;-&quot;,&quot;c&quot;,&quot;1&quot;,id) as hitsid,catid,updatetime from &#96;cmsv9_news&#96; where catid in (17,18) and id &gt; 6441;</span><br></pre></td></tr></table></figure>
+
+<h2 id="清空数据表，重新从1自增"><a href="#清空数据表，重新从1自增" class="headerlink" title="清空数据表，重新从1自增"></a>清空数据表，重新从1自增</h2><p>清空数据表，且主键重新从1开始自增，相比Delete，Truncate不可加Where语句，删除的话Delete更加灵活一点。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TRUNCATE TABLE Tablename;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询两个表相关联的数据"><a href="#查询两个表相关联的数据" class="headerlink" title="查询两个表相关联的数据"></a>查询两个表相关联的数据</h2><p>从一个表中查询另一个表中包含关系的数据关联SQL语句。</p>
+<p>附语法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">concat(str1, str2,...)</span><br></pre></td></tr></table></figure>
+
+<p>功能：将多个字符串连接成一个字符串。</p>
+<p>返回结果为连接参数产生的字符串，如果有任何一个参数为null，则返回值为null。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT n.id,n.title,s.title AS school FROM &#96;cmsv9_news&#96; AS n LEFT JOIN &#96;cmsv9_school&#96; as s ON n.title LIKE CONCAT(&quot;%&quot;,s.title,&quot;%&quot;) WHERE n.subhead &#x3D; &#39;&#39;</span><br></pre></td></tr></table></figure>
+
+<p>附加修改SQL</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">UPDATE &#96;cmsv9_news&#96; AS n LEFT JOIN &#96;cmsv9_school&#96; as s ON n.title LIKE CONCAT(&quot;%&quot;,s.title,&quot;%&quot;) SET n.subhead &#x3D; s.title WHERE</span><br><span class="line">n.subhead &#x3D; &#39;&#39; AND n.title &lt;&gt; &#39;&#39; AND s.title &lt;&gt; &#39;&#39;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询结果串联成字符串"><a href="#查询结果串联成字符串" class="headerlink" title="查询结果串联成字符串"></a>查询结果串联成字符串</h2><p>查询出来的结果串联成一个字符串，方便二次进行函数处理。</p>
+<p>附语法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">group_concat([DISTINCT] 要连接的字段 [Order BY ASC&#x2F;DESC 排序字段] [Separator &#39;分隔符&#39;])</span><br></pre></td></tr></table></figure>
+
+<p>附加SQL：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">SELECT GROUP_CONCAT(id) as idall FROM &#96;qhky_arctype&#96; WHERE reid &#x3D; &#39;15&#39;</span><br></pre></td></tr></table></figure>
+
+<p>返回值为Array类型。</p>
+]]></content>
+      <categories>
+        <category>代码</category>
+        <category>mysql</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>laravel-model</title>
+    <url>/2020/07/23/laravel-model/</url>
+    <content><![CDATA[<img src="/2020/07/23/laravel-model/laravel.jpg" class>
+
+<a id="more"></a>
+
+<h1 id="Eloquent-ORM"><a href="#Eloquent-ORM" class="headerlink" title="Eloquent ORM"></a>Eloquent ORM</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Laravel 内置的 Eloquent ORM 提供了一个美观、简单的与数据库打交道的 ActiveRecord 实现，每张数据表都对应一个与该表进行交互的模型（Model），通过模型类，你可以对数据表进行查询、插入、更新、删除等操作。</p>
+<h2 id="定义模型"><a href="#定义模型" class="headerlink" title="定义模型"></a>定义模型</h2><p>我们从创建一个 Eloquent 模型开始，模型类通常位于 <code>app</code> 目录下，你也可以将其放在其他可以被 <code>composer.json</code> 文件自动加载到的地方。所有 Eloquent 模型都继承自 <code>Illuminate\Database\Eloquent\Model</code> 类。</p>
+<p>创建模型实例最简单的办法就是使用 <a href="https://xueyuanjun.com/post/19502.html" target="_blank" rel="noopener">Artisan 命令</a> <code>make:model</code>：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">php artisan make:model Flight</span><br></pre></td></tr></table></figure>
+
+<p>如果你想要在生成模型时生成<a href="https://xueyuanjun.com/post/19523.html" target="_blank" rel="noopener">数据库迁移</a>，可以使用 <code>--migration</code> 或 <code>-m</code> 选项：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">php artisan make:model Flight --migration</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">php artisan make:model Flight -m</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Eloquent-模型约定"><a href="#Eloquent-模型约定" class="headerlink" title="Eloquent 模型约定"></a>Eloquent 模型约定</h3><p>现在，让我们来看一个 <code>Flight</code> 模型的例子，我们将用该类获取和存取数据表 <code>flights</code> 中的信息：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="表名"><a href="#表名" class="headerlink" title="表名"></a><strong>表名</strong></h4><p>注意我们并没有告诉 Eloquent 我们的 <code>Flight</code> 模型使用哪张表，默认规则是小写的模型类名复数格式作为与其对应的表名（除非在模型类中明确指定了其它名称）。所以，在本例中，Eloquent 认为 <code>Flight</code> 模型存储记录在 <code>flights</code> 表中。你也可以在模型中定义 <code>table</code> 属性来指定自定义的表名：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 关联到模型的数据表</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@var</span> string</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> $table = <span class="string">'my_flights'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="主键"><a href="#主键" class="headerlink" title="主键"></a><strong>主键</strong></h4><p>Eloquent 默认每张表的主键名为 <code>id</code>，你可以在模型类中定义一个 <code>$primaryKey</code> 属性来覆盖该约定。</p>
+<p>此外，Eloquent 默认主键字段是自增的整型数据，这意味着主键将会被自动转化为 <code>int</code> 类型，如果你想要使用非自增或非数字类型主键，必须在对应模型中设置 <code>$incrementing</code> 属性为 <code>false</code>，如果主键不是整型，还要设置 <code>$keyType</code> 属性值为 <code>string</code>。</p>
+<h4 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a><strong>时间戳</strong></h4><p>默认情况下，Eloquent 期望 <code>created_at</code> 和 <code>updated_at</code> 已经存在于数据表中，如果你不想要这些 Laravel 自动管理的数据列，在模型类中设置 <code>$timestamps</code> 属性为 <code>false</code>：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 表明模型是否应该被打上时间戳</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@var</span> bool</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> $timestamps = <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你需要自定义时间戳格式，设置模型中的 <code>$dateFormat</code> 属性。该属性决定日期被如何存储到数据库中，以及模型被序列化为数组或 JSON 时日期的格式：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 模型日期列的存储格式</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@var</span> string</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> $dateFormat = <span class="string">'U'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果你需要自定义用于存储时间戳的字段名称，可以在模型中设置 <code>CREATED_AT</code> 和 <code>UPDATED_AT</code> 常量：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> CREATED_AT = <span class="string">'creation_date'</span>;</span><br><span class="line">    <span class="keyword">const</span> UPDATED_AT = <span class="string">'last_update'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="数据库连接"><a href="#数据库连接" class="headerlink" title="数据库连接"></a><strong>数据库连接</strong></h4><p>默认情况下，所有的 Eloquent 模型使用应用配置中的默认数据库连接，如果你想要为模型指定不同的连接，可以通过 <code>$connection</code> 属性来设置：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * The connection name for the model.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@var</span> string</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> $connection = <span class="string">'connection-name'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="默认属性名"><a href="#默认属性名" class="headerlink" title="默认属性名"></a>默认属性名</h3><p>如果你想要定义某些模型属性的默认值，可以在模型上定义 <code>$attributes</code> 属性：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * The model's default values for attributes.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@var</span> array</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> $attributes = [</span><br><span class="line">        <span class="string">'delayed'</span> =&gt; <span class="keyword">false</span>,</span><br><span class="line">    ];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>代码</category>
+        <category>laravel</category>
+        <category>eloquent orm</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>laravel</tag>
+        <tag>eloquent orm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PHPCMS采集-图片采集</title>
+    <url>/2020/05/26/phpcms/</url>
+    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/05/26/phpcms/phpcms.jpg" class></div>
+
+<a id="more"></a>
+
+<h1 id="采集图片功能"><a href="#采集图片功能" class="headerlink" title="采集图片功能"></a>采集图片功能</h1><p>本次采集图片功能针对PHPCMS采集模块所进行的一个修改，原因吗是采集过程中需要采集多个不同位置的图片，但是PHPCMS采集图片的主要针对的是内容中的，而且需要勾选自动提取缩略图选项才能提取缩略图，所以自己尝试的去修改了采集模块的Class，只是满足了采集图片的功能需求，代码比较粗略，也存在一些BUG，有人鉴戒时，如若有更多的实现方法或者改进方案，可以在评论中探讨一下。</p>
+<h2 id="方法一：原生类"><a href="#方法一：原生类" class="headerlink" title="方法一：原生类"></a>方法一：原生类</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>首先找到采集方法的类：class collection，位置在/phpcms/modules/collection/classes/collection.class.php，为方便的话也可以直接搜索文件名。</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>找到文件后，可以直接搜索下边这行代码，大约在47行：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> ($config[<span class="string">'customize_config'</span>] = string2array($config[<span class="string">'customize_config'</span>])) &#123;</span><br></pre></td></tr></table></figure>
+
+<p>在上边这行代码下添加下边两行代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">pc_base::load_sys_class(<span class="string">'attachment'</span>,<span class="string">''</span>,<span class="number">0</span>);</span><br><span class="line">$attachment = <span class="keyword">new</span> attachment(<span class="string">'collection'</span>,<span class="string">'0'</span>,get_siteid());</span><br></pre></td></tr></table></figure>
+
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>在上边代码往下大约3~4行，可以找到下边这行代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$data[$v[<span class="string">'en_name'</span>]] = <span class="keyword">self</span>::replace_item(<span class="keyword">self</span>::cut_html($html, $rule[<span class="number">0</span>], $rule[<span class="number">1</span>]), $v[<span class="string">'html_rule'</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>然后在下边这行代码下边添加以下代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(strpos($data[$v[<span class="string">'en_name'</span>]],<span class="string">'/uploadfile'</span>) !==<span class="keyword">false</span> || strpos($data[$v[<span class="string">'en_name'</span>]],<span class="string">'/uploads'</span>) !==<span class="keyword">false</span>)&#123;</span><br><span class="line"></span><br><span class="line">    $scheme = parse_url($url, PHP_URL_SCHEME);</span><br><span class="line">    $hostname = parse_url($url,PHP_URL_HOST);</span><br><span class="line">    $imgurl = <span class="string">"&lt;img src='"</span>.$scheme.<span class="string">"://"</span>.$hostname.$data[$v[<span class="string">'en_name'</span>]].<span class="string">"' /&gt;"</span>;</span><br><span class="line"></span><br><span class="line">    $imgurl = $attachment-&gt;download($data[$v[<span class="string">'en_name'</span>]], $imgurl,$config[<span class="string">'watermark'</span>]);</span><br><span class="line">    preg_match(<span class="string">'/&lt;img.+src=\'?(.+\.(jpg|gif|bmp|bnp|png))\'?.+&gt;/i'</span>,$imgurl,$match);</span><br><span class="line">    $data[$v[<span class="string">'en_name'</span>]] = parse_url($match[<span class="number">1</span>],PHP_URL_PATH);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中uploadfile|uploads是判断采集网址图片的地址的，可根据采集网址上传地址的命名去进行适当的调整。</p>
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>在PHPCMS采集管理，自定义规则中添加你的规则即可，此方法只对自定义规则生效。</p>
+<h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><p>代码简陋，存在诸多不足，后续我再优化上传。</p>
+<h2 id="方法二：鉴戒方法"><a href="#方法二：鉴戒方法" class="headerlink" title="方法二：鉴戒方法"></a>方法二：鉴戒方法</h2><h3 id="第一步-1"><a href="#第一步-1" class="headerlink" title="第一步"></a>第一步</h3><p>跟以上文件一样，方法二与第一种方法不一致地方为，第一种方法使用的是PHPCMS的原生类，第二种方法使用的是远程图片本地化的额外方法。</p>
+<p>在该类最下边新添加远程图片本地化的方法，该方法是网上Copy过来的，感谢代码贡献者，才能让大家使用到此方法，方法如下：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*功能：php完美实现下载远程图片保存到本地</span></span><br><span class="line"><span class="comment">*参数：文件url,保存文件目录,保存文件名称，使用的下载方式</span></span><br><span class="line"><span class="comment">*当保存文件名称为空时则使用远程文件原来的名称</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getImage</span><span class="params">($url,$save_dir=<span class="string">''</span>,$filename=<span class="string">''</span>,$type=<span class="number">0</span>)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(trim($url)==<span class="string">''</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">array</span>(<span class="string">'file_name'</span>=&gt;<span class="string">''</span>,<span class="string">'save_path'</span>=&gt;<span class="string">''</span>,<span class="string">'error'</span>=&gt;<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(trim($save_dir)==<span class="string">''</span>)&#123;</span><br><span class="line">        $save_dir=<span class="string">'./'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(trim($filename)==<span class="string">''</span>)&#123;<span class="comment">//保存文件名</span></span><br><span class="line">        $ext=strrchr($url,<span class="string">'.'</span>);</span><br><span class="line">        <span class="keyword">if</span>($ext!=<span class="string">'.gif'</span>&amp;&amp;$ext!=<span class="string">'.jpg'</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">array</span>(<span class="string">'file_name'</span>=&gt;<span class="string">''</span>,<span class="string">'save_path'</span>=&gt;<span class="string">''</span>,<span class="string">'error'</span>=&gt;<span class="number">3</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        $filename=md5(rand(<span class="number">10</span>,<span class="number">99</span>).time().rand(<span class="number">1000</span>,<span class="number">9999</span>)).$ext;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(<span class="number">0</span>!==strrpos($save_dir,<span class="string">'/'</span>))&#123;</span><br><span class="line">        $save_dir.=<span class="string">'/'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//创建保存目录</span></span><br><span class="line">    <span class="keyword">if</span>(!file_exists($save_dir)&amp;&amp;!mkdir($save_dir,<span class="number">0777</span>,<span class="keyword">true</span>))&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">array</span>(<span class="string">'file_name'</span>=&gt;<span class="string">''</span>,<span class="string">'save_path'</span>=&gt;<span class="string">''</span>,<span class="string">'error'</span>=&gt;<span class="number">5</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//获取远程文件所采用的方法</span></span><br><span class="line">    <span class="keyword">if</span>($type)&#123;</span><br><span class="line">        $ch=curl_init();</span><br><span class="line">        $timeout=<span class="number">5</span>;</span><br><span class="line">        curl_setopt($ch,CURLOPT_URL,$url);</span><br><span class="line">        curl_setopt($ch,CURLOPT_RETURNTRANSFER,<span class="number">1</span>);</span><br><span class="line">        curl_setopt($ch,CURLOPT_CONNECTTIMEOUT,$timeout);</span><br><span class="line">        $img=curl_exec($ch);</span><br><span class="line">        curl_close($ch);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        ob_start();</span><br><span class="line">        readfile($url);</span><br><span class="line">        $img=ob_get_contents();</span><br><span class="line">        ob_end_clean();</span><br><span class="line">    &#125;</span><br><span class="line">    $size=strlen($img);</span><br><span class="line">    $fp2=@fopen($save_dir.$filename,<span class="string">'a'</span>);</span><br><span class="line">    fwrite($fp2,$img);</span><br><span class="line">    fclose($fp2);</span><br><span class="line">    <span class="keyword">unset</span>($img,$url);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">array</span>(<span class="string">'file_name'</span>=&gt;$filename,<span class="string">'save_path'</span>=&gt;$save_dir.$filename,<span class="string">'size'</span>=&gt;$size,<span class="string">'error'</span>=&gt;<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二步-1"><a href="#第二步-1" class="headerlink" title="第二步"></a>第二步</h3><p>方法一的第三步操作，可以找到下边这行代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$data[$v[<span class="string">'en_name'</span>]] = <span class="keyword">self</span>::replace_item(<span class="keyword">self</span>::cut_html($html, $rule[<span class="number">0</span>], $rule[<span class="number">1</span>]), $v[<span class="string">'html_rule'</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>然后在下边这行代码下边添加以下代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(strpos($data[$v[<span class="string">'en_name'</span>]],<span class="string">'/uploadfile'</span>) !==<span class="keyword">false</span> || strpos($data[$v[<span class="string">'en_name'</span>]],<span class="string">'/uploads'</span>) !==<span class="keyword">false</span>)&#123;</span><br><span class="line"></span><br><span class="line">    $scheme = parse_url($url, PHP_URL_SCHEME);</span><br><span class="line">    $hostname = parse_url($url,PHP_URL_HOST);</span><br><span class="line">    $imgurl = .$scheme.<span class="string">"://"</span>.$hostname.$data[$v[<span class="string">'en_name'</span>]];</span><br><span class="line">   	$return = <span class="keyword">self</span>::getImage($imgurl,<span class="string">"uploadfile/caiimg"</span>);</span><br><span class="line">   	$data[$v[<span class="string">'en_name'</span>]] = $return[<span class="string">'save_path'</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中getImage方法需要配置你的图片上传地址，想自定义文件名名称的话可以在方法中自行修改。</p>
+<h2 id="备注-1"><a href="#备注-1" class="headerlink" title="备注"></a>备注</h2><p>以上就是关于PHPCMS图片采集我自己琢磨出的俩个方法，方法存在不足以及BUG，大家有好的改进或者实现方式可以评论下方，我一定去尝试改进和学习，谢谢大家。</p>
+<blockquote>
+<p>如果没能一次成功，那就叫它1.0版吧。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>代码</category>
+        <category>phpcms</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>phpcms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ThinkPHP去除index.php</title>
+    <url>/2020/09/23/ThinkPHP/</url>
+    <content><![CDATA[<div style="width:50%;margin:0 auto;"><img src="/2020/09/23/ThinkPHP/thinkphp.jpg" class></div>
+
+<a id="more"></a>
+
+<h1 id="ThinkPHP去除index-php"><a href="#ThinkPHP去除index-php" class="headerlink" title="ThinkPHP去除index.php"></a>ThinkPHP去除index.php</h1><h2 id="Apache方法"><a href="#Apache方法" class="headerlink" title="Apache方法"></a>Apache方法</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p><code>httpd.conf</code>配置文件中加载了<code>mod_rewrite.so</code>模块</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>AllowOverride None 将None改为 All</p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>把下面的内容保存为<code>.htaccess</code>文件放到应用入口文件的同级目录下</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt;</span><br><span class="line">  Options +FollowSymlinks -Multiviews</span><br><span class="line">  RewriteEngine On</span><br><span class="line"></span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">  RewriteRule ^(.*)$ index.php/$<span class="number">1</span> [QSA,PT,L]</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt;</span><br><span class="line">  Options +FollowSymlinks -Multiviews</span><br><span class="line">  RewriteEngine On</span><br><span class="line"></span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">  RewriteRule ^(.*)$ index.php?s=$<span class="number">1</span> [QSA,PT,L]</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>代码</category>
+        <category>thinkphp</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>thinkphp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何预防薅羊毛</title>
+    <url>/2020/06/02/econnoisseur/</url>
+    <content><![CDATA[<img src="/2020/06/02/econnoisseur/hao.jpg" class>
+
+<a id="more"></a>
+
+<h1 id="如何预防薅羊毛？"><a href="#如何预防薅羊毛？" class="headerlink" title="如何预防薅羊毛？"></a>如何预防薅羊毛？</h1><p>关于答题形式或者其他游戏形式奖励真实红包的活动，羊毛党或者不法分子通过肉鸡号大量虚假账号进行注册，套取红包造成用户的直接损失，关于以上自己的一些总结包括网上的一些前辈总结出来的方法，在这里做一个汇总：</p>
+<h2 id="第一点"><a href="#第一点" class="headerlink" title="第一点"></a>第一点</h2><p>进行OPNEID微信信息等验证，有很多肉鸡号是没有姓名和头像的，不确保有些微信存在姓名和头像。</p>
+<h2 id="第二点"><a href="#第二点" class="headerlink" title="第二点"></a>第二点</h2><p>用户从一开始的注册到后来的答题以及领取红包的整体流程要有详细的时间（服务器时间）以及IP的留存，方便比对IP地址。</p>
+<h2 id="第三点"><a href="#第三点" class="headerlink" title="第三点"></a>第三点</h2><p>限制微信红包的金额、每人的次数以及一天红包的上限和微信的防刷等级，防止通过大金额在很短的时间内造成大的损失。</p>
+<h2 id="第四点"><a href="#第四点" class="headerlink" title="第四点"></a>第四点</h2><p>红包在不必要的情况下（延时发放），不要立刻发出去，可以设定在某一个时间段发出去，或者后台审核发出去，给我们自己一个缓冲的时间去处理以及过滤掉一些非法的数据。</p>
+<h2 id="第五点"><a href="#第五点" class="headerlink" title="第五点"></a>第五点</h2><p>整体程序的严谨性和安全性的提高，例如：限制活动的时间，用户的地区，公众号关注等方面。</p>
+<h2 id="第六点"><a href="#第六点" class="headerlink" title="第六点"></a>第六点</h2><p>随机验证码或者手机短信验证码多条件限制等。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>以上就是总结的关于微信红包的真实案例后的真实想法，通过此次活动能够更加警醒自己对于安全性方面的知识的提高和学习。</p>
+<img src="/2020/06/02/econnoisseur/mianli.jpg" class>]]></content>
+      <categories>
+        <category>project</category>
+        <category>心情</category>
+      </categories>
+      <tags>
+        <tag>project</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>excel操作</title>
+    <url>/2020/07/30/excel/</url>
+    <content><![CDATA[<div style="width:50%;margin:0 auto;"><img src="/2020/07/30/excel/excel.jpg" class></div>
+
+<a id="more"></a>
+
+<h1 id="Excel操作"><a href="#Excel操作" class="headerlink" title="Excel操作"></a>Excel操作</h1><h2 id="把字符串用符号隔开"><a href="#把字符串用符号隔开" class="headerlink" title="把字符串用符号隔开"></a>把字符串用符号隔开</h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">=<span class="built_in">MID</span>(<span class="symbol">A1</span>,<span class="number">1</span>,<span class="number">1</span>)&amp;<span class="string">";"</span>&amp;<span class="built_in">MID</span>(<span class="symbol">A1</span>,<span class="number">2</span>,<span class="number">1</span>)&amp;<span class="string">";"</span>&amp;<span class="built_in">MID</span>(<span class="symbol">A1</span>,<span class="number">3</span>,<span class="number">1</span>)&amp;<span class="string">";"</span>&amp;<span class="built_in">MID</span>(<span class="symbol">A1</span>,<span class="number">4</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="去除空格"><a href="#去除空格" class="headerlink" title="去除空格"></a>去除空格</h2><p>选中单元格，点击右上角“查找和选择”，选择“替换”。</p>
+<p>弹出对话框后，在“查找内容”中输入一个空格，点击“全部替换”即可。</p>
+<h2 id="去除换行符"><a href="#去除换行符" class="headerlink" title="去除换行符"></a>去除换行符</h2><p>选择要删除换行符的单元格，然后按快捷键<strong>Ctrl + H</strong>启动“查找和替换”功能。</p>
+<p>接下来，在“搜索字符串”框中单击一次，按住Ctrl键并按键盘上的“J”。这是将“换行”指定为替换目标的操作。然后单击“全部替换”以消除换行符。</p>
+<h2 id="去除结尾字符"><a href="#去除结尾字符" class="headerlink" title="去除结尾字符"></a>去除结尾字符</h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">=<span class="built_in">LEFT</span>(<span class="symbol">A1</span>,<span class="built_in">LEN</span>(<span class="symbol">A1</span>)-<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="excel中如何只复制内容，不复制公式"><a href="#excel中如何只复制内容，不复制公式" class="headerlink" title="excel中如何只复制内容，不复制公式"></a>excel中如何只复制内容，不复制公式</h2><p>打开需要操作的EXCEL表格，选中需要复制单元格按键盘“Ctrl+C”复制单元格内容。</p>
+<p>选中需要粘贴的单元格，在“开始”选项卡找到“粘贴板”，点击“粘贴”下方的下拉菜单按钮。</p>
+<p>在弹出的粘贴选项中选择“粘贴数值”。</p>
+<h2 id="单元格合并加符号"><a href="#单元格合并加符号" class="headerlink" title="单元格合并加符号"></a>单元格合并加符号</h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">=<span class="symbol">B2</span>&amp;<span class="string">"-"</span>&amp;<span class="symbol">C2</span>&amp;<span class="string">"+"</span>&amp;<span class="string">"E2"</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>excel</category>
+        <category>office</category>
+      </categories>
+      <tags>
+        <tag>excel</tag>
+        <tag>office</tag>
       </tags>
   </entry>
   <entry>
@@ -560,113 +667,6 @@
       <tags>
         <tag>reading</tag>
         <tag>psychology</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>laravel-model</title>
-    <url>/2020/07/23/laravel-model/</url>
-    <content><![CDATA[<img src="/2020/07/23/laravel-model/laravel.jpg" class>
-
-<a id="more"></a>
-
-<h1 id="Eloquent-ORM"><a href="#Eloquent-ORM" class="headerlink" title="Eloquent ORM"></a>Eloquent ORM</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Laravel 内置的 Eloquent ORM 提供了一个美观、简单的与数据库打交道的 ActiveRecord 实现，每张数据表都对应一个与该表进行交互的模型（Model），通过模型类，你可以对数据表进行查询、插入、更新、删除等操作。</p>
-<h2 id="定义模型"><a href="#定义模型" class="headerlink" title="定义模型"></a>定义模型</h2><p>我们从创建一个 Eloquent 模型开始，模型类通常位于 <code>app</code> 目录下，你也可以将其放在其他可以被 <code>composer.json</code> 文件自动加载到的地方。所有 Eloquent 模型都继承自 <code>Illuminate\Database\Eloquent\Model</code> 类。</p>
-<p>创建模型实例最简单的办法就是使用 <a href="https://xueyuanjun.com/post/19502.html" target="_blank" rel="noopener">Artisan 命令</a> <code>make:model</code>：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">php artisan make:model Flight</span><br></pre></td></tr></table></figure>
-
-<p>如果你想要在生成模型时生成<a href="https://xueyuanjun.com/post/19523.html" target="_blank" rel="noopener">数据库迁移</a>，可以使用 <code>--migration</code> 或 <code>-m</code> 选项：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">php artisan make:model Flight --migration</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">php artisan make:model Flight -m</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="Eloquent-模型约定"><a href="#Eloquent-模型约定" class="headerlink" title="Eloquent 模型约定"></a>Eloquent 模型约定</h3><p>现在，让我们来看一个 <code>Flight</code> 模型的例子，我们将用该类获取和存取数据表 <code>flights</code> 中的信息：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="表名"><a href="#表名" class="headerlink" title="表名"></a><strong>表名</strong></h4><p>注意我们并没有告诉 Eloquent 我们的 <code>Flight</code> 模型使用哪张表，默认规则是小写的模型类名复数格式作为与其对应的表名（除非在模型类中明确指定了其它名称）。所以，在本例中，Eloquent 认为 <code>Flight</code> 模型存储记录在 <code>flights</code> 表中。你也可以在模型中定义 <code>table</code> 属性来指定自定义的表名：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 关联到模型的数据表</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@var</span> string</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> $table = <span class="string">'my_flights'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="主键"><a href="#主键" class="headerlink" title="主键"></a><strong>主键</strong></h4><p>Eloquent 默认每张表的主键名为 <code>id</code>，你可以在模型类中定义一个 <code>$primaryKey</code> 属性来覆盖该约定。</p>
-<p>此外，Eloquent 默认主键字段是自增的整型数据，这意味着主键将会被自动转化为 <code>int</code> 类型，如果你想要使用非自增或非数字类型主键，必须在对应模型中设置 <code>$incrementing</code> 属性为 <code>false</code>，如果主键不是整型，还要设置 <code>$keyType</code> 属性值为 <code>string</code>。</p>
-<h4 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a><strong>时间戳</strong></h4><p>默认情况下，Eloquent 期望 <code>created_at</code> 和 <code>updated_at</code> 已经存在于数据表中，如果你不想要这些 Laravel 自动管理的数据列，在模型类中设置 <code>$timestamps</code> 属性为 <code>false</code>：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 表明模型是否应该被打上时间戳</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@var</span> bool</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> $timestamps = <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果你需要自定义时间戳格式，设置模型中的 <code>$dateFormat</code> 属性。该属性决定日期被如何存储到数据库中，以及模型被序列化为数组或 JSON 时日期的格式：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 模型日期列的存储格式</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@var</span> string</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> $dateFormat = <span class="string">'U'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果你需要自定义用于存储时间戳的字段名称，可以在模型中设置 <code>CREATED_AT</code> 和 <code>UPDATED_AT</code> 常量：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">const</span> CREATED_AT = <span class="string">'creation_date'</span>;</span><br><span class="line">    <span class="keyword">const</span> UPDATED_AT = <span class="string">'last_update'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="数据库连接"><a href="#数据库连接" class="headerlink" title="数据库连接"></a><strong>数据库连接</strong></h4><p>默认情况下，所有的 Eloquent 模型使用应用配置中的默认数据库连接，如果你想要为模型指定不同的连接，可以通过 <code>$connection</code> 属性来设置：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * The connection name for the model.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@var</span> string</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> $connection = <span class="string">'connection-name'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="默认属性名"><a href="#默认属性名" class="headerlink" title="默认属性名"></a>默认属性名</h3><p>如果你想要定义某些模型属性的默认值，可以在模型上定义 <code>$attributes</code> 属性：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">App</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Database</span>\<span class="title">Eloquent</span>\<span class="title">Model</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Flight</span> <span class="keyword">extends</span> <span class="title">Model</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * The model's default values for attributes.</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@var</span> array</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">protected</span> $attributes = [</span><br><span class="line">        <span class="string">'delayed'</span> =&gt; <span class="keyword">false</span>,</span><br><span class="line">    ];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>代码</category>
-        <category>laravel</category>
-        <category>eloquent orm</category>
-      </categories>
-      <tags>
-        <tag>代码</tag>
-        <tag>laravel</tag>
-        <tag>eloquent orm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>excel操作</title>
-    <url>/2020/07/30/excel/</url>
-    <content><![CDATA[<div style="width:50%;margin:0 auto;"><img src="/2020/07/30/excel/excel.jpg" class></div>
-
-<a id="more"></a>
-
-<h1 id="Excel操作"><a href="#Excel操作" class="headerlink" title="Excel操作"></a>Excel操作</h1><h2 id="把字符串用符号隔开"><a href="#把字符串用符号隔开" class="headerlink" title="把字符串用符号隔开"></a>把字符串用符号隔开</h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">=<span class="built_in">MID</span>(<span class="symbol">A1</span>,<span class="number">1</span>,<span class="number">1</span>)&amp;<span class="string">";"</span>&amp;<span class="built_in">MID</span>(<span class="symbol">A1</span>,<span class="number">2</span>,<span class="number">1</span>)&amp;<span class="string">";"</span>&amp;<span class="built_in">MID</span>(<span class="symbol">A1</span>,<span class="number">3</span>,<span class="number">1</span>)&amp;<span class="string">";"</span>&amp;<span class="built_in">MID</span>(<span class="symbol">A1</span>,<span class="number">4</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="去除空格"><a href="#去除空格" class="headerlink" title="去除空格"></a>去除空格</h2><p>选中单元格，点击右上角“查找和选择”，选择“替换”。</p>
-<p>弹出对话框后，在“查找内容”中输入一个空格，点击“全部替换”即可。</p>
-<h2 id="去除换行符"><a href="#去除换行符" class="headerlink" title="去除换行符"></a>去除换行符</h2><p>选择要删除换行符的单元格，然后按快捷键<strong>Ctrl + H</strong>启动“查找和替换”功能。</p>
-<p>接下来，在“搜索字符串”框中单击一次，按住Ctrl键并按键盘上的“J”。这是将“换行”指定为替换目标的操作。然后单击“全部替换”以消除换行符。</p>
-<h2 id="去除结尾字符"><a href="#去除结尾字符" class="headerlink" title="去除结尾字符"></a>去除结尾字符</h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">=<span class="built_in">LEFT</span>(<span class="symbol">A1</span>,<span class="built_in">LEN</span>(<span class="symbol">A1</span>)-<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="excel中如何只复制内容，不复制公式"><a href="#excel中如何只复制内容，不复制公式" class="headerlink" title="excel中如何只复制内容，不复制公式"></a>excel中如何只复制内容，不复制公式</h2><p>打开需要操作的EXCEL表格，选中需要复制单元格按键盘“Ctrl+C”复制单元格内容。</p>
-<p>选中需要粘贴的单元格，在“开始”选项卡找到“粘贴板”，点击“粘贴”下方的下拉菜单按钮。</p>
-<p>在弹出的粘贴选项中选择“粘贴数值”。</p>
-<h2 id="单元格合并加符号"><a href="#单元格合并加符号" class="headerlink" title="单元格合并加符号"></a>单元格合并加符号</h2><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">=<span class="symbol">B2</span>&amp;<span class="string">"-"</span>&amp;<span class="symbol">C2</span>&amp;<span class="string">"+"</span>&amp;<span class="string">"E2"</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>excel</category>
-        <category>office</category>
-      </categories>
-      <tags>
-        <tag>excel</tag>
-        <tag>office</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ThinkPHP去除index.php</title>
-    <url>/2020/09/23/ThinkPHP/</url>
-    <content><![CDATA[<div style="width:50%;margin:0 auto;"><img src="/2020/09/23/ThinkPHP/thinkphp.jpg" class></div>
-
-<a id="more"></a>
-
-<h1 id="ThinkPHP去除index-php"><a href="#ThinkPHP去除index-php" class="headerlink" title="ThinkPHP去除index.php"></a>ThinkPHP去除index.php</h1><h2 id="Apache方法"><a href="#Apache方法" class="headerlink" title="Apache方法"></a>Apache方法</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p><code>httpd.conf</code>配置文件中加载了<code>mod_rewrite.so</code>模块</p>
-<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>AllowOverride None 将None改为 All</p>
-<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>把下面的内容保存为<code>.htaccess</code>文件放到应用入口文件的同级目录下</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt;</span><br><span class="line">  Options +FollowSymlinks -Multiviews</span><br><span class="line">  RewriteEngine On</span><br><span class="line"></span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">  RewriteRule ^(.*)$ index.php/$<span class="number">1</span> [QSA,PT,L]</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>
-
-<p>或者</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">&lt;IfModule mod_rewrite.c&gt;</span><br><span class="line">  Options +FollowSymlinks -Multiviews</span><br><span class="line">  RewriteEngine On</span><br><span class="line"></span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-d</span><br><span class="line">  RewriteCond %&#123;REQUEST_FILENAME&#125; !-f</span><br><span class="line">  RewriteRule ^(.*)$ index.php?s=$<span class="number">1</span> [QSA,PT,L]</span><br><span class="line">&lt;/IfModule&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>代码</category>
-        <category>thinkphp</category>
-      </categories>
-      <tags>
-        <tag>代码</tag>
-        <tag>thinkphp</tag>
       </tags>
   </entry>
   <entry>
