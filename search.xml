@@ -705,4 +705,40 @@
         <tag>心情</tag>
       </tags>
   </entry>
+  <entry>
+    <title>PHPCMS后台替换H5上传图片</title>
+    <url>/2020/10/23/phpcms/</url>
+    <content><![CDATA[<div style="width:70%;margin:0 auto;"><img src="/2020/10/23/phpcms/phpcms.jpg" class></div>
+
+<a id="more"></a>
+
+<h1 id="Flash上传图标问题"><a href="#Flash上传图标问题" class="headerlink" title="Flash上传图标问题"></a>Flash上传图标问题</h1><p>本次改动针对于后台flash上传图片插件的问题，以及上传图片后hash值等问题进行处理，本次修改是在别人完整的功能上进行问题处理，下面给大家分享一下：</p>
+<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p>这里提供下其他博主修改好了的phpcms h5上传代码，此代码只供学习交流，请勿用于商业用途。</p>
+<p> <a href="/download/h5upload.zip" ">点击下载</a></p>
+<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>解压文件，可看到后台文件以及样式文件等，对应覆盖自己项目的相应文件夹即可。</p>
+<h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>文件覆盖完成后，使用中你会发现图片添加完成后页面无法正常关闭，其中的一些方法只兼容IE浏览器，下面是修改调整：</p>
+<p>打开phpcms/modules/content.php中的141行，就是add()方法中,</p>
+<p>把不兼容的代码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">showmessage(L(<span class="string">'add_success'</span>).L(<span class="string">'2s_close'</span>),<span class="string">'blank'</span>,<span class="string">''</span>,<span class="string">''</span>,<span class="string">'parent.right.location.reload();function set_time() &#123;$("#secondid").html(1);&#125;setTimeout("set_time()", 500);setTimeout("top.art.dialog(&#123;id:\'content_id\'&#125;).close()", 1200);'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>改为：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">showmessage(L(<span class="string">'add_success'</span>).L(<span class="string">'2s_close'</span>),<span class="string">'blank'</span>,<span class="string">''</span>,<span class="string">''</span>,<span class="string">'function set_time() &#123;$("#secondid").html(1);&#125;setTimeout("set_time()", 500);setTimeout("window.close()", 1200);'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>相同文件中223行，edit()方法中，</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">showmessage(L(<span class="string">'update_success'</span>).L(<span class="string">'2s_close'</span>),<span class="string">'blank'</span>,<span class="string">''</span>,<span class="string">''</span>,<span class="string">'parent.right.location.reload();function set_time() &#123;$("#secondid").html(1);&#125;setTimeout("set_time()", 500);setTimeout("top.art.dialog(&#123;id:\'content_id\'&#125;).close()", 1200);'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>改为：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">showmessage(L(<span class="string">'update_success'</span>).L(<span class="string">'2s_close'</span>),<span class="string">'blank'</span>,<span class="string">''</span>,<span class="string">''</span>,<span class="string">'function set_time() &#123;$("#secondid").html(1);&#125;setTimeout("set_time()", 500);setTimeout("window.close()", 1200);'</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>已上就是本次我针对其他博主的功能基础做出的完善，代码以及界面还有稍许其他问题，后续将更加优化完善。</p>
+]]></content>
+      <categories>
+        <category>代码</category>
+        <category>phpcms</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>phpcms</tag>
+      </tags>
+  </entry>
 </search>

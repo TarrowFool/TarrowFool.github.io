@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wang.github.io/"/>
-  <updated>2020-09-23T02:44:50.650Z</updated>
+  <updated>2020-10-26T06:29:03.366Z</updated>
   <id>https://wang.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHPCMS后台替换H5上传图片</title>
+    <link href="https://wang.github.io/2020/10/23/phpcms/"/>
+    <id>https://wang.github.io/2020/10/23/phpcms/</id>
+    <published>2020-10-23T06:08:56.000Z</published>
+    <updated>2020-10-26T06:29:03.366Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div style=&quot;width:70%;margin:0 auto;&quot;&gt;&lt;img src=&quot;/2020/10/23/phpcms/phpcms.jpg&quot; class&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/categories/code/"/>
+    
+      <category term="phpcms" scheme="https://wang.github.io/categories/phpcms/"/>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/tags/code/"/>
+    
+      <category term="phpcms" scheme="https://wang.github.io/tags/phpcms/"/>
+    
+  </entry>
   
   <entry>
     <title>ThinkPHP去除index.php</title>
