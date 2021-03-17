@@ -802,4 +802,86 @@
         <tag>dedecms</tag>
       </tags>
   </entry>
+  <entry>
+    <title>微信授权以及用户信息获取</title>
+    <url>/2020/12/02/wechat/</url>
+    <content><![CDATA[<div style="width:50%;margin:0 auto;"><img src="/2020/12/02/wechat/wechat.jpg" class></div>
+
+<a id="more"></a>
+
+<h3 id="微信公众平台"><a href="#微信公众平台" class="headerlink" title="微信公众平台"></a>微信公众平台</h3><h4 id="请求流程"><a href="#请求流程" class="headerlink" title="请求流程"></a>请求流程</h4><div style="width:70%;margin:0 auto;"><img src="/2020/12/02/wechat/wechat_gettoken.png" class></div>
+
+<h4 id="网页授权"><a href="#网页授权" class="headerlink" title="网页授权"></a>网页授权</h4><p><strong>关于网页授权的两种scope的区别说明(官方)：</strong></p>
+<ul>
+<li>以snsapi_base为scope发起的网页授权，是用来获取进入页面的用户的openid的，并且是静默授权并自动跳转到回调页的。用户感知的就是直接进入了回调页（往往是业务页面）</li>
+<li>以snsapi_userinfo为scope发起的网页授权，是用来获取用户的基本信息的。但这种授权需要用户手动同意，并且由于用户同意过，所以无须关注，就可在授权后获取该用户的基本信息。</li>
+<li>用户管理类接口中的“获取用户基本信息接口”，是在用户和公众号产生消息交互或关注后事件推送后，才能根据用户OpenID来获取用户基本信息。这个接口，包括其他微信接口，都是需要该用户（即openid）关注了公众号后，才能调用成功的。</li>
+</ul>
+<p><strong>关于网页授权access_token和普通access_token的区别</strong></p>
+<ul>
+<li>微信网页授权是通过OAuth2.0机制实现的，在用户授权给公众号后，公众号可以获取到一个网页授权特有的接口调用凭证（网页授权access_token），通过网页授权access_token可以进行授权后接口调用，如获取用户基本信息；</li>
+<li>其他微信接口，需要通过基础支持中的“获取access_token”接口来获取到的普通access_token调用。</li>
+</ul>
+<p><strong>关于UnionID机制</strong></p>
+<ul>
+<li>请注意，网页授权获取用户基本信息也遵循UnionID机制。即如果开发者有在多个公众号，或在公众号、移动应用之间统一用户帐号的需求，需要前往微信开放平台（open.weixin.qq.com）绑定公众号后，才可利用UnionID机制来满足上述需求。</li>
+<li>UnionID机制的作用说明：如果开发者拥有多个移动应用、网站应用和公众帐号，可通过获取用户基本信息中的unionid来区分用户的唯一性，因为同一用户，对同一个微信开放平台下的不同应用（移动应用、网站应用和公众帐号），unionid是相同的。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>代码</category>
+        <category>wechat</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>wechat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git</title>
+    <url>/2021/03/17/git/</url>
+    <content><![CDATA[<div style="width:50%;margin:0 auto;"><img src="/2021/03/17/git/git.png" class></div>
+
+<a id="more"></a>
+
+<h2 id="git命令语法汇总"><a href="#git命令语法汇总" class="headerlink" title="git命令语法汇总"></a>git命令语法汇总</h2><h3 id="创建库"><a href="#创建库" class="headerlink" title="创建库"></a>创建库</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加和提交到仓库"><a href="#添加和提交到仓库" class="headerlink" title="添加和提交到仓库"></a>添加和提交到仓库</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add readme.txt                # 添加 </span><br><span class="line">git status                        # 提交前查看状态</span><br><span class="line">git commit -m &quot;description&quot;       # 提交</span><br><span class="line">git status                        # 提交后查看仓库状态</span><br><span class="line">git diff readme.txt # 查看文件更改前后的内容变化</span><br></pre></td></tr></table></figure>
+
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 现在-&gt;过去</span><br><span class="line">git log                           # 查看历史记录  </span><br><span class="line">git log --prettry&#x3D;oneline         # 查看历史记录-简易版</span><br><span class="line">git reset --hard HEAD^            # 回退到上一个版本</span><br><span class="line">git reset --hard HEAD~100         # 回退到第前10个版本</span><br><span class="line"></span><br><span class="line"># 过去-&gt;现在  </span><br><span class="line">git reflog                        # 获得所有提交命令的版本号  </span><br><span class="line">git reset --hard &lt;commit id&gt;      # 通过版本号回到现在</span><br></pre></td></tr></table></figure>
+
+<h3 id="缓存区和暂存区"><a href="#缓存区和暂存区" class="headerlink" title="缓存区和暂存区"></a>缓存区和暂存区</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add file1 file2 file3         # 添加到缓存区 </span><br><span class="line">git commit -m &quot;description&quot;       # 一次性提交多个文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="撤销和删除文件"><a href="#撤销和删除文件" class="headerlink" title="撤销和删除文件"></a>撤销和删除文件</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 文件内容有误，需要恢复到之前的版本：可以手动更改在commit，也可以回到HEAD^版本，本文介绍第三种方法</span><br><span class="line">## version1：没有加入到暂存区  </span><br><span class="line">git status                        # 查看哪个文件被更改了</span><br><span class="line">git checkout --filename           # 撤销这个文件的更改 </span><br><span class="line">## version2: 已经加入到暂存区  </span><br><span class="line">git reset --hard HEAD^            # 先返回到上一版本（暂存区-&gt;工作区）</span><br><span class="line">git checkout --filename           # 撤销这个文件的更改</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">rm filename                       # 从工作区删除filename  </span><br><span class="line">git rm filename                   # 从版本库删除filename</span><br><span class="line">git checkout -- filename          # 恢复删除的filename</span><br></pre></td></tr></table></figure>
+
+<h3 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa –C “youremail@example.com”    # 建立github和本地电脑的SSH Key链接</span><br></pre></td></tr></table></figure>
+
+<h4 id="本地-gt-GitHub"><a href="#本地-gt-GitHub" class="headerlink" title="本地-&gt;GitHub"></a>本地-&gt;GitHub</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git remote add origin git@server-name:path&#x2F;repo-name.git  # 关联一个GitHub</span><br><span class="line">git push -u origin master          # 本地内容推送到GitHub（第一次用）</span><br><span class="line">git push origin master             # 以后每次提交用</span><br></pre></td></tr></table></figure>
+
+<h4 id="GitHub-gt-本地"><a href="#GitHub-gt-本地" class="headerlink" title="GitHub-&gt;本地"></a>GitHub-&gt;本地</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone git@github.com:haochen&#x2F;learngit.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建和合并分支"><a href="#创建和合并分支" class="headerlink" title="创建和合并分支"></a>创建和合并分支</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git checkout -b feature1       # 创建并切换到feature1分支</span><br><span class="line">git branch                     # 查看当前所有分支 </span><br><span class="line">git checkout master            # 切换到主分支  git merge feature1             # 合并master和feature1分支:fast-mode模式</span><br><span class="line">git merge --no-ff -m &quot;merge with no-ff&quot; &lt;name&gt;    #  合并分支，并且留下信息说明我在这里合并过  git branch -d feature1         # 删除feature1分支</span><br></pre></td></tr></table></figure>
+
+<h4 id="解决合并冲突"><a href="#解决合并冲突" class="headerlink" title="解决合并冲突"></a>解决合并冲突</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git log --graph --pretty&#x3D;oneline --abbrev-commit   # 树状图查看分支情况</span><br></pre></td></tr></table></figure>
+
+<h2 id="速查图"><a href="#速查图" class="headerlink" title="速查图"></a>速查图</h2><img src="/2021/03/17/git/sucha.jpg" class>
+
+<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><img src="/2021/03/17/git/other_1.png" class>
+
+<img src="/2021/03/17/git/other_2.png" class>
+
+<h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>初次涉猎，还待完善。</p>
+]]></content>
+      <categories>
+        <category>代码</category>
+        <category>wechat</category>
+      </categories>
+      <tags>
+        <tag>代码</tag>
+        <tag>git</tag>
+        <tag>version</tag>
+      </tags>
+  </entry>
 </search>

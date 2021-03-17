@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wang.github.io/"/>
-  <updated>2020-11-21T07:13:42.560Z</updated>
+  <updated>2021-03-17T01:38:49.877Z</updated>
   <id>https://wang.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git</title>
+    <link href="https://wang.github.io/2021/03/17/git/"/>
+    <id>https://wang.github.io/2021/03/17/git/</id>
+    <published>2021-03-17T01:16:14.000Z</published>
+    <updated>2021-03-17T01:38:49.877Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div style=&quot;width:50%;margin:0 auto;&quot;&gt;&lt;img src=&quot;/2021/03/17/git/git.png&quot; class&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/categories/code/"/>
+    
+      <category term="wechat" scheme="https://wang.github.io/categories/wechat/"/>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/tags/code/"/>
+    
+      <category term="git" scheme="https://wang.github.io/tags/git/"/>
+    
+      <category term="version" scheme="https://wang.github.io/tags/version/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信授权以及用户信息获取</title>
+    <link href="https://wang.github.io/2020/12/02/wechat/"/>
+    <id>https://wang.github.io/2020/12/02/wechat/</id>
+    <published>2020-12-02T07:30:00.000Z</published>
+    <updated>2020-12-02T07:33:03.200Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div style=&quot;width:50%;margin:0 auto;&quot;&gt;&lt;img src=&quot;/2020/12/02/wechat/wechat.jpg&quot; class&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/categories/code/"/>
+    
+      <category term="wechat" scheme="https://wang.github.io/categories/wechat/"/>
+    
+    
+      <category term="代码" scheme="https://wang.github.io/tags/code/"/>
+    
+      <category term="wechat" scheme="https://wang.github.io/tags/wechat/"/>
+    
+  </entry>
   
   <entry>
     <title>DEDECMS常用方法以及标签</title>
